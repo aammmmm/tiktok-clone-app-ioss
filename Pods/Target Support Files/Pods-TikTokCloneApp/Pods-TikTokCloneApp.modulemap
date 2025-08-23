@@ -1,0 +1,6 @@
+framework module Pods_TikTokCloneApp {
+  umbrella header "Pods-TikTokCloneApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
