@@ -8,32 +8,30 @@
 import UIKit
 import Core
 
-// MARK: - View
 protocol FeedPresenterToView: AnyObject {
-    func showVideos(_ videos: [VideoEntity])
+    func showVideos(_ videos: [FeedEntity])
+    func appendVideos(_ videos: [FeedEntity])
     func showLoading(_ isLoading: Bool)
     func showError(_ message: String)
 }
 
-//ViewToPresenter -> dipanggil dari view, ada di presenter
-// MARK: - Presenter
 protocol FeedViewToPresenter: AnyObject {
     func viewDidLoad()
     func loadMoreVideos()
-    func didSelectVideo(_ video: VideoEntity)
+    func didSelectItem(at index: Int)
 }
 
-// MARK: - Interactor
 protocol FeedPresenterToInteractor: AnyObject {
     func fetchVideos(page: Int)
+    func videoEntity(at index: Int) -> VideoEntity?   // ambil dari cache
 }
 
 protocol FeedInteractorToPresenter: AnyObject {
-    func didFetchVideos(_ videos: [VideoEntity])
+    func didFetchVideos(_ videos: [FeedEntity], page: Int)
     func didFailToFetchVideos(_ error: Error)
 }
 
-// MARK: - Router
 protocol FeedViewToRouter: AnyObject {
     func navigateToPlayer(with video: VideoEntity, from view: UIViewController)
 }
+

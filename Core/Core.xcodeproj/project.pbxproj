@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		304665D62E5BFF1400DFCE16 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304665D52E5BFF1200DFCE16 /* Constants.swift */; };
 		8C84B32ED0F4F608A3727A36 /* Pods_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB2C3C14FF81FD1C28F6915 /* Pods_Core.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		304665D52E5BFF1200DFCE16 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		305F939E2E57185600461071 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3750CD9A877C11551DB06113 /* Pods-Core.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.debug.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.debug.xcconfig"; sourceTree = "<group>"; };
 		6BB2C3C14FF81FD1C28F6915 /* Pods_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +75,7 @@
 		305F93942E57185600461071 = {
 			isa = PBXGroup;
 			children = (
+				304665D52E5BFF1200DFCE16 /* Constants.swift */,
 				305F94712E57236500461071 /* Model */,
 				305F945A2E57215500461071 /* Networking */,
 				305F93A02E57185600461071 /* Core */,
@@ -208,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				304665D62E5BFF1400DFCE16 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

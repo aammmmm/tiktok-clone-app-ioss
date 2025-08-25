@@ -11,4 +11,5 @@ struct FeedEntity {
     let thumbnailUrl: String
     let views: String
     let author: String
+    let isLive: Bool
 }

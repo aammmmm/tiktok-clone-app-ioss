@@ -5,44 +5,52 @@
 //  Created by Abraham Putra Lukas on 21/08/25.
 //
 
-import Foundation
-import Core
+// FeedPresenter.swift
 import UIKit
+import Core
 
-final class FeedPresenter: FeedViewToPresenter {
+final class FeedPresenter {
     weak var view: FeedPresenterToView?
     var interactor: FeedPresenterToInteractor?
     var router: FeedViewToRouter?
-    
-    private var currentPage = 1
-    private var videos: [VideoEntity] = []
-    
+
+    private var page = 1
+    private var isLoading = false
+}
+
+extension FeedPresenter: FeedViewToPresenter {
     func viewDidLoad() {
+        isLoading = true
+        page = 1
         view?.showLoading(true)
-        interactor?.fetchVideos(page: currentPage)
+        interactor?.fetchVideos(page: page)
     }
-    
+
     func loadMoreVideos() {
-        currentPage += 1
-        interactor?.fetchVideos(page: currentPage)
+        guard !isLoading else { return }
+        isLoading = true
+        page += 1
+        interactor?.fetchVideos(page: page)
     }
-    
-    func didSelectVideo(_ video: VideoEntity) {
-        if let vc = view as? UIViewController {
-            router?.navigateToPlayer(with: video, from: vc)
-        }
+
+    func didSelectItem(at index: Int) {
+        guard let video = interactor?.videoEntity(at: index),
+              let vc = view as? UIViewController else { return }
+        router?.navigateToPlayer(with: video, from: vc)
     }
 }
 
 extension FeedPresenter: FeedInteractorToPresenter {
-    func didFetchVideos(_ videos: [VideoEntity]) {
+    func didFetchVideos(_ videos: [FeedEntity], page: Int) {
+        isLoading = false
         view?.showLoading(false)
-        self.videos.append(contentsOf: videos)
-        view?.showVideos(self.videos)
+        if page == 1 { view?.showVideos(videos) } else { view?.appendVideos(videos) }
     }
-    
+
     func didFailToFetchVideos(_ error: Error) {
+        isLoading = false
         view?.showLoading(false)
         view?.showError(error.localizedDescription)
     }
 }
+

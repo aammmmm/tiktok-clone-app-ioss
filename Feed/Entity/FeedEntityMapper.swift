@@ -4,20 +4,13 @@
 //
 //  Created by Abraham Putra Lukas on 22/08/25.
 //
+// FeedEntityMapper.swift
 import Core
 
 enum FeedEntityMapper {
-    static func map(_ video: VideoEntity) -> FeedEntity {
-        FeedEntity(
-            id: video.id,
-            title: video.title,
-            thumbnailUrl: video.thumbnailUrl,
-            views: video.views,
-            author: video.author
-        )
+    static func map(_ v: VideoEntity) -> FeedEntity {
+        FeedEntity(id: v.id, title: v.title, thumbnailUrl: v.thumbnailUrl, views: v.views, author: v.author, isLive: v.isLive)
     }
-    
-    static func mapList(_ videos: [VideoEntity]) -> [FeedEntity] {
-        videos.map(map(_:))
-    }
+    static func mapList(_ list: [VideoEntity]) -> [FeedEntity] { list.map(map(_:)) }
 }
+
