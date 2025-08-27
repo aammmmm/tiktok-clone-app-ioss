@@ -7,9 +7,12 @@
 
 import Moya
 
+// list endpoint
 public enum APIProviders {
     case getVideos
+//    case postComment(videoId: String, commentText: String)
 }
+
 
 extension APIProviders: TargetType {
     public var baseURL: URL {
@@ -21,7 +24,7 @@ extension APIProviders: TargetType {
     
     public var method: Moya.Method { .get }
     
-//    specify body, param, objects
+//    specify request (body, param, objects)
     public var task: Task { .requestPlain }
     
 //    headers

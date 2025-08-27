@@ -6,5 +6,20 @@
 //
 
 import Foundation
+import Core
 
+final class PlayerPresenter: PlayerViewToPresenter {
+    weak var view: PlayerPresenterToView?
+    var interactor: PlayerPresenterToInteractor?
+    var router: PlayerPresenterToRouter?
+    
+    func viewDidLoad() {
+        interactor?.fetchVideoDetails()
+    }
+}
 
+extension PlayerPresenter: PlayerInteractorToPresenter {
+    func didFetchVideoDetails(_ video: VideoEntity) {
+        view?.showVideoDetails(video)
+    }
+}

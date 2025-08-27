@@ -17,7 +17,6 @@ public struct VideoEntity: Decodable {
     public let description: String
     public let subscriber: String
     public let isLive: Bool
-
 }
 
 

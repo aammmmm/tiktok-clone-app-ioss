@@ -8,18 +8,40 @@
 import UIKit
 import Core
 import Feed
+import Player
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
-    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-            guard let windowScene = (scene as? UIWindowScene) else { return }
+    func scene(_ scene: UIScene,
+               willConnectTo session: UISceneSession,
+               options connectionOptions: UIScene.ConnectionOptions) {
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        let window = UIWindow(windowScene: windowScene)
+        self.window = window
         
-            let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UINavigationController(rootViewController: FeedRouter.createModule())
-            self.window = window
-            window.makeKeyAndVisible()
+        // set route view
+        let feedVC = FeedRouter.createModule()
+        let rootNavigationController = UINavigationController(rootViewController: feedVC)
+        window.rootViewController = rootNavigationController
+        window.makeKeyAndVisible()
+        
+        // Routing setup
+        AppRouter.route = { destination in
+            switch destination {
+            case .feed:
+                let feedVC = FeedRouter.createModule()
+                UIApplication.topViewController()?.navigationController?.pushViewController(feedVC, animated: true)
+                
+            case .player(let video):
+                let playerVC = PlayerRouter.createModule(with: video)
+                UIApplication.topViewController()?.navigationController?.pushViewController(playerVC, animated: true)
+            default:
+                print("Route Not Found")
+            }
+        }
     }
+
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
