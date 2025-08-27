@@ -27,11 +27,12 @@ protocol FeedPresenterToInteractor: AnyObject {
 }
 
 protocol FeedInteractorToPresenter: AnyObject {
+    func didStartFetchingVideos()
     func didFetchVideos(_ videos: [FeedEntity], page: Int)
     func didFailToFetchVideos(_ error: Error)
 }
 
 protocol FeedViewToRouter: AnyObject {
-    func navigateToPlayer(with video: VideoEntity, from view: UIViewController)
+    func navigateToPlayer(from view: FeedPresenterToView, with video: VideoEntity)
 }
 

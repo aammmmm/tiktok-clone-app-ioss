@@ -23,12 +23,10 @@ public final class FeedRouter: FeedViewToRouter {
         interactor.output = presenter
         return view
     }
-
-    public func navigateToPlayer(with video: VideoEntity, from view: UIViewController) {
-        let vc = UIViewController()
-        vc.view.backgroundColor = .systemBackground
-        vc.title = video.title
-        view.navigationController?.pushViewController(vc, animated: true)
+    
+    func navigateToPlayer(from view: FeedPresenterToView, with video: VideoEntity) {
+        AppRouter.route?(.player(video))
     }
+
 }
 

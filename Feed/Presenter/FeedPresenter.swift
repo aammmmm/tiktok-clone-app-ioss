@@ -20,28 +20,40 @@ final class FeedPresenter {
 
 extension FeedPresenter: FeedViewToPresenter {
     func viewDidLoad() {
+        print("DEBUG: viewDidLoad Called")
         isLoading = true
         page = 1
         view?.showLoading(true)
         interactor?.fetchVideos(page: page)
     }
 
+//    triggered saat scroll abis, lalu fetch
     func loadMoreVideos() {
-        guard !isLoading else { return }
+        guard !isLoading else {
+            return
+        }
         isLoading = true
         page += 1
+        print("DEBUG: loadMoreVideos called, page=\(page)")
         interactor?.fetchVideos(page: page)
     }
 
     func didSelectItem(at index: Int) {
         guard let video = interactor?.videoEntity(at: index),
-              let vc = view as? UIViewController else { return }
-        router?.navigateToPlayer(with: video, from: vc)
+              let view = view else { return }
+        
+        router?.navigateToPlayer(from: view, with: video)
     }
 }
 
 extension FeedPresenter: FeedInteractorToPresenter {
+//    buat trigger showLoading saat scroll
+    func didStartFetchingVideos() {
+        view?.showLoading(true)
+    }
+    
     func didFetchVideos(_ videos: [FeedEntity], page: Int) {
+        print("DEBUG: didFetchVideos called, page=\(page), count=\(videos.count)")
         isLoading = false
         view?.showLoading(false)
         if page == 1 { view?.showVideos(videos) } else { view?.appendVideos(videos) }

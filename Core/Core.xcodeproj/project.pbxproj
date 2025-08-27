@@ -30,6 +30,11 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		304665E42E5C551E00DFCE16 /* Helper */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		305F93A02E57185600461071 /* Core */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -75,6 +80,7 @@
 		305F93942E57185600461071 = {
 			isa = PBXGroup;
 			children = (
+				304665E42E5C551E00DFCE16 /* Helper */,
 				304665D52E5BFF1200DFCE16 /* Constants.swift */,
 				305F94712E57236500461071 /* Model */,
 				305F945A2E57215500461071 /* Networking */,
@@ -129,6 +135,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				304665E42E5C551E00DFCE16 /* Helper */,
 				305F93A02E57185600461071 /* Core */,
 				305F945A2E57215500461071 /* Networking */,
 				305F94712E57236500461071 /* Model */,

@@ -38,12 +38,8 @@
                         </collectionView>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="GJx-oh-0PD" firstAttribute="leading" secondItem="ebo-Xc-IeO" secondAttribute="leading" id="5Fq-Xn-fsb"/>
                         <constraint firstItem="GJx-oh-0PD" firstAttribute="top" secondItem="ebo-Xc-IeO" secondAttribute="top" id="bdO-YM-AWE"/>
-                        <constraint firstAttribute="bottom" secondItem="GJx-oh-0PD" secondAttribute="bottom" id="bpZ-yr-1BY"/>
                         <constraint firstItem="GJx-oh-0PD" firstAttribute="leading" secondItem="ebo-Xc-IeO" secondAttribute="leading" id="cJ9-VI-n6v"/>
-                        <constraint firstAttribute="trailing" secondItem="GJx-oh-0PD" secondAttribute="trailing" id="euH-Ko-kd5"/>
-                        <constraint firstItem="GJx-oh-0PD" firstAttribute="top" secondItem="ebo-Xc-IeO" secondAttribute="top" id="hF9-3F-JkT"/>
                         <constraint firstAttribute="bottom" secondItem="GJx-oh-0PD" secondAttribute="bottom" id="oVi-re-Tya"/>
                         <constraint firstItem="GJx-oh-0PD" firstAttribute="width" secondItem="ebo-Xc-IeO" secondAttribute="width" id="qKg-GN-OS9"/>
                         <constraint firstAttribute="trailing" secondItem="GJx-oh-0PD" secondAttribute="trailing" id="xVd-k1-uQz"/>
