@@ -37,7 +37,6 @@ public class PlayerViewController: UIViewController {
             config.requiresUserActionForMediaPlayback = false
         }
 
-        webView.scrollView.isScrollEnabled = false
         webView.backgroundColor = .black
         webView.isOpaque = false
         

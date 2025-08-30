@@ -55,11 +55,6 @@
 			path = Player;
 			sourceTree = "<group>";
 		};
-		305F946A2E57228500461071 /* Entity */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Entity;
-			sourceTree = "<group>";
-		};
 		305F946B2E57228A00461071 /* View */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = View;
@@ -113,7 +108,6 @@
 				305F946F2E5722AB00461071 /* Interactor */,
 				305F946C2E57229400461071 /* Presenter */,
 				305F946B2E57228A00461071 /* View */,
-				305F946A2E57228500461071 /* Entity */,
 				305F94442E57210700461071 /* Player */,
 				305F94432E57210700461071 /* Products */,
 				0540D4154CD6B557162B88FE /* Pods */,
@@ -168,7 +162,6 @@
 			);
 			fileSystemSynchronizedGroups = (
 				305F94442E57210700461071 /* Player */,
-				305F946A2E57228500461071 /* Entity */,
 				305F946B2E57228A00461071 /* View */,
 				305F946C2E57229400461071 /* Presenter */,
 				305F946F2E5722AB00461071 /* Interactor */,

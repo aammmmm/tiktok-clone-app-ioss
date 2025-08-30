@@ -8,17 +8,17 @@
 import UIKit
 import Core
 
+protocol FeedViewToPresenter: AnyObject {
+    func viewDidLoad()
+    func loadMoreVideos()
+    func didSelectItem(at index: Int)
+}
+
 protocol FeedPresenterToView: AnyObject {
     func showVideos(_ videos: [FeedEntity])
     func appendVideos(_ videos: [FeedEntity])
     func showLoading(_ isLoading: Bool)
     func showError(_ message: String)
-}
-
-protocol FeedViewToPresenter: AnyObject {
-    func viewDidLoad()
-    func loadMoreVideos()
-    func didSelectItem(at index: Int)
 }
 
 protocol FeedPresenterToInteractor: AnyObject {
@@ -32,7 +32,8 @@ protocol FeedInteractorToPresenter: AnyObject {
     func didFailToFetchVideos(_ error: Error)
 }
 
-protocol FeedViewToRouter: AnyObject {
+protocol FeedPresenterToRouter: AnyObject {
     func navigateToPlayer(from view: FeedPresenterToView, with video: VideoEntity)
 }
 
+// ViewToPresenter -> PresenterToInteractor -> InteractorToPresenter -> PresenterToView -> PresenterToRouter

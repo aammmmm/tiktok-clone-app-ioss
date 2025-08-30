@@ -12,7 +12,7 @@ import Core
 final class FeedPresenter {
     weak var view: FeedPresenterToView?
     var interactor: FeedPresenterToInteractor?
-    var router: FeedViewToRouter?
+    var router: FeedPresenterToRouter?
 
     private var page = 1
     private var isLoading = false
@@ -20,10 +20,7 @@ final class FeedPresenter {
 
 extension FeedPresenter: FeedViewToPresenter {
     func viewDidLoad() {
-        print("DEBUG: viewDidLoad Called")
-        isLoading = true
         page = 1
-        view?.showLoading(true)
         interactor?.fetchVideos(page: page)
     }
 
@@ -40,7 +37,7 @@ extension FeedPresenter: FeedViewToPresenter {
 
     func didSelectItem(at index: Int) {
         guard let video = interactor?.videoEntity(at: index),
-              let view = view else { return }
+                let view = view else { return }
         
         router?.navigateToPlayer(from: view, with: video)
     }
