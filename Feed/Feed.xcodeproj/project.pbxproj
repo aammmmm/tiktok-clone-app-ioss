@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		304665E22E5C4FC100DFCE16 /* Player.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 304665E12E5C4FC100DFCE16 /* Player.framework */; };
-		304665E32E5C4FC100DFCE16 /* Player.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 304665E12E5C4FC100DFCE16 /* Player.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		305F94852E57281300461071 /* FeedProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305F94842E5727FA00461071 /* FeedProtocols.swift */; };
 		305F95AC2E5807B800461071 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305F95AB2E5807B800461071 /* Core.framework */; };
 		305F95AD2E5807B800461071 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 305F95AB2E5807B800461071 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -23,7 +21,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				305F95AD2E5807B800461071 /* Core.framework in Embed Frameworks */,
-				304665E32E5C4FC100DFCE16 /* Player.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -91,7 +88,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				304665E22E5C4FC100DFCE16 /* Player.framework in Frameworks */,
 				60B4E3E07E8FC6EAFD1C0694 /* Pods_Feed.framework in Frameworks */,
 				305F95AC2E5807B800461071 /* Core.framework in Frameworks */,
 			);

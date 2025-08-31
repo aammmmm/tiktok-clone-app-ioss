@@ -16,20 +16,8 @@ final class FeedCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var authorLabel: UILabel!
     @IBOutlet private weak var liveBadgeLabel: UILabel!
-
-//    @IBOutlet weak var overlayView: UIView!
     
     private let gradientLayer = CAGradientLayer()
-
-//    inisiasi pada view setelah semua properti outlet sudah terhubung dari XIB
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-//    override func layoutSubviews() {
-//        super.layoutSubviews()
-//        overlayView?.layer.sublayers?.first?.frame = overlayView?.bounds ?? .zero
-//    }
 
 //    buat reuse cell, jadi clear data lama
 //    kf bakal cancelDownloadTask untuk gbr lama, buat mencegah salah ambil gambar saat discroll cepat
@@ -41,6 +29,7 @@ final class FeedCollectionViewCell: UICollectionViewCell {
     }
 
 //    buat configure cell
+//    setImage utk download gbr, tampilin placeholder, cache, update img setelah selesai diload
     func configure(with item: FeedEntity) {
         setupUI()
         
@@ -48,12 +37,13 @@ final class FeedCollectionViewCell: UICollectionViewCell {
         authorLabel.text = "\(item.author)  •  \(item.views) views"
 
         if let url = URL(string: item.thumbnailUrl) {
-            // Tampilkan loading indicator
             thumbnailImageView.kf.indicatorType = .activity
             thumbnailImageView.kf.setImage(
                 with: url,
                 placeholder: UIImage(named: "video_placeholder"),
-                options: [.transition(.fade(0.2))]
+                options: [.transition(.fade(0.2)),
+                          .cacheOriginalImage
+                ]
             )
         } else {
             thumbnailImageView.image = UIImage(named: "video_placeholder")
@@ -78,14 +68,6 @@ final class FeedCollectionViewCell: UICollectionViewCell {
         thumbnailImageView.contentMode = .scaleToFill
         thumbnailImageView.clipsToBounds = true
         thumbnailImageView.layer.cornerRadius = 24
-//        thumbnailImageView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner] // hanya sudut atas
-
-        // Gradient
-//        overlayView.isUserInteractionEnabled = false
-//        overlayView.backgroundColor = .clear
-//        gradientLayer.colors = [UIColor.clear.cgColor, UIColor.black.withAlphaComponent(0.3).cgColor]
-//        gradientLayer.locations = [0.0, 1.0]
-//        overlayView.layer.insertSublayer(gradientLayer, at: 0)
 
         titleLabel.textColor = .black
 

@@ -9,7 +9,7 @@
 import UIKit
 import Core
 
-public final class FeedRouter: FeedViewToRouter {
+public final class FeedRouter: FeedPresenterToRouter {
     public static func createModule() -> UIViewController {
         let view = FeedViewController(nibName: "FeedViewController", bundle: Bundle(for: FeedViewController.self))
         let presenter = FeedPresenter()

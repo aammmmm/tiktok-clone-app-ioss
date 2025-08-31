@@ -16,7 +16,7 @@ class FeedViewController: UIViewController, FeedPresenterToView {
     private var videos: [FeedEntity] = []
     private var isLoadingMore = false
 
-//    lifecycle, dipanggil sekali per life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
@@ -24,20 +24,16 @@ class FeedViewController: UIViewController, FeedPresenterToView {
     }
 
     private func setupCollectionView() {
-        let nib = UINib(
-            nibName: "FeedTableCollectionViewCell",
-            bundle: Bundle(for: FeedViewController.self)
-        )
-        collectionView.register(
-            nib,
-            forCellWithReuseIdentifier: "FeedTableCollectionViewCell"
-        )
-        collectionView.register(
-            LoadingFooterView.self,
-            forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
-            withReuseIdentifier: LoadingFooterView.reuseIdentifier
-        )
+        let nib = UINib(nibName: "FeedTableCollectionViewCell", bundle: Bundle(for: FeedViewController.self))
         
+        collectionView.register(nib, forCellWithReuseIdentifier: "FeedTableCollectionViewCell")
+        collectionView.register(LoadingFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: LoadingFooterView.reuseIdentifier)
+        collectionView.register(
+            SearchHeaderView.self,
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: SearchHeaderView.reuseIdentifier
+        )
+
         view.backgroundColor = UIColor(red: 245/255, green: 246/255, blue: 248/255, alpha: 1)
         collectionView.backgroundColor = .clear
         
@@ -45,7 +41,6 @@ class FeedViewController: UIViewController, FeedPresenterToView {
         collectionView.delegate = self
     }
 
-    // MARK: - FeedPresenterToView
     // load data pertama kali / refresh
     func showVideos(_ videos: [FeedEntity]) {
         self.videos = videos
@@ -74,8 +69,9 @@ class FeedViewController: UIViewController, FeedPresenterToView {
     func showError(_ message: String) { }
 }
 
-extension FeedViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    // count video di collection
+extension FeedViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, SearchHeaderViewDelegate {
+    
+    // count berapa banyak video per section untuk CollectionView
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         videos.count
     }
@@ -97,33 +93,46 @@ extension FeedViewController: UICollectionViewDataSource, UICollectionViewDelega
         presenter?.didSelectItem(at: indexPath.item)
     }
 
-//    loading spinner
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String,
-        at indexPath: IndexPath
-    ) -> UICollectionReusableView {
-        guard kind == UICollectionView.elementKindSectionFooter,
-              let footer = collectionView.dequeueReusableSupplementaryView(
-                ofKind: kind,
-                withReuseIdentifier: LoadingFooterView.reuseIdentifier,
-                for: indexPath
-              ) as? LoadingFooterView else {
-            return UICollectionReusableView()
-        }
-        isLoadingMore ? footer.startAnimating() : footer.stopAnimating()
-        return footer
-    }
+    // header & footer (search bar + loading spinner)
+     func collectionView(
+         _ collectionView: UICollectionView,
+         viewForSupplementaryElementOfKind kind: String,
+         at indexPath: IndexPath
+     ) -> UICollectionReusableView {
+         if kind == UICollectionView.elementKindSectionHeader {
+             guard let header = collectionView.dequeueReusableSupplementaryView(
+                 ofKind: kind,
+                 withReuseIdentifier: SearchHeaderView.reuseIdentifier,
+                 for: indexPath
+             ) as? SearchHeaderView else {
+                 return UICollectionReusableView()
+             }
+             header.delegate = self
+             return header
+         }
 
-    func collectionView(
-        _ collectionView: UICollectionView,
-        layout collectionViewLayout: UICollectionViewLayout,
-        referenceSizeForFooterInSection section: Int
-    ) -> CGSize {
+         if kind == UICollectionView.elementKindSectionFooter {
+             guard let footer = collectionView.dequeueReusableSupplementaryView(
+                 ofKind: kind,
+                 withReuseIdentifier: LoadingFooterView.reuseIdentifier,
+                 for: indexPath
+             ) as? LoadingFooterView else {
+                 return UICollectionReusableView()
+             }
+             isLoadingMore ? footer.startAnimating() : footer.stopAnimating()
+             return footer
+         }
+
+         return UICollectionReusableView()
+     }
+
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
         return isLoadingMore ? CGSize(width: collectionView.bounds.width, height: 60) : .zero
     }
     
 //    cell (coll card) size
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 //        margin
         let width = collectionView.bounds.width - 28
         let height: CGFloat = 280
@@ -131,13 +140,10 @@ extension FeedViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
 //    cell spacing
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 24
     }
 
-    // infinite scroll
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height
@@ -148,4 +154,16 @@ extension FeedViewController: UICollectionViewDataSource, UICollectionViewDelega
             presenter?.loadMoreVideos()
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.bounds.width, height: 56)
+    }
+    
+    func didSubmitSearch(query: String) {
+        presenter?.didTapSearch(query: query)
+    }
 }
+
+

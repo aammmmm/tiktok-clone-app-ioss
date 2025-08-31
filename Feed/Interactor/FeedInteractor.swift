@@ -11,38 +11,48 @@ import Moya
 
 final class FeedInteractor: FeedPresenterToInteractor {
     weak var output: FeedInteractorToPresenter?
-    private let provider = MoyaProvider<APIProviders>()
+//    private let provider = MoyaProvider<APIProviders>()
     private var cache: [VideoEntity] = []
     private var isFetching = false
 
     // MARK: - Fetch Videos (API + Cache)
     func fetchVideos(page: Int) {
         output?.didStartFetchingVideos()
-
-        provider.request(.getVideos) { [weak self] result in
-            guard let self = self else { return }
-            switch result {
-            case .success(let response):
-                do {
-                    let videos = try JSONDecoder().decode([VideoEntity].self, from: response.data)
-                    if page == 1 {
-                        self.cache = videos
-                    } else {
-                        self.cache.append(contentsOf: videos)
+//        closure ini pake weak untuk mencegah reference cycle, jadi weak memastikan self ga nambah itungan reference
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
+            APIService.shared.request(.getVideos) { [weak self] result in
+                guard let self = self else { return }
+                switch result {
+                case .success(let response):
+                    do {
+                        let videos = try JSONDecoder().decode([VideoEntity].self, from: response.data)
+                        if page == 1 {
+                            self.cache = videos
+                        } else {
+                            self.cache.append(contentsOf: videos)
+                        }
+                        self.output?.didFetchVideos(FeedEntityMapper.mapList(videos), page: page)
+                    } catch {
+                        self.output?.didFailToFetchVideos(error)
                     }
-                    self.output?.didFetchVideos(FeedEntityMapper.mapList(videos), page: page)
-                } catch {
+                case .failure(let error):
                     self.output?.didFailToFetchVideos(error)
                 }
-            case .failure(let error):
-                self.output?.didFailToFetchVideos(error)
             }
         }
     }
 
-    // MARK: - Get Video By Index
+//    ngambil video atau data by index
     func videoEntity(at index: Int) -> VideoEntity? {
         guard index >= 0 && index < cache.count else { return nil }
         return cache[index]
+    }
+    
+    func searchVideos(query: String) {
+        let results = cache.filter { video in
+            video.title.lowercased().contains(query.lowercased())
+            || video.author.lowercased().contains(query.lowercased())
+        }
+        output?.didSearchVideos(FeedEntityMapper.mapList(results))
     }
 }

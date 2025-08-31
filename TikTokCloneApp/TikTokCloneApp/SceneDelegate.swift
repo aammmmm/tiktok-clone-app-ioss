@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         self.window = window
         
-        // set route view
+        // set root view
         let feedVC = FeedRouter.createModule()
         let rootNavigationController = UINavigationController(rootViewController: feedVC)
         window.rootViewController = rootNavigationController
@@ -28,12 +28,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         // Routing setup
         AppRouter.route = { destination in
+            print("DEBUG: Routing to \(destination)")
             switch destination {
             case .feed:
+                print("DEBUG: Feed route triggered")
                 let feedVC = FeedRouter.createModule()
                 UIApplication.topViewController()?.navigationController?.pushViewController(feedVC, animated: true)
                 
             case .player(let video):
+                print("DEBUG: Video route triggered")
                 let playerVC = PlayerRouter.createModule(with: video)
                 UIApplication.topViewController()?.navigationController?.pushViewController(playerVC, animated: true)
             default:

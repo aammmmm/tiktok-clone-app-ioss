@@ -148,13 +148,11 @@
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="enk-lL-dee" secondAttribute="trailing" id="4eq-Sj-FRx"/>
-                        <constraint firstAttribute="bottom" secondItem="enk-lL-dee" secondAttribute="bottom" id="MLK-Kh-SIG"/>
+                        <constraint firstItem="enk-lL-dee" firstAttribute="top" secondItem="nvG-Jj-5SP" secondAttribute="top" id="BAT-zI-dg6"/>
+                        <constraint firstAttribute="bottom" secondItem="enk-lL-dee" secondAttribute="bottom" id="E5W-iY-UFG"/>
                         <constraint firstItem="enk-lL-dee" firstAttribute="width" secondItem="nvG-Jj-5SP" secondAttribute="width" id="RdF-PN-YDl"/>
-                        <constraint firstAttribute="height" constant="759" id="TE3-Q5-T6B"/>
+                        <constraint firstItem="enk-lL-dee" firstAttribute="leading" secondItem="nvG-Jj-5SP" secondAttribute="leading" id="TE5-Zb-uCN"/>
                         <constraint firstItem="enk-lL-dee" firstAttribute="centerY" secondItem="nvG-Jj-5SP" secondAttribute="centerY" id="d1K-Se-Sd7"/>
-                        <constraint firstAttribute="width" constant="393" id="rAl-ax-KlT"/>
-                        <constraint firstItem="enk-lL-dee" firstAttribute="leading" secondItem="nvG-Jj-5SP" secondAttribute="leading" id="slW-p5-Yp8"/>
-                        <constraint firstItem="enk-lL-dee" firstAttribute="top" secondItem="nvG-Jj-5SP" secondAttribute="top" id="wUe-qP-rVU"/>
                     </constraints>
                 </scrollView>
             </subviews>

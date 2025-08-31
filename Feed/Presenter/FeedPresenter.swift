@@ -12,24 +12,22 @@ import Core
 final class FeedPresenter {
     weak var view: FeedPresenterToView?
     var interactor: FeedPresenterToInteractor?
-    var router: FeedViewToRouter?
+    var router: FeedPresenterToRouter?
 
     private var page = 1
     private var isLoading = false
+    private var isSearching = false
 }
 
 extension FeedPresenter: FeedViewToPresenter {
     func viewDidLoad() {
-        print("DEBUG: viewDidLoad Called")
-        isLoading = true
         page = 1
-        view?.showLoading(true)
         interactor?.fetchVideos(page: page)
     }
 
 //    triggered saat scroll abis, lalu fetch
     func loadMoreVideos() {
-        guard !isLoading else {
+        guard !isLoading, !isSearching else {
             return
         }
         isLoading = true
@@ -40,9 +38,20 @@ extension FeedPresenter: FeedViewToPresenter {
 
     func didSelectItem(at index: Int) {
         guard let video = interactor?.videoEntity(at: index),
-              let view = view else { return }
+                let view = view else { return }
         
         router?.navigateToPlayer(from: view, with: video)
+    }
+    
+    func didTapSearch(query: String) {
+        if query.isEmpty {
+            isSearching = false
+            page = 1
+            interactor?.fetchVideos(page: page)
+        } else {
+            isSearching = true
+            interactor?.searchVideos(query: query)
+        }
     }
 }
 
@@ -63,6 +72,10 @@ extension FeedPresenter: FeedInteractorToPresenter {
         isLoading = false
         view?.showLoading(false)
         view?.showError(error.localizedDescription)
+    }
+    
+    func didSearchVideos(_ videos: [FeedEntity]) {
+        view?.showVideos(videos)
     }
 }
 

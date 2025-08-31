@@ -7,6 +7,7 @@
 
 import UIKit
 
+// helper class untuk nemuin VC yg aktif (top view), supaya navigasi atau push bisa dilakuin
 extension UIApplication {
     public static func topViewController(
         _ base: UIViewController? = UIApplication.shared.connectedScenes
