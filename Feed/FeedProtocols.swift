@@ -12,6 +12,7 @@ protocol FeedViewToPresenter: AnyObject {
     func viewDidLoad()
     func loadMoreVideos()
     func didSelectItem(at index: Int)
+    func didTapSearch(query: String)
 }
 
 protocol FeedPresenterToView: AnyObject {
@@ -24,12 +25,14 @@ protocol FeedPresenterToView: AnyObject {
 protocol FeedPresenterToInteractor: AnyObject {
     func fetchVideos(page: Int)
     func videoEntity(at index: Int) -> VideoEntity?   // ambil dari cache
+    func searchVideos(query: String)
 }
 
 protocol FeedInteractorToPresenter: AnyObject {
     func didStartFetchingVideos()
     func didFetchVideos(_ videos: [FeedEntity], page: Int)
     func didFailToFetchVideos(_ error: Error)
+    func didSearchVideos(_ videos: [FeedEntity])
 }
 
 protocol FeedPresenterToRouter: AnyObject {

@@ -16,6 +16,7 @@ final class FeedPresenter {
 
     private var page = 1
     private var isLoading = false
+    private var isSearching = false
 }
 
 extension FeedPresenter: FeedViewToPresenter {
@@ -26,7 +27,7 @@ extension FeedPresenter: FeedViewToPresenter {
 
 //    triggered saat scroll abis, lalu fetch
     func loadMoreVideos() {
-        guard !isLoading else {
+        guard !isLoading, !isSearching else {
             return
         }
         isLoading = true
@@ -40,6 +41,17 @@ extension FeedPresenter: FeedViewToPresenter {
                 let view = view else { return }
         
         router?.navigateToPlayer(from: view, with: video)
+    }
+    
+    func didTapSearch(query: String) {
+        if query.isEmpty {
+            isSearching = false
+            page = 1
+            interactor?.fetchVideos(page: page)
+        } else {
+            isSearching = true
+            interactor?.searchVideos(query: query)
+        }
     }
 }
 
@@ -60,6 +72,10 @@ extension FeedPresenter: FeedInteractorToPresenter {
         isLoading = false
         view?.showLoading(false)
         view?.showError(error.localizedDescription)
+    }
+    
+    func didSearchVideos(_ videos: [FeedEntity]) {
+        view?.showVideos(videos)
     }
 }
 

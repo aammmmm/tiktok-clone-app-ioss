@@ -47,4 +47,12 @@ final class FeedInteractor: FeedPresenterToInteractor {
         guard index >= 0 && index < cache.count else { return nil }
         return cache[index]
     }
+    
+    func searchVideos(query: String) {
+        let results = cache.filter { video in
+            video.title.lowercased().contains(query.lowercased())
+            || video.author.lowercased().contains(query.lowercased())
+        }
+        output?.didSearchVideos(FeedEntityMapper.mapList(results))
+    }
 }
