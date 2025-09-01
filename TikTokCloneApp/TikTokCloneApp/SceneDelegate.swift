@@ -9,6 +9,7 @@ import UIKit
 import Core
 import Feed
 import Player
+import Post
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
@@ -19,31 +20,59 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         self.window = window
-        
-        // set root view
+
+        // --- Feed ---
         let feedVC = FeedRouter.createModule()
-        let rootNavigationController = UINavigationController(rootViewController: feedVC)
-        window.rootViewController = rootNavigationController
+        let feedNav = UINavigationController(rootViewController: feedVC)
+        feedNav.tabBarItem = UITabBarItem(title: "Feed",
+                                          image: UIImage(systemName: "house"),
+                                          tag: 0)
+
+        // --- Post ---
+        let postVC = PostRouter.createModule()
+        let postNav = UINavigationController(rootViewController: postVC)
+        postNav.tabBarItem = UITabBarItem(title: "Post",
+                                          image: UIImage(systemName: "plus.square"),
+                                          tag: 1)
+
+        // --- Profile / Settings (opsional) ---
+        let profileVC = UIViewController()
+        profileVC.view.backgroundColor = .systemBackground
+        profileVC.title = "Profile"
+        let profileNav = UINavigationController(rootViewController: profileVC)
+        profileNav.tabBarItem = UITabBarItem(title: "Profile",
+                                             image: UIImage(systemName: "person"),
+                                             tag: 2)
+
+        // --- Tab Bar Controller ---
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [feedNav, postNav, profileNav]
+
+        window.rootViewController = tabBarController
         window.makeKeyAndVisible()
-        
+
         // Routing setup
         AppRouter.route = { destination in
             print("DEBUG: Routing to \(destination)")
             switch destination {
             case .feed:
-                print("DEBUG: Feed route triggered")
-                let feedVC = FeedRouter.createModule()
-                UIApplication.topViewController()?.navigationController?.pushViewController(feedVC, animated: true)
-                
+                tabBarController.selectedIndex = 0
+
+            case .post:
+                tabBarController.selectedIndex = 1
+
             case .player(let video):
                 print("DEBUG: Video route triggered")
                 let playerVC = PlayerRouter.createModule(with: video)
                 UIApplication.topViewController()?.navigationController?.pushViewController(playerVC, animated: true)
+
             default:
                 print("Route Not Found")
             }
         }
     }
+}
+
 
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -74,6 +103,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
-
-}
 

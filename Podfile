@@ -26,7 +26,13 @@ target 'Player' do
   pod 'netfox'
 end
 
+target 'Post' do
+  project 'Post/Post.xcodeproj'
+  common_pods
+  pod 'netfox'
+end
+
 target 'Core' do
   project 'Core/Core.xcodeproj'
-  pod 'Moya'
+  common_pods
 end

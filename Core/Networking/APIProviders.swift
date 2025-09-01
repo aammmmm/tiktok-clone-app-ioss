@@ -10,9 +10,9 @@ import Moya
 // list endpoint
 public enum APIProviders {
     case getVideos
-//    case postComment(videoId: String, commentText: String)
+    case getPosts
+    case createPost(video: VideoEntity)
 }
-
 
 extension APIProviders: TargetType {
     public var baseURL: URL {
@@ -24,23 +24,43 @@ extension APIProviders: TargetType {
         switch self {
         case .getVideos:
             return ""
+        case .getPosts, .createPost:
+            return "/posts"
         }
     }
     
-    public var method: Moya.Method { .get }
+    public var method: Moya.Method {
+        switch self {
+        case .getVideos, .getPosts:
+            return .get
+        case .createPost:
+            return .post
+        }
+    }
     
 //    specify request (body, param, objects)
     public var task: Task {
         switch self {
-        case .getVideos:
+        case .getVideos, .getPosts:
             return .requestPlain
-//        case .postComment(_, let commentText):
-//            let parameters: [String: Any] = ["text": commentText]
-//            return .requestParameters(parameters: parameters, encoding: JSONEncoding.default)
+        case .createPost(let video):
+            let params: [String: Any] = [
+                "id": video.id,
+                "title": video.title,
+                "thumbnailUrl": video.thumbnailUrl,
+                "duration": video.duration,
+                "uploadTime": video.uploadTime,
+                "views": video.views,
+                "author": video.author,
+                "videoUrl": video.videoUrl,
+                "description": video.description,
+                "subscriber": video.subscriber,
+                "isLive": video.isLive
+            ]
+            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
         }
     }
     
-//    headers
     public var headers: [String: String]? {
         ["Content-Type": "application/json"]
     }

@@ -10,6 +10,7 @@ import Foundation
 public enum AppRoute {
     case feed
     case player(VideoEntity)
+    case post
 }
 
 public class AppRouter {

@@ -5,6 +5,9 @@
       location = "group:TikTokCloneApp/TikTokCloneApp.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Post/Post.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "container:Core/Core.xcodeproj">
    </FileRef>
    <FileRef
@@ -15,5 +18,8 @@
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Core/Core.xcodeproj">
    </FileRef>
 </Workspace>

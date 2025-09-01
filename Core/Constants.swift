@@ -10,6 +10,6 @@ import Foundation
 enum Constants {
     enum API {
 //        static let baseURL = "https://www.apirequest.in/video/api"
-        static let baseURL = "http://localhost:3000"
+        static let baseURL = "http://localhost:3001"
     }
 }

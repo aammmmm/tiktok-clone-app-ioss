@@ -44,8 +44,7 @@ final class SearchHeaderView: UICollectionReusableView {
     }
 
     @objc private func textDidChange(_ textField: UITextField) {
-        // ❌ Tidak menutup keyboard, hanya update presenter kalau mau real-time
-        // Kalau hanya search saat submit, baris ini bisa dihapus
+       
     }
 }
 
