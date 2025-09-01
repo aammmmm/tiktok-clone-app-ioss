@@ -23,6 +23,7 @@ targets:
       - target: Core
       - target: Feed
       - target: Player
+      - target: Post
     settings:
       base:
         OTHER_LDFLAGS: "$(inherited) -ObjC"
@@ -46,6 +47,16 @@ targets:
     settings:
       base:
         OTHER_LDFLAGS: "$(inherited) -ObjC"
+  Player:
+    type: framework
+    platform: iOS
+    sources: [Post/Sources]
+    resources: [Post/Resources]
+    dependencies:
+      - target: Core
+    settings:
+      base:
+        OTHER_LDFLAGS: "$(inherited) -ObjC"
   Core:
     type: framework
     platform: iOS
@@ -55,7 +66,6 @@ targets:
       base:
         OTHER_LDFLAGS: "$(inherited) -ObjC"
 
-# Workspace
 workspaces:
   TikTokCloneiOSs:
     projects:
@@ -63,4 +73,5 @@ workspaces:
       - Feed
       - Player
       - Core
+      - Post
 
