@@ -52,7 +52,7 @@ extension SearchHeaderView: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         let query = textField.text ?? ""
         delegate?.didSubmitSearch(query: query)
-        textField.resignFirstResponder() // ✅ Keyboard baru ditutup saat user tekan Search
+        textField.resignFirstResponder()
         return true
     }
 }

@@ -12,6 +12,9 @@ import Core
 final class PostViewController: UIViewController, PostPresenterToView {
     var presenter: PostViewToPresenter?
     
+    static let nibName = "PostCollectionViewCell"
+    static let reuseIdentifier = "PostCollectionViewCell"
+    
     private var collectionView: UICollectionView!
     private var posts: [VideoEntity] = []
     private var isLoadingMore = false
@@ -62,6 +65,7 @@ final class PostViewController: UIViewController, PostPresenterToView {
         )
     }
     
+//    declare nav modal sheet
     @objc private func didTapAdd() {
         let formVC = PostFormViewController()
         formVC.onSubmit = { [weak self] video in
@@ -72,7 +76,6 @@ final class PostViewController: UIViewController, PostPresenterToView {
         present(nav, animated: true)
     }
     
-    // MARK: - PostPresenterToView
     func showPosts(_ posts: [VideoEntity]) {
         self.posts = posts
         collectionView.reloadData()
@@ -91,9 +94,7 @@ final class PostViewController: UIViewController, PostPresenterToView {
     
     func showLoading(_ isLoading: Bool) {
         isLoadingMore = isLoading
-        if isLoading {
-            print("DEBUG: Loading posts...")
-        }
+        collectionView.reloadSections(IndexSet(integer: 0))
     }
     
     func showError(_ message: String) {
@@ -103,7 +104,7 @@ final class PostViewController: UIViewController, PostPresenterToView {
     }
 }
 
-// MARK: - CollectionView
+
 extension PostViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         posts.count

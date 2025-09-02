@@ -9,6 +9,7 @@
 import UIKit
 import Core
 
+// createModule sebagai factory untuk assemble seluruh modulenya saat dipanggil di sceneDelegate
 public final class FeedRouter: FeedPresenterToRouter {
     public static func createModule() -> UIViewController {
         let view = FeedViewController(nibName: "FeedViewController", bundle: Bundle(for: FeedViewController.self))

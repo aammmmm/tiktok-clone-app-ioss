@@ -80,7 +80,7 @@ extension PostPresenter: PostInteractorToPresenter {
 
     func didCreatePost(_ video: VideoEntity) {
         // langsung update ke UI (prepend)
-        var newList = [video]
+        let newList = [video]
         view?.appendPosts(newList)
     }
 

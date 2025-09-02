@@ -8,7 +8,6 @@
 import UIKit
 import Core
 
-// MARK: - View <-> Presenter
 protocol PostViewToPresenter {
     func viewDidLoad()
     func loadMorePosts()
@@ -24,7 +23,6 @@ protocol PostPresenterToView: AnyObject {
     func showError(_ message: String)
 }
 
-// MARK: - Presenter <-> Interactor
 protocol PostPresenterToInteractor {
     func fetchPosts(page: Int)
     func postEntity(at index: Int) -> VideoEntity?
@@ -41,7 +39,6 @@ protocol PostInteractorToPresenter: AnyObject {
     func didFailToCreatePost(_ error: Error)
 }
 
-// MARK: - Router
 protocol PostPresenterToRouter: AnyObject {
     func navigateToPlayer(from view: PostPresenterToView, with video: VideoEntity)
     func navigateToCreateForm(from view: PostPresenterToView?)

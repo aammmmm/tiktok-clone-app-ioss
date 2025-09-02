@@ -15,8 +15,8 @@ class FeedViewController: UIViewController, FeedPresenterToView {
     
     private var videos: [FeedEntity] = []
     private var isLoadingMore = false
+    private let refreshControl = UIRefreshControl()
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
@@ -24,27 +24,31 @@ class FeedViewController: UIViewController, FeedPresenterToView {
     }
 
     private func setupCollectionView() {
-        let nib = UINib(nibName: "FeedTableCollectionViewCell", bundle: Bundle(for: FeedViewController.self))
+        let nib = UINib(nibName: FeedCollectionViewCell.nibName, bundle: Bundle(for: FeedViewController.self))
         
-        collectionView.register(nib, forCellWithReuseIdentifier: "FeedTableCollectionViewCell")
+        collectionView.register(nib, forCellWithReuseIdentifier: FeedCollectionViewCell.reuseIdentifier)
         collectionView.register(LoadingFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: LoadingFooterView.reuseIdentifier)
-        collectionView.register(
-            SearchHeaderView.self,
-            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
-            withReuseIdentifier: SearchHeaderView.reuseIdentifier
+        collectionView.register(SearchHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SearchHeaderView.reuseIdentifier
         )
 
         view.backgroundColor = UIColor(red: 245/255, green: 246/255, blue: 248/255, alpha: 1)
         collectionView.backgroundColor = .clear
         
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 60, right: 0)
+        collectionView.contentInsetAdjustmentBehavior = .always
+        
         collectionView.dataSource = self
         collectionView.delegate = self
+        
+        collectionView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(didPullToRefresh), for: .valueChanged)
     }
 
     // load data pertama kali / refresh
     func showVideos(_ videos: [FeedEntity]) {
         self.videos = videos
         collectionView.reloadData()
+        refreshControl.endRefreshing()
     }
 
 //    buat append data saat discroll ke view (pagination)
@@ -60,13 +64,26 @@ class FeedViewController: UIViewController, FeedPresenterToView {
         print("End: \(end)")
         print("Index Paths: \(indexPaths)")
     }
+    
+    @objc private func didPullToRefresh() {
+        videos.removeAll()
+        collectionView.reloadData()
+        isLoadingMore = false
+
+        // Fetch data awal
+        presenter?.viewDidLoad()
+    }
 
     func showLoading(_ isLoading: Bool) {
         isLoadingMore = isLoading
         collectionView.reloadSections(IndexSet(integer: 0))
     }
 
-    func showError(_ message: String) { }
+    func showError(_ message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
+    }
 }
 
 extension FeedViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, SearchHeaderViewDelegate {
@@ -79,7 +96,7 @@ extension FeedViewController: UICollectionViewDataSource, UICollectionViewDelega
     // isi cell sesuai indexPath.item
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: "FeedTableCollectionViewCell",
+            withReuseIdentifier: FeedCollectionViewCell.reuseIdentifier,
             for: indexPath
         ) as? FeedCollectionViewCell else {
             return UICollectionViewCell()
@@ -94,10 +111,7 @@ extension FeedViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
 
     // header & footer (search bar + loading spinner)
-     func collectionView(
-         _ collectionView: UICollectionView,
-         viewForSupplementaryElementOfKind kind: String,
-         at indexPath: IndexPath
+     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath
      ) -> UICollectionReusableView {
          if kind == UICollectionView.elementKindSectionHeader {
              guard let header = collectionView.dequeueReusableSupplementaryView(
@@ -165,5 +179,3 @@ extension FeedViewController: UICollectionViewDataSource, UICollectionViewDelega
         presenter?.didTapSearch(query: query)
     }
 }
-
-

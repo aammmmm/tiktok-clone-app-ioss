@@ -10,7 +10,6 @@ import Core
 
 final class PostFormViewController: UIViewController {
     
-    // MARK: - UI Components
     private let scrollView = UIScrollView()
     private let contentView = UIStackView()
     
@@ -26,16 +25,14 @@ final class PostFormViewController: UIViewController {
     private let isLiveSwitch = UISwitch()
     private let submitButton = UIButton(type: .system)
     
-    // Callback ke parent
+//    Callback ke parent
     var onSubmit: ((VideoEntity) -> Void)?
     
-    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
     
-    // MARK: - Setup UI
     private func setupUI() {
         view.backgroundColor = .systemBackground
         title = "Add Video"
@@ -61,7 +58,6 @@ final class PostFormViewController: UIViewController {
             contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor, constant: -32)
         ])
         
-        // Tambahkan field
         addTextField(titleField, placeholder: "Title")
         addTextField(thumbnailField, placeholder: "Thumbnail URL")
         addTextField(durationField, placeholder: "Duration")
@@ -90,7 +86,6 @@ final class PostFormViewController: UIViewController {
         liveStack.spacing = 8
         contentView.addArrangedSubview(liveStack)
         
-        // Submit button
         submitButton.setTitle("Submit", for: .normal)
         submitButton.titleLabel?.font = .boldSystemFont(ofSize: 16)
         submitButton.addTarget(self, action: #selector(handleSubmit), for: .touchUpInside)
@@ -103,7 +98,6 @@ final class PostFormViewController: UIViewController {
         contentView.addArrangedSubview(textField)
     }
     
-    // MARK: - Actions
     @objc private func handleSubmit() {
         let video = VideoEntity(
             id: UUID().uuidString,
@@ -122,10 +116,8 @@ final class PostFormViewController: UIViewController {
         onSubmit?(video)
         dismiss(animated: true, completion: nil)
     }
-
 }
 
-// MARK: - UILabel Convenience
 private extension UILabel {
     convenience init(text: String) {
         self.init()

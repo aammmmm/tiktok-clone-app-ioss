@@ -1,5 +1,5 @@
 //
-//  FeedTableCollectionViewCell.swift
+//  FeedCollectionViewCell.swift
 //  Feed
 //
 //  Created by Abraham Putra Lukas on 22/08/25.
@@ -10,6 +10,8 @@ import Kingfisher
 import Core
 
 final class FeedCollectionViewCell: UICollectionViewCell {
+    static let nibName = "FeedCollectionViewCell"
+    static let reuseIdentifier = "FeedCollectionViewCell"
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet private weak var thumbnailImageView: UIImageView!

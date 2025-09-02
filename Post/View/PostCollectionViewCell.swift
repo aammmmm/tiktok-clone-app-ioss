@@ -1,8 +1,8 @@
 //
-//  FeedTableCollectionViewCell.swift
-//  Feed
+//  PostCollectionViewCell.swift
+//  Post
 //
-//  Created by Abraham Putra Lukas on 22/08/25.
+//  Created by Abraham Putra Lukas on 01/09/25.
 //
 
 import UIKit
@@ -10,7 +10,7 @@ import Kingfisher
 import Core
 
 public final class PostCollectionViewCell: UICollectionViewCell {
-    static let reuseIdentifier = "SearchHeaderView"
+    static let reuseIdentifier = "PostCollectionViewCell"
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet private weak var thumbnailImageView: UIImageView!

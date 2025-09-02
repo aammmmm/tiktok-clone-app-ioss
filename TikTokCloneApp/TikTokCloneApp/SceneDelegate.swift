@@ -21,21 +21,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         self.window = window
 
-        // --- Feed ---
         let feedVC = FeedRouter.createModule()
         let feedNav = UINavigationController(rootViewController: feedVC)
         feedNav.tabBarItem = UITabBarItem(title: "Feed",
                                           image: UIImage(systemName: "house"),
                                           tag: 0)
 
-        // --- Post ---
         let postVC = PostRouter.createModule()
         let postNav = UINavigationController(rootViewController: postVC)
         postNav.tabBarItem = UITabBarItem(title: "Post",
                                           image: UIImage(systemName: "plus.square"),
                                           tag: 1)
 
-        // --- Profile / Settings (opsional) ---
         let profileVC = UIViewController()
         profileVC.view.backgroundColor = .systemBackground
         profileVC.title = "Profile"
@@ -44,36 +41,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                                              image: UIImage(systemName: "person"),
                                              tag: 2)
 
-        // --- Tab Bar Controller ---
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = [feedNav, postNav, profileNav]
 
         window.rootViewController = tabBarController
         window.makeKeyAndVisible()
 
-        // Routing setup
         AppRouter.route = { destination in
-            print("DEBUG: Routing to \(destination)")
             switch destination {
             case .feed:
                 tabBarController.selectedIndex = 0
-
             case .post:
                 tabBarController.selectedIndex = 1
-
             case .player(let video):
-                print("DEBUG: Video route triggered")
                 let playerVC = PlayerRouter.createModule(with: video)
                 UIApplication.topViewController()?.navigationController?.pushViewController(playerVC, animated: true)
-
             default:
                 print("Route Not Found")
             }
         }
     }
 }
-
-
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
