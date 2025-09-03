@@ -8,10 +8,10 @@
 import Foundation
 import Core
 import Moya
+import DataService
 
 final class FeedInteractor: FeedPresenterToInteractor {
     weak var output: FeedInteractorToPresenter?
-//    private let provider = MoyaProvider<APIProviders>()
     private var cache: [VideoEntity] = []
     private var isFetching = false
 

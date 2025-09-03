@@ -6,6 +6,7 @@
 //
 
 import Moya
+import Core
 
 public enum APIProviders {
     case getVideos

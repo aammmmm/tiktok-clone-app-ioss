@@ -33,3 +33,13 @@ target 'Core' do
   project 'Core/Core.xcodeproj'
   common_pods
 end
+
+target 'DataService' do
+  project 'DataService/DataService.xcodeproj'
+  common_pods
+end
+
+target 'Worker' do
+  project 'Worker/Worker.xcodeproj'
+  common_pods
+end

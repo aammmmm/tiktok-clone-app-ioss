@@ -14,9 +14,15 @@
       location = "group:Player/Player.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Worker/Worker.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Feed/Feed.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:DataService/DataService.xcodeproj">
    </FileRef>
 </Workspace>

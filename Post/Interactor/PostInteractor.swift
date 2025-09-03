@@ -7,6 +7,7 @@
 
 import Foundation
 import Core
+import DataService
 
 final class PostInteractor: PostPresenterToInteractor {
     weak var output: PostInteractorToPresenter?

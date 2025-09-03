@@ -7,105 +7,81 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8C84B32ED0F4F608A3727A36 /* Pods_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB2C3C14FF81FD1C28F6915 /* Pods_Core.framework */; };
+		339C1F4FC3AB8D5ADF05049D /* Pods_Worker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64D5C1A363CCB6E5714F2F0C /* Pods_Worker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		305F939E2E57185600461071 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3750CD9A877C11551DB06113 /* Pods-Core.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.debug.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.debug.xcconfig"; sourceTree = "<group>"; };
-		6BB2C3C14FF81FD1C28F6915 /* Pods_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4DDC637A906DACF56A39FDB /* Pods-Core.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.release.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.release.xcconfig"; sourceTree = "<group>"; };
+		0E854CD2DD0E8F40573CAEB0 /* Pods-Worker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Worker.debug.xcconfig"; path = "Target Support Files/Pods-Worker/Pods-Worker.debug.xcconfig"; sourceTree = "<group>"; };
+		1D8B152791CD3333A9C3AF35 /* Pods-Worker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Worker.release.xcconfig"; path = "Target Support Files/Pods-Worker/Pods-Worker.release.xcconfig"; sourceTree = "<group>"; };
+		30C4AC352E681A5500DFABEB /* Worker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Worker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64D5C1A363CCB6E5714F2F0C /* Pods_Worker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Worker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		305F93A52E57185600461071 /* Exceptions for "Core" folder in "Core" target */ = {
+		30C4AC3A2E681A5500DFABEB /* Exceptions for "Worker" folder in "Worker" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			publicHeaders = (
-				Core.h,
+				Worker.h,
 			);
-			target = 305F939D2E57185600461071 /* Core */;
+			target = 30C4AC342E681A5500DFABEB /* Worker */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		304665E42E5C551E00DFCE16 /* Helper */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Helper;
-			sourceTree = "<group>";
-		};
-		305F93A02E57185600461071 /* Core */ = {
+		30C4AC372E681A5500DFABEB /* Worker */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				305F93A52E57185600461071 /* Exceptions for "Core" folder in "Core" target */,
+				30C4AC3A2E681A5500DFABEB /* Exceptions for "Worker" folder in "Worker" target */,
 			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		305F945A2E57215500461071 /* Networking */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Networking;
-			sourceTree = "<group>";
-		};
-		305F94712E57236500461071 /* Model */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Model;
-			sourceTree = "<group>";
-		};
-		30C4AA052E64BB3F00DFABEB /* View */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = View;
+			path = Worker;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		305F939B2E57185600461071 /* Frameworks */ = {
+		30C4AC322E681A5500DFABEB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C84B32ED0F4F608A3727A36 /* Pods_Core.framework in Frameworks */,
+				339C1F4FC3AB8D5ADF05049D /* Pods_Worker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		05DEC0FFD6E630A4077214DA /* Pods */ = {
+		30C4AC2B2E681A5500DFABEB = {
 			isa = PBXGroup;
 			children = (
-				3750CD9A877C11551DB06113 /* Pods-Core.debug.xcconfig */,
-				F4DDC637A906DACF56A39FDB /* Pods-Core.release.xcconfig */,
+				30C4AC372E681A5500DFABEB /* Worker */,
+				30C4AC362E681A5500DFABEB /* Products */,
+				87080904E5C06990AB02ACCE /* Pods */,
+				C1B54AA03B03375146681C84 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		30C4AC362E681A5500DFABEB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				30C4AC352E681A5500DFABEB /* Worker.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		87080904E5C06990AB02ACCE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0E854CD2DD0E8F40573CAEB0 /* Pods-Worker.debug.xcconfig */,
+				1D8B152791CD3333A9C3AF35 /* Pods-Worker.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../Pods;
 			sourceTree = "<group>";
 		};
-		305F93942E57185600461071 = {
+		C1B54AA03B03375146681C84 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				30C4AA052E64BB3F00DFABEB /* View */,
-				304665E42E5C551E00DFCE16 /* Helper */,
-				305F94712E57236500461071 /* Model */,
-				305F945A2E57215500461071 /* Networking */,
-				305F93A02E57185600461071 /* Core */,
-				305F939F2E57185600461071 /* Products */,
-				05DEC0FFD6E630A4077214DA /* Pods */,
-				C37086378CB82F43B33135F0 /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		305F939F2E57185600461071 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				305F939E2E57185600461071 /* Core.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C37086378CB82F43B33135F0 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6BB2C3C14FF81FD1C28F6915 /* Pods_Core.framework */,
+				64D5C1A363CCB6E5714F2F0C /* Pods_Worker.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -113,7 +89,7 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		305F93992E57185600461071 /* Headers */ = {
+		30C4AC302E681A5500DFABEB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -123,67 +99,63 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		305F939D2E57185600461071 /* Core */ = {
+		30C4AC342E681A5500DFABEB /* Worker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 305F93A62E57185600461071 /* Build configuration list for PBXNativeTarget "Core" */;
+			buildConfigurationList = 30C4AC3B2E681A5500DFABEB /* Build configuration list for PBXNativeTarget "Worker" */;
 			buildPhases = (
-				9C09B6420DBE3C5E0880EDE2 /* [CP] Check Pods Manifest.lock */,
-				305F93992E57185600461071 /* Headers */,
-				305F939A2E57185600461071 /* Sources */,
-				305F939B2E57185600461071 /* Frameworks */,
-				305F939C2E57185600461071 /* Resources */,
+				CA32211CECACFDF7BA00D5CC /* [CP] Check Pods Manifest.lock */,
+				30C4AC302E681A5500DFABEB /* Headers */,
+				30C4AC312E681A5500DFABEB /* Sources */,
+				30C4AC322E681A5500DFABEB /* Frameworks */,
+				30C4AC332E681A5500DFABEB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				304665E42E5C551E00DFCE16 /* Helper */,
-				305F93A02E57185600461071 /* Core */,
-				305F945A2E57215500461071 /* Networking */,
-				305F94712E57236500461071 /* Model */,
-				30C4AA052E64BB3F00DFABEB /* View */,
+				30C4AC372E681A5500DFABEB /* Worker */,
 			);
-			name = Core;
-			productName = Core;
-			productReference = 305F939E2E57185600461071 /* Core.framework */;
+			name = Worker;
+			productName = Worker;
+			productReference = 30C4AC352E681A5500DFABEB /* Worker.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		305F93952E57185600461071 /* Project object */ = {
+		30C4AC2C2E681A5500DFABEB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
-					305F939D2E57185600461071 = {
+					30C4AC342E681A5500DFABEB = {
 						CreatedOnToolsVersion = 16.0;
 					};
 				};
 			};
-			buildConfigurationList = 305F93982E57185600461071 /* Build configuration list for PBXProject "Core" */;
+			buildConfigurationList = 30C4AC2F2E681A5500DFABEB /* Build configuration list for PBXProject "Worker" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 305F93942E57185600461071;
+			mainGroup = 30C4AC2B2E681A5500DFABEB;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 305F939F2E57185600461071 /* Products */;
+			productRefGroup = 30C4AC362E681A5500DFABEB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				305F939D2E57185600461071 /* Core */,
+				30C4AC342E681A5500DFABEB /* Worker */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		305F939C2E57185600461071 /* Resources */ = {
+		30C4AC332E681A5500DFABEB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -193,7 +165,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9C09B6420DBE3C5E0880EDE2 /* [CP] Check Pods Manifest.lock */ = {
+		CA32211CECACFDF7BA00D5CC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -208,7 +180,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Core-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Worker-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -218,7 +190,7 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		305F939A2E57185600461071 /* Sources */ = {
+		30C4AC312E681A5500DFABEB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -228,9 +200,9 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		305F93A72E57185600461071 /* Debug */ = {
+		30C4AC3C2E681A5500DFABEB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3750CD9A877C11551DB06113 /* Pods-Core.debug.xcconfig */;
+			baseConfigurationReference = 0E854CD2DD0E8F40573CAEB0 /* Pods-Worker.debug.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -252,7 +224,7 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = Aam.Core;
+				PRODUCT_BUNDLE_IDENTIFIER = Aam.Worker;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -262,9 +234,9 @@
 			};
 			name = Debug;
 		};
-		305F93A82E57185600461071 /* Release */ = {
+		30C4AC3D2E681A5500DFABEB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F4DDC637A906DACF56A39FDB /* Pods-Core.release.xcconfig */;
+			baseConfigurationReference = 1D8B152791CD3333A9C3AF35 /* Pods-Worker.release.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -286,7 +258,7 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = Aam.Core;
+				PRODUCT_BUNDLE_IDENTIFIER = Aam.Worker;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -296,7 +268,7 @@
 			};
 			name = Release;
 		};
-		305F93A92E57185600461071 /* Debug */ = {
+		30C4AC3E2E681A5500DFABEB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -362,7 +334,7 @@
 			};
 			name = Debug;
 		};
-		305F93AA2E57185600461071 /* Release */ = {
+		30C4AC3F2E681A5500DFABEB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -424,25 +396,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		305F93982E57185600461071 /* Build configuration list for PBXProject "Core" */ = {
+		30C4AC2F2E681A5500DFABEB /* Build configuration list for PBXProject "Worker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				305F93A92E57185600461071 /* Debug */,
-				305F93AA2E57185600461071 /* Release */,
+				30C4AC3E2E681A5500DFABEB /* Debug */,
+				30C4AC3F2E681A5500DFABEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		305F93A62E57185600461071 /* Build configuration list for PBXNativeTarget "Core" */ = {
+		30C4AC3B2E681A5500DFABEB /* Build configuration list for PBXNativeTarget "Worker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				305F93A72E57185600461071 /* Debug */,
-				305F93A82E57185600461071 /* Release */,
+				30C4AC3C2E681A5500DFABEB /* Debug */,
+				30C4AC3D2E681A5500DFABEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 305F93952E57185600461071 /* Project object */;
+	rootObject = 30C4AC2C2E681A5500DFABEB /* Project object */;
 }
