@@ -15,7 +15,6 @@ final class PostPresenter {
 
     private var page = 1
     private var isLoading = false
-    private var isSearching = false
 }
 
 extension PostPresenter: PostViewToPresenter {
@@ -25,7 +24,7 @@ extension PostPresenter: PostViewToPresenter {
     }
 
     func loadMorePosts() {
-        guard !isLoading, !isSearching else { return }
+        guard !isLoading else { return }
         isLoading = true
         page += 1
         interactor?.fetchPosts(page: page)
@@ -35,17 +34,6 @@ extension PostPresenter: PostViewToPresenter {
         guard let video = interactor?.postEntity(at: index),
               let view = view else { return }
         router?.navigateToPlayer(from: view, with: video)
-    }
-
-    func didTapSearch(query: String) {
-        if query.isEmpty {
-            isSearching = false
-            page = 1
-            interactor?.fetchPosts(page: page)
-        } else {
-            isSearching = true
-            interactor?.searchPosts(query: query)
-        }
     }
 
     func didTapCreate(video: VideoEntity) {
@@ -72,10 +60,6 @@ extension PostPresenter: PostInteractorToPresenter {
         isLoading = false
         view?.showLoading(false)
         view?.showError(error.localizedDescription)
-    }
-
-    func didSearchPosts(_ posts: [VideoEntity]) {
-        view?.showPosts(posts)
     }
 
     func didCreatePost(_ video: VideoEntity) {

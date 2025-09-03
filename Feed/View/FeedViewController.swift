@@ -64,15 +64,6 @@ class FeedViewController: UIViewController, FeedPresenterToView {
         print("End: \(end)")
         print("Index Paths: \(indexPaths)")
     }
-    
-    @objc private func didPullToRefresh() {
-        videos.removeAll()
-        collectionView.reloadData()
-        isLoadingMore = false
-
-        // Fetch data awal
-        presenter?.viewDidLoad()
-    }
 
     func showLoading(_ isLoading: Bool) {
         isLoadingMore = isLoading
@@ -84,6 +75,15 @@ class FeedViewController: UIViewController, FeedPresenterToView {
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         present(alert, animated: true)
     }
+    
+    @objc private func didPullToRefresh() {
+        videos.removeAll()
+        collectionView.reloadData()
+        isLoadingMore = false
+
+        presenter?.viewDidLoad()
+    }
+    
 }
 
 extension FeedViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, SearchHeaderViewDelegate {
@@ -173,6 +173,13 @@ extension FeedViewController: UICollectionViewDataSource, UICollectionViewDelega
                         layout collectionViewLayout: UICollectionViewLayout,
                         referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: collectionView.bounds.width, height: 56)
+    }
+    
+//    jarak antar header ke cell
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
     }
     
     func didSubmitSearch(query: String) {

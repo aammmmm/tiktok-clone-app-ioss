@@ -45,14 +45,6 @@ final class PostInteractor: PostPresenterToInteractor {
         return cache[index]
     }
 
-    func searchPosts(query: String) {
-        let results = cache.filter { video in
-            video.title.lowercased().contains(query.lowercased())
-            || video.author.lowercased().contains(query.lowercased())
-        }
-        output?.didSearchPosts(results)
-    }
-
     func createPost(video: VideoEntity) {
         // simulasi API call create post
         APIService.shared.request(.createPost(video: video)) { [weak self] result in

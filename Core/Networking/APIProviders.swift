@@ -7,7 +7,6 @@
 
 import Moya
 
-// list endpoint
 public enum APIProviders {
     case getVideos
     case getPosts

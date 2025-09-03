@@ -12,7 +12,6 @@ protocol PostViewToPresenter {
     func viewDidLoad()
     func loadMorePosts()
     func didSelectItem(at index: Int)
-    func didTapSearch(query: String)
     func didTapCreate(video: VideoEntity)
 }
 
@@ -26,7 +25,6 @@ protocol PostPresenterToView: AnyObject {
 protocol PostPresenterToInteractor {
     func fetchPosts(page: Int)
     func postEntity(at index: Int) -> VideoEntity?
-    func searchPosts(query: String)
     func createPost(video: VideoEntity)
 }
 
@@ -34,7 +32,6 @@ protocol PostInteractorToPresenter: AnyObject {
     func didStartFetchingPosts()
     func didFetchPosts(_ posts: [VideoEntity], page: Int)
     func didFailToFetchPosts(_ error: Error)
-    func didSearchPosts(_ posts: [VideoEntity])
     func didCreatePost(_ video: VideoEntity)
     func didFailToCreatePost(_ error: Error)
 }
