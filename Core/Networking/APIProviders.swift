@@ -10,7 +10,7 @@ import Moya
 public enum APIProviders {
     case getVideos
     case getPosts
-    case createPost(video: VideoEntity)
+    case createPost(CreatePostRequest)
 }
 
 extension APIProviders: TargetType {
@@ -38,25 +38,13 @@ extension APIProviders: TargetType {
     }
     
 //    specify request (body, param, objects)
+//    btter bikin jadi obj dulu
     public var task: Task {
         switch self {
         case .getVideos, .getPosts:
             return .requestPlain
-        case .createPost(let video):
-            let params: [String: Any] = [
-                "id": video.id,
-                "title": video.title,
-                "thumbnailUrl": video.thumbnailUrl,
-                "duration": video.duration,
-                "uploadTime": video.uploadTime,
-                "views": video.views,
-                "author": video.author,
-                "videoUrl": video.videoUrl,
-                "description": video.description,
-                "subscriber": video.subscriber,
-                "isLive": video.isLive
-            ]
-            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
+        case .createPost(let request):
+            return .requestJSONEncodable(request)
         }
     }
     

@@ -26,4 +26,5 @@ protocol PlayerInteractorToPresenter: AnyObject {
 
 protocol PlayerPresenterToRouter: AnyObject {
     static func createModule(with video: VideoEntity) -> PlayerViewController
+//    func navigateToNextPage(from view: PlayerPresenterToView?)
 }

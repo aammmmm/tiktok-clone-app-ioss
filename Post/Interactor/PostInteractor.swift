@@ -46,8 +46,9 @@ final class PostInteractor: PostPresenterToInteractor {
     }
 
     func createPost(video: VideoEntity) {
-        // simulasi API call create post
-        APIService.shared.request(.createPost(video: video)) { [weak self] result in
+        let request = CreatePostRequest(video: video)
+
+        APIService.shared.request(.createPost(request)) { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(_):

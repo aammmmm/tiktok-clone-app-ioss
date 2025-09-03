@@ -7,8 +7,10 @@
 
 import Foundation
 import Core
+import UIKit
 
 public final class PlayerRouter: PlayerPresenterToRouter {
+    
     public static func createModule(with video: VideoEntity) -> PlayerViewController {
         let view = PlayerViewController(
             nibName: "PlayerViewController",
@@ -29,4 +31,10 @@ public final class PlayerRouter: PlayerPresenterToRouter {
         
         return view
     }
+    
+//    func navigateToNextPage(from view: (any PlayerPresenterToView)?) {
+//        guard let sourceVC = view as? UIViewController else { return }
+//        let nextVC = NextViewController(nibName: NextViewController.nibName, bundle: Bundle(for: NextViewController.self))
+//        sourceVC.navigationController?.pushViewController(nextVC, animated: true)
+//    }
 }

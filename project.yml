@@ -47,7 +47,7 @@ targets:
     settings:
       base:
         OTHER_LDFLAGS: "$(inherited) -ObjC"
-  Player:
+  Post:
     type: framework
     platform: iOS
     sources: [Post/Sources]

@@ -9,6 +9,7 @@ import Foundation
 import Core
 
 final class PlayerPresenter: PlayerViewToPresenter {
+
     weak var view: PlayerPresenterToView?
     var interactor: PlayerPresenterToInteractor?
     var router: PlayerPresenterToRouter?
@@ -16,6 +17,11 @@ final class PlayerPresenter: PlayerViewToPresenter {
     func viewDidLoad() {
         interactor?.fetchVideoDetails()
     }
+    
+//    func didTapDummyButton() {
+//        router?.navigateToNextPage(from: view)
+//    }
+
 }
 
 extension PlayerPresenter: PlayerInteractorToPresenter {

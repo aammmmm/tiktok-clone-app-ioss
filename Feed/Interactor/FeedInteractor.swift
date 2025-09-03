@@ -19,11 +19,13 @@ final class FeedInteractor: FeedPresenterToInteractor {
     func fetchVideos(page: Int) {
         output?.didStartFetchingVideos()
 //        closure ini pake weak untuk mencegah reference cycle, jadi weak memastikan self ga nambah itungan reference (self nyimpen closure, closure nyimpen self)
+//        logic
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
             APIService.shared.request(.getVideos) { [weak self] result in
                 guard let self = self else { return }
                 switch result {
                 case .success(let response):
+                    print(response.data)
                     do {
                         let videos = try JSONDecoder().decode([VideoEntity].self, from: response.data)
                         if page == 1 {

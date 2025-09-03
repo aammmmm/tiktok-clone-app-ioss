@@ -10,26 +10,23 @@ end
 
 target 'TikTokCloneApp' do
   project 'TikTokCloneApp/TikTokCloneApp.xcodeproj'
-  common_pods
   pod 'netfox'
+  common_pods
 end
 
 target 'Feed' do
   project 'Feed/Feed.xcodeproj'
   common_pods
-  pod 'netfox'
 end
 
 target 'Player' do
   project 'Player/Player.xcodeproj'
   common_pods
-  pod 'netfox'
 end
 
 target 'Post' do
   project 'Post/Post.xcodeproj'
   common_pods
-  pod 'netfox'
 end
 
 target 'Core' do
