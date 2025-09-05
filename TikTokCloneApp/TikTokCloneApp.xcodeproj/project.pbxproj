@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		302FC6F42E6AA974002B2A2D /* AppNavigations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 302FC6F32E6AA974002B2A2D /* AppNavigations.framework */; };
+		302FC6F52E6AA974002B2A2D /* AppNavigations.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 302FC6F32E6AA974002B2A2D /* AppNavigations.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		30C4AAB42E6568C800DFABEB /* Post.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C4AAB32E6568C800DFABEB /* Post.framework */; };
 		30C4AAB52E6568C800DFABEB /* Post.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 30C4AAB32E6568C800DFABEB /* Post.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		30C4AC5D2E681C4400DFABEB /* DataService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C4AC5B2E681C4400DFABEB /* DataService.framework */; };
@@ -35,6 +37,7 @@
 				30DC5D632E58286C00EF20A3 /* Player.framework in CopyFiles */,
 				30DC5D612E58286C00EF20A3 /* Feed.framework in CopyFiles */,
 				30DC5D5F2E58286C00EF20A3 /* Core.framework in CopyFiles */,
+				302FC6F52E6AA974002B2A2D /* AppNavigations.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +46,7 @@
 /* Begin PBXFileReference section */
 		0413A1CC499F82DD2BE7A983 /* Pods-TikTokCloneApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokCloneApp.release.xcconfig"; path = "Target Support Files/Pods-TikTokCloneApp/Pods-TikTokCloneApp.release.xcconfig"; sourceTree = "<group>"; };
 		29C5AC6ED2E9EB100A09D98F /* Pods_TikTokCloneApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikTokCloneApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		302FC6F32E6AA974002B2A2D /* AppNavigations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppNavigations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		305F937C2E57180E00461071 /* TikTokCloneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikTokCloneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C4AAB32E6568C800DFABEB /* Post.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Post.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C4AC5B2E681C4400DFABEB /* DataService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				302FC6F42E6AA974002B2A2D /* AppNavigations.framework in Frameworks */,
 				30C4AC5D2E681C4400DFABEB /* DataService.framework in Frameworks */,
 				30DC5D602E58286C00EF20A3 /* Feed.framework in Frameworks */,
 				30C4AF4B2E68573800DFABEB /* FeedWorker.framework in Frameworks */,
@@ -127,6 +132,7 @@
 		305F94882E5728E700461071 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				302FC6F32E6AA974002B2A2D /* AppNavigations.framework */,
 				30C4AF4A2E68573800DFABEB /* FeedWorker.framework */,
 				30C4AE832E6855D000DFABEB /* FeedWorker.framework */,
 				30C4AE292E68524800DFABEB /* FeedWorker.framework */,

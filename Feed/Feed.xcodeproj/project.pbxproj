@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		302FC6D52E6AA7AE002B2A2D /* FeedWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302FC6D42E6AA7AA002B2A2D /* FeedWireframe.swift */; };
 		305F94852E57281300461071 /* FeedProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305F94842E5727FA00461071 /* FeedProtocols.swift */; };
 		305F95AC2E5807B800461071 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305F95AB2E5807B800461071 /* Core.framework */; };
 		305F95AD2E5807B800461071 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 305F95AB2E5807B800461071 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -32,6 +33,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		302FC6D42E6AA7AA002B2A2D /* FeedWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedWireframe.swift; sourceTree = "<group>"; };
 		304665E12E5C4FC100DFCE16 /* Player.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Player.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		305F93DE2E571ADC00461071 /* Feed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		305F94842E5727FA00461071 /* FeedProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedProtocols.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 		305F93D42E571ADC00461071 = {
 			isa = PBXGroup;
 			children = (
+				302FC6D42E6AA7AA002B2A2D /* FeedWireframe.swift */,
 				3075B9E62E692654009DF0D1 /* FeedConfigurator.swift */,
 				305F94842E5727FA00461071 /* FeedProtocols.swift */,
 				305F941C2E571FD200461071 /* View */,
@@ -271,6 +274,7 @@
 			files = (
 				305F94852E57281300461071 /* FeedProtocols.swift in Sources */,
 				3075B9E72E692659009DF0D1 /* FeedConfigurator.swift in Sources */,
+				302FC6D52E6AA7AE002B2A2D /* FeedWireframe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

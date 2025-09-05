@@ -20,7 +20,7 @@ extension APIProviders: TargetType {
     public var baseURL: URL {
         switch self {
         case .getVideoById:
-            guard let url = URL(string: "http://localhost:3002") else {
+            guard let url = URL(string: "https://www.apirequest.in/video/api") else {
                 fatalError("Invalid remote API URL")
             }
             return url

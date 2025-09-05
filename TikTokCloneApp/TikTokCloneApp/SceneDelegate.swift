@@ -10,6 +10,7 @@ import Core
 import Feed
 import Player
 import Post
+import AppNavigations
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
@@ -21,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         self.window = window
 
-        let feedVC = FeedConfigurator.createFeedModule()
+        let feedVC = Navigations.shared.buildFeedModule()
         let feedNav = UINavigationController(rootViewController: feedVC)
         feedNav.tabBarItem = UITabBarItem(title: "Feed",
                                           image: UIImage(systemName: "house"),
@@ -33,33 +34,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                                           image: UIImage(systemName: "plus.square"),
                                           tag: 1)
 
-        let profileVC = UIViewController()
-        profileVC.view.backgroundColor = .systemBackground
-        profileVC.title = "Profile"
-        let profileNav = UINavigationController(rootViewController: profileVC)
-        profileNav.tabBarItem = UITabBarItem(title: "Profile",
-                                             image: UIImage(systemName: "person"),
-                                             tag: 2)
-
         let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [feedNav, postNav, profileNav]
+        tabBarController.viewControllers = [feedNav, postNav]
 
         window.rootViewController = tabBarController
         window.makeKeyAndVisible()
 
-        AppRouter.route = { destination in
-            switch destination {
-            case .feed:
-                tabBarController.selectedIndex = 0
-            case .post:
-                tabBarController.selectedIndex = 1
-            case .player(let videoId):
-                let playerVC = PlayerConfigurator.createModule(with: videoId)
-                UIApplication.topViewController()?.navigationController?.pushViewController(playerVC, animated: true)
-            default:
-                print("Route Not Found")
-            }
-        }
+//        AppRouter.route = { destination in
+//            switch destination {
+//            case .feed:
+//                tabBarController.selectedIndex = 0
+//            case .post:
+//                tabBarController.selectedIndex = 1
+//            case .player(let videoId):
+//                let playerVC = PlayerConfigurator.createModule(with: videoId)
+//                UIApplication.topViewController()?.navigationController?.pushViewController(playerVC, animated: true)
+//            default:
+//                print("Route Not Found")
+//            }
+//        }
     }
 }
 

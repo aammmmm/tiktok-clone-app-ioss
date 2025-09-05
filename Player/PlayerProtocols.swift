@@ -10,6 +10,7 @@ import Core
 
 protocol PlayerViewToPresenter: AnyObject {
     func viewDidLoad()
+    func didTapWebButton(url: URL, title: String)
 }
 
 protocol PlayerPresenterToView: AnyObject {
@@ -29,4 +30,5 @@ protocol PlayerInteractorToPresenter: AnyObject {
 protocol PlayerPresenterToRouter: AnyObject {
 //    static func createModule(with video: VideoEntity) -> PlayerViewController
 //    func navigateToNextPage(from view: PlayerPresenterToView?)
+    func navigateToWebDetail(from view: PlayerPresenterToView, url: URL, title: String)
 }

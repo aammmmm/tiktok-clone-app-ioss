@@ -11,7 +11,8 @@ import Core
 
 public class PlayerViewController: UIViewController {
     var presenter: PlayerViewToPresenter?
-    
+    private var currentVideo: VideoEntity?
+
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
@@ -39,18 +40,28 @@ public class PlayerViewController: UIViewController {
 
         webView.backgroundColor = .black
         webView.isOpaque = false
-        
-//        buang constraint lama
+
         if let layout = webView.superview?.constraints.first(where: { $0.firstAttribute == .height && $0.secondAttribute == .width }) {
             layout.isActive = false
         }
-        let aspectRatio = NSLayoutConstraint(item: webView as Any, attribute: .height, relatedBy: .equal, toItem: webView, attribute: .width, multiplier: 9.0/16.0, constant: 0)
+        let aspectRatio = NSLayoutConstraint(
+            item: webView as Any,
+            attribute: .height,
+            relatedBy: .equal,
+            toItem: webView,
+            attribute: .width,
+            multiplier: 9.0/16.0,
+            constant: 0
+        )
         aspectRatio.isActive = true
     }
     
     private func setupUI() {
         titleLabel.font = UIFont.systemFont(ofSize: 26, weight: .bold)
-        
+        titleLabel.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapTitle))
+        titleLabel.addGestureRecognizer(tapGesture)
+
         viewsLabel.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         viewsLabel.textColor = .systemGray
         
@@ -69,6 +80,13 @@ public class PlayerViewController: UIViewController {
         subscriberLabel.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         subscriberLabel.textColor = .systemGray
     }
+    
+    @objc private func didTapTitle() {
+        guard let video = currentVideo,
+              let url = URL(string: video.videoUrl) else { return }
+        presenter?.didTapWebButton(url: url, title: video.title)
+        print("TITLE IS CLICKED")
+    }
 }
 
 extension PlayerViewController: PlayerPresenterToView {
@@ -82,6 +100,7 @@ extension PlayerViewController: PlayerPresenterToView {
     }
     
     func showVideoDetails(_ video: VideoEntity) {
+        currentVideo = video   // simpan biar bisa dipakai saat tap
         title = video.title
 
         titleLabel.text = video.title
@@ -97,4 +116,3 @@ extension PlayerViewController: PlayerPresenterToView {
         }
     }
 }
-

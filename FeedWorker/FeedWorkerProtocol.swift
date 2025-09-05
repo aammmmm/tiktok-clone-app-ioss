@@ -7,5 +7,13 @@
 
 import Core
 
+public protocol FeedWorkerProtocol: AnyObject {
+    var responseDelegate: FeedWorkerResponseProtocol? { get set }
+    func fetchVideos(page: Int)
+}
 
+public protocol FeedWorkerResponseProtocol: AnyObject {
+    func didSuccessFetchVideos(_ videos: [VideoEntity], page: Int)
+    func didFailFetchVideos(error: String)
+}
 

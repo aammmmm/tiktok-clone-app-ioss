@@ -5,9 +5,13 @@
 //  Created by Abraham Putra Lukas on 04/09/25.
 //
 import Core
+import UIKit
 
-public class PlayerConfigurator {
-    public static func createModule(with videoId: String) -> PlayerViewController {
+public final class PlayerConfigurator {
+    public static let shared = PlayerConfigurator()
+    public var delegate: PlayerWireframe?
+    
+    public func createPlayerModule(with videoId: String) -> UIViewController {
         let view = PlayerViewController(
             nibName: "PlayerViewController",
             bundle: Bundle(for: PlayerViewController.self)
@@ -19,12 +23,10 @@ public class PlayerConfigurator {
         
         view.presenter = presenter
         presenter.view = view
-        presenter.interactor = interactor
         presenter.router = router
+        presenter.interactor = interactor
         interactor.presenter = presenter
         
         return view
     }
 }
-
-

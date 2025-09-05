@@ -9,18 +9,9 @@ import DataService
 import Moya
 import Core
 
-public protocol FeedWorkerProtocol: AnyObject {
-    var responseDelegate: FeedWorkerResponseDelegate? { get set }
-    func fetchVideos(page: Int)
-}
-
-public protocol FeedWorkerResponseDelegate: AnyObject {
-    func didSuccessFetchVideos(_ videos: [VideoEntity], page: Int)
-    func didFailFetchVideos(error: String)
-}
 
 public class FeedWorkerr: FeedWorkerProtocol {
-    public weak var responseDelegate: FeedWorkerResponseDelegate?
+    public weak var responseDelegate: FeedWorkerResponseProtocol?
     private let provider: MoyaProvider<APIProviders>
 
     public init(provider: MoyaProvider<APIProviders> = MoyaProvider<APIProviders>()) {

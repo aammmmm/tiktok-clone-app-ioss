@@ -8,7 +8,10 @@
 import UIKit
 
 public final class FeedConfigurator {
-    public static func createFeedModule() -> UIViewController {
+    public static let shared = FeedConfigurator()
+    public var delegate: FeedWireframe?
+
+    public func createFeedModule() -> UIViewController {
         let view = FeedViewController(nibName: "FeedViewController", bundle: Bundle(for: FeedViewController.self))
         let presenter = FeedPresenter()
         let interactor = FeedInteractor()
@@ -16,8 +19,8 @@ public final class FeedConfigurator {
 
         view.presenter = presenter
         presenter.view = view
-        presenter.interactor = interactor
         presenter.router = router
+        presenter.interactor = interactor
         interactor.output = presenter
 
         return view

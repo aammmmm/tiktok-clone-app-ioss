@@ -25,7 +25,7 @@ final class FeedInteractor: FeedPresenterToInteractor {
     }
 }
 
-extension FeedInteractor: FeedWorkerResponseDelegate {
+extension FeedInteractor: FeedWorkerResponseProtocol {
     func didSuccessFetchVideos(_ videos: [VideoEntity], page: Int) {
         output?.didFetchVideos(videos, page: page)
     }

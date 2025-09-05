@@ -72,9 +72,13 @@ class FeedViewController: UIViewController, FeedPresenterToView {
 
     func showError(_ message: String) {
         let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        alert.addAction(UIAlertAction(title: "Refresh", style: .default, handler: { _ in
+            self.presenter?.viewDidLoad()
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(alert, animated: true)
     }
+    
     
     @objc private func didPullToRefresh() {
         videos.removeAll()

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		302FC6FF2E6AB444002B2A2D /* PlayerWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302FC6FE2E6AB441002B2A2D /* PlayerWireframe.swift */; };
 		304665EF2E5C648900DFCE16 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 304665EE2E5C648900DFCE16 /* Core.framework */; };
 		304665F02E5C648900DFCE16 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 304665EE2E5C648900DFCE16 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		305F94872E57282A00461071 /* PlayerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305F94862E57282200461071 /* PlayerProtocols.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		302FC6FE2E6AB441002B2A2D /* PlayerWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerWireframe.swift; sourceTree = "<group>"; };
 		304665EE2E5C648900DFCE16 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		305F94422E57210700461071 /* Player.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Player.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		305F94862E57282200461071 /* PlayerProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerProtocols.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 		305F94382E57210700461071 = {
 			isa = PBXGroup;
 			children = (
+				302FC6FE2E6AB441002B2A2D /* PlayerWireframe.swift */,
 				3075B9EA2E6928D7009DF0D1 /* PlayerConfigurator.swift */,
 				305F94862E57282200461071 /* PlayerProtocols.swift */,
 				305F94702E5722BC00461071 /* Router */,
@@ -256,6 +259,7 @@
 			files = (
 				305F94872E57282A00461071 /* PlayerProtocols.swift in Sources */,
 				3075B9EB2E6928DB009DF0D1 /* PlayerConfigurator.swift in Sources */,
+				302FC6FF2E6AB444002B2A2D /* PlayerWireframe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

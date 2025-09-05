@@ -5,8 +5,6 @@
 //  Created by Abraham Putra Lukas on 21/08/25.
 //
 
-// FeedPresenter.swift
-import UIKit
 import Core
 
 final class FeedPresenter {

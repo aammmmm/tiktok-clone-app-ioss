@@ -7,6 +7,7 @@
 
 import Foundation
 import Core
+import UIKit
 
 final class PlayerPresenter: PlayerViewToPresenter {
 
@@ -17,6 +18,13 @@ final class PlayerPresenter: PlayerViewToPresenter {
     func viewDidLoad() {
         interactor?.fetchVideoDetails()
     }
+    
+    public func didTapWebButton(url: URL, title: String) {
+        if let view = view {
+            router?.navigateToWebDetail(from: view, url: url, title: title)
+        }
+    }
+    
     
 //    func didTapDummyButton() {
 //        router?.navigateToNextPage(from: view)

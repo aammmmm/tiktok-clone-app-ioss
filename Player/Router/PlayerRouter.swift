@@ -10,11 +10,11 @@ import Core
 import UIKit
 
 public final class PlayerRouter: PlayerPresenterToRouter {
-//    static func createModule(with video: Core.VideoEntity) -> PlayerViewController {
-//        
-//    }
-    
-    
+    func navigateToWebDetail(from view: PlayerPresenterToView, url: URL, title: String) {
+        guard let vc = view as? UIViewController else { return }
+        PlayerConfigurator.shared.delegate?.fromPlayerToWebViewDetail(view: vc, url: url, title: title
+        )
+    }
     
 //    func navigateToNextPage(from view: (any PlayerPresenterToView)?) {
 //        guard let sourceVC = view as? UIViewController else { return }
