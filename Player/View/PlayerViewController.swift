@@ -72,6 +72,15 @@ public class PlayerViewController: UIViewController {
 }
 
 extension PlayerViewController: PlayerPresenterToView {
+    func showError(_ message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Refresh", style: .default, handler: { _ in
+            self.presenter?.viewDidLoad()
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(alert, animated: true)
+    }
+    
     func showVideoDetails(_ video: VideoEntity) {
         title = video.title
 

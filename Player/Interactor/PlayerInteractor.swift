@@ -7,16 +7,32 @@
 
 import Foundation
 import Core
+import PlayerWorker
 
 final class PlayerInteractor: PlayerPresenterToInteractor {
     weak var presenter: PlayerInteractorToPresenter?
-    private let video: VideoEntity
+    private let videoId: String
+    private let worker: PlayerWorkerr
     
-    init(video: VideoEntity) {
-        self.video = video
+    init(videoId: String, worker: PlayerWorkerr = PlayerWorkerr()) {
+        self.videoId = videoId
+        self.worker = worker
+        self.worker.responseDelegate = self
     }
     
     func fetchVideoDetails() {
-        presenter?.didFetchVideoDetails(video)
+        worker.fetchVideoDetail(by: videoId)
     }
 }
+
+extension PlayerInteractor: PlayerWorkerResponseDelegate {
+    func didSuccessFetchVideoDetail(_ video: VideoEntity) {
+        presenter?.didFetchVideoDetails(video)
+    }
+    
+    func didFailFetchVideoDetail(error: String) {
+        let err = NSError(domain: "FeedWorker", code: -1, userInfo: [NSLocalizedDescriptionKey: error])
+        presenter?.didFailToFetchVideoDetails(err)
+    }
+}
+

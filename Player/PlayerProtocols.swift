@@ -14,6 +14,7 @@ protocol PlayerViewToPresenter: AnyObject {
 
 protocol PlayerPresenterToView: AnyObject {
     func showVideoDetails(_ video: VideoEntity)
+    func showError(_ message: String)
 }
 
 protocol PlayerPresenterToInteractor: AnyObject {
@@ -22,9 +23,10 @@ protocol PlayerPresenterToInteractor: AnyObject {
 
 protocol PlayerInteractorToPresenter: AnyObject {
     func didFetchVideoDetails(_ video: VideoEntity)
+    func didFailToFetchVideoDetails(_ error: Error)
 }
 
 protocol PlayerPresenterToRouter: AnyObject {
-    static func createModule(with video: VideoEntity) -> PlayerViewController
+//    static func createModule(with video: VideoEntity) -> PlayerViewController
 //    func navigateToNextPage(from view: PlayerPresenterToView?)
 }

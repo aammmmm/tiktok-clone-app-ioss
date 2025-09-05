@@ -10,15 +10,32 @@
 		04F5F327FDEF9DA8857EFE9F /* Pods_DataService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAE3196CCFBEE801E7E6548 /* Pods_DataService.framework */; };
 		30C4AC622E681CC500DFABEB /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C4AC612E681CC500DFABEB /* APIService.swift */; };
 		30C4AC642E681CC900DFABEB /* APIProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C4AC632E681CC900DFABEB /* APIProviders.swift */; };
-		30C4ACC02E681EFD00DFABEB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C4ACBF2E681EFD00DFABEB /* Constants.swift */; };
+		30C4AD212E68392600DFABEB /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C4AD202E68392600DFABEB /* Core.framework */; };
+		30C4AD222E68392600DFABEB /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 30C4AD202E68392600DFABEB /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		30C4AD382E684D9400DFABEB /* CreatePostRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C4AD372E684D9400DFABEB /* CreatePostRequest.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		30C4AD232E68392700DFABEB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				30C4AD222E68392600DFABEB /* Core.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1AF855663F7C237355E42A32 /* Pods-DataService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataService.release.xcconfig"; path = "Target Support Files/Pods-DataService/Pods-DataService.release.xcconfig"; sourceTree = "<group>"; };
 		30C4AC502E681B1600DFABEB /* DataService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C4AC612E681CC500DFABEB /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		30C4AC632E681CC900DFABEB /* APIProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProviders.swift; sourceTree = "<group>"; };
-		30C4ACBF2E681EFD00DFABEB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		30C4AD202E68392600DFABEB /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30C4AD372E684D9400DFABEB /* CreatePostRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostRequest.swift; sourceTree = "<group>"; };
 		6C4A7E7A23897522A7FFFA02 /* Pods-DataService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataService.debug.xcconfig"; path = "Target Support Files/Pods-DataService/Pods-DataService.debug.xcconfig"; sourceTree = "<group>"; };
 		FAAE3196CCFBEE801E7E6548 /* Pods_DataService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DataService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -50,6 +67,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04F5F327FDEF9DA8857EFE9F /* Pods_DataService.framework in Frameworks */,
+				30C4AD212E68392600DFABEB /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,9 +87,9 @@
 		30C4AC462E681B1600DFABEB = {
 			isa = PBXGroup;
 			children = (
-				30C4ACBF2E681EFD00DFABEB /* Constants.swift */,
 				30C4AC632E681CC900DFABEB /* APIProviders.swift */,
 				30C4AC612E681CC500DFABEB /* APIService.swift */,
+				30C4AD372E684D9400DFABEB /* CreatePostRequest.swift */,
 				30C4AC522E681B1600DFABEB /* DataService */,
 				30C4AC512E681B1600DFABEB /* Products */,
 				1CFC25248B563EFF0AC742ED /* Pods */,
@@ -90,6 +108,7 @@
 		ABAF4E659BC71B9B65184F38 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				30C4AD202E68392600DFABEB /* Core.framework */,
 				FAAE3196CCFBEE801E7E6548 /* Pods_DataService.framework */,
 			);
 			name = Frameworks;
@@ -117,6 +136,7 @@
 				30C4AC4C2E681B1600DFABEB /* Sources */,
 				30C4AC4D2E681B1600DFABEB /* Frameworks */,
 				30C4AC4E2E681B1600DFABEB /* Resources */,
+				30C4AD232E68392700DFABEB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -206,7 +226,7 @@
 			files = (
 				30C4AC622E681CC500DFABEB /* APIService.swift in Sources */,
 				30C4AC642E681CC900DFABEB /* APIProviders.swift in Sources */,
-				30C4ACC02E681EFD00DFABEB /* Constants.swift in Sources */,
+				30C4AD382E684D9400DFABEB /* CreatePostRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,23 +20,23 @@ protocol FeedPresenterToView: AnyObject {
     func appendVideos(_ videos: [FeedEntity])
     func showLoading(_ isLoading: Bool)
     func showError(_ message: String)
+//    func showOriginalVideos()
+    func clearVideos()
 }
 
 protocol FeedPresenterToInteractor: AnyObject {
     func fetchVideos(page: Int)
-    func videoEntity(at index: Int) -> VideoEntity?   // ambil dari cache
-    func searchVideos(query: String)
 }
 
 protocol FeedInteractorToPresenter: AnyObject {
     func didStartFetchingVideos()
-    func didFetchVideos(_ videos: [FeedEntity], page: Int)
+    func didFetchVideos(_ videos: [VideoEntity], page: Int)
     func didFailToFetchVideos(_ error: Error)
-    func didSearchVideos(_ videos: [FeedEntity])
+//    func didSearchVideos(_ videos: [VideoEntity])
 }
 
 protocol FeedPresenterToRouter: AnyObject {
-    func navigateToPlayer(from view: FeedPresenterToView, with video: VideoEntity)
+    func navigateToPlayer(from view: FeedPresenterToView, with video: String)
 }
 
 // ViewToPresenter -> PresenterToInteractor -> InteractorToPresenter -> PresenterToView -> PresenterToRouter

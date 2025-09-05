@@ -39,7 +39,9 @@ target 'DataService' do
   common_pods
 end
 
-target 'Worker' do
-  project 'Worker/Worker.xcodeproj'
+target 'FeedWorker' do
+  project 'FeedWorker/FeedWorker.xcodeproj'
   common_pods
+
+target
 end

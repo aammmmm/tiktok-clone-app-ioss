@@ -28,4 +28,8 @@ extension PlayerPresenter: PlayerInteractorToPresenter {
     func didFetchVideoDetails(_ video: VideoEntity) {
         view?.showVideoDetails(video)
     }
+    
+    func didFailToFetchVideoDetails(_ error: Error) {
+        view?.showError(error.localizedDescription)
+    }
 }

@@ -41,11 +41,6 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		305F945A2E57215500461071 /* Networking */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Networking;
-			sourceTree = "<group>";
-		};
 		305F94712E57236500461071 /* Model */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Model;
@@ -86,7 +81,6 @@
 				30C4AA052E64BB3F00DFABEB /* View */,
 				304665E42E5C551E00DFCE16 /* Helper */,
 				305F94712E57236500461071 /* Model */,
-				305F945A2E57215500461071 /* Networking */,
 				305F93A02E57185600461071 /* Core */,
 				305F939F2E57185600461071 /* Products */,
 				05DEC0FFD6E630A4077214DA /* Pods */,
@@ -140,7 +134,6 @@
 			fileSystemSynchronizedGroups = (
 				304665E42E5C551E00DFCE16 /* Helper */,
 				305F93A02E57185600461071 /* Core */,
-				305F945A2E57215500461071 /* Networking */,
 				305F94712E57236500461071 /* Model */,
 				30C4AA052E64BB3F00DFABEB /* View */,
 			);

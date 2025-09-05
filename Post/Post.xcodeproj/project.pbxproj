@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3075B9E92E6926DA009DF0D1 /* PostConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075B9E82E6926D7009DF0D1 /* PostConfigurator.swift */; };
 		30C4A9982E649AA400DFABEB /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C4A9972E649AA300DFABEB /* Core.framework */; };
 		30C4A9992E649AA400DFABEB /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 30C4A9972E649AA300DFABEB /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		30C4A9ED2E649C6500DFABEB /* PostProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C4A9EC2E649C5E00DFABEB /* PostProtocols.swift */; };
+		30C4AD252E68395800DFABEB /* DataService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C4AD242E68395800DFABEB /* DataService.framework */; };
+		30C4AD262E68395800DFABEB /* DataService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 30C4AD242E68395800DFABEB /* DataService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9212B81D7CA8BA0553F1D4DE /* Pods_Post.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09C06E52CE726BAD93BBBE89 /* Pods_Post.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,6 +23,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				30C4AD262E68395800DFABEB /* DataService.framework in Embed Frameworks */,
 				30C4A9992E649AA400DFABEB /* Core.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -30,9 +34,11 @@
 /* Begin PBXFileReference section */
 		058A69DD6DF34B7FAB85512B /* Pods-Post.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Post.debug.xcconfig"; path = "Target Support Files/Pods-Post/Pods-Post.debug.xcconfig"; sourceTree = "<group>"; };
 		09C06E52CE726BAD93BBBE89 /* Pods_Post.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Post.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3075B9E82E6926D7009DF0D1 /* PostConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostConfigurator.swift; sourceTree = "<group>"; };
 		30C4A98B2E649A8C00DFABEB /* Post.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Post.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C4A9972E649AA300DFABEB /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C4A9EC2E649C5E00DFABEB /* PostProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostProtocols.swift; sourceTree = "<group>"; };
+		30C4AD242E68395800DFABEB /* DataService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C476C456EEB7CB9FE8B73CA3 /* Pods-Post.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Post.release.xcconfig"; path = "Target Support Files/Pods-Post/Pods-Post.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30C4AD252E68395800DFABEB /* DataService.framework in Frameworks */,
 				30C4A9982E649AA400DFABEB /* Core.framework in Frameworks */,
 				9212B81D7CA8BA0553F1D4DE /* Pods_Post.framework in Frameworks */,
 			);
@@ -98,6 +105,7 @@
 		30C4A9812E649A8C00DFABEB = {
 			isa = PBXGroup;
 			children = (
+				3075B9E82E6926D7009DF0D1 /* PostConfigurator.swift */,
 				30C4A9EC2E649C5E00DFABEB /* PostProtocols.swift */,
 				30C4A9EA2E649C4C00DFABEB /* View */,
 				30C4A9FE2E64ABD900DFABEB /* Interactor */,
@@ -122,6 +130,7 @@
 		30C4A9962E649AA300DFABEB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				30C4AD242E68395800DFABEB /* DataService.framework */,
 				30C4A9972E649AA300DFABEB /* Core.framework */,
 				09C06E52CE726BAD93BBBE89 /* Pods_Post.framework */,
 			);
@@ -253,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3075B9E92E6926DA009DF0D1 /* PostConfigurator.swift in Sources */,
 				30C4A9ED2E649C6500DFABEB /* PostProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

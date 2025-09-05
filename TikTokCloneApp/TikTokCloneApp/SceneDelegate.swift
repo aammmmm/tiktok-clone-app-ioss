@@ -21,13 +21,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         self.window = window
 
-        let feedVC = FeedRouter.createModule()
+        let feedVC = FeedConfigurator.createFeedModule()
         let feedNav = UINavigationController(rootViewController: feedVC)
         feedNav.tabBarItem = UITabBarItem(title: "Feed",
                                           image: UIImage(systemName: "house"),
                                           tag: 0)
 
-        let postVC = PostRouter.createModule()
+        let postVC = PostConfigurator.createModule()
         let postNav = UINavigationController(rootViewController: postVC)
         postNav.tabBarItem = UITabBarItem(title: "Post",
                                           image: UIImage(systemName: "plus.square"),
@@ -53,8 +53,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 tabBarController.selectedIndex = 0
             case .post:
                 tabBarController.selectedIndex = 1
-            case .player(let video):
-                let playerVC = PlayerRouter.createModule(with: video)
+            case .player(let videoId):
+                let playerVC = PlayerConfigurator.createModule(with: videoId)
                 UIApplication.topViewController()?.navigationController?.pushViewController(playerVC, animated: true)
             default:
                 print("Route Not Found")

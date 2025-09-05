@@ -17,6 +17,8 @@ final class FeedPresenter {
     private var page = 1
     private var isLoading = false
     private var isSearching = false
+    private var videosCache: [VideoEntity] = []
+    private var searchResults: [VideoEntity] = []
 }
 
 extension FeedPresenter: FeedViewToPresenter {
@@ -25,11 +27,8 @@ extension FeedPresenter: FeedViewToPresenter {
         interactor?.fetchVideos(page: page)
     }
 
-//    triggered saat scroll abis, lalu fetch
     func loadMoreVideos() {
-        guard !isLoading, !isSearching else {
-            return
-        }
+        guard !isLoading, !isSearching else { return }
         isLoading = true
         page += 1
         print("DEBUG: loadMoreVideos called, page=\(page)")
@@ -37,35 +36,50 @@ extension FeedPresenter: FeedViewToPresenter {
     }
 
     func didSelectItem(at index: Int) {
-        guard let video = interactor?.videoEntity(at: index),
-                let view = view else { return }
-        
-        router?.navigateToPlayer(from: view, with: video)
+        let targetList = isSearching ? searchResults : videosCache
+        let video = targetList[index]
+        if let view = view {
+            router?.navigateToPlayer(from: view, with: video.id)
+        }
     }
-    
+
     func didTapSearch(query: String) {
         if query.isEmpty {
             isSearching = false
+            view?.clearVideos()
             page = 1
             interactor?.fetchVideos(page: page)
         } else {
             isSearching = true
-            interactor?.searchVideos(query: query)
+            searchResults = videosCache.filter {
+                $0.title.lowercased().contains(query.lowercased()) ||
+                $0.author.lowercased().contains(query.lowercased())
+            }
+            let feedEntities = FeedEntityMapper.mapList(searchResults)
+            view?.showVideos(feedEntities)
         }
     }
 }
 
 extension FeedPresenter: FeedInteractorToPresenter {
-//    buat trigger showLoading saat scroll
     func didStartFetchingVideos() {
         view?.showLoading(true)
     }
     
-    func didFetchVideos(_ videos: [FeedEntity], page: Int) {
+    func didFetchVideos(_ videos: [VideoEntity], page: Int) {
         print("DEBUG: didFetchVideos called, page=\(page), count=\(videos.count)")
         isLoading = false
         view?.showLoading(false)
-        if page == 1 { view?.showVideos(videos) } else { view?.appendVideos(videos) }
+
+        if page == 1 {
+            videosCache = videos
+            let feedEntities = FeedEntityMapper.mapList(videosCache)
+            view?.showVideos(feedEntities)
+        } else {
+            videosCache.append(contentsOf: videos)
+            let newEntities = FeedEntityMapper.mapList(videos)
+            view?.appendVideos(newEntities)
+        }
     }
 
     func didFailToFetchVideos(_ error: Error) {
@@ -73,9 +87,4 @@ extension FeedPresenter: FeedInteractorToPresenter {
         view?.showLoading(false)
         view?.showError(error.localizedDescription)
     }
-    
-    func didSearchVideos(_ videos: [FeedEntity]) {
-        view?.showVideos(videos)
-    }
 }
-

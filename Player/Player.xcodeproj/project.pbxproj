@@ -10,6 +10,9 @@
 		304665EF2E5C648900DFCE16 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 304665EE2E5C648900DFCE16 /* Core.framework */; };
 		304665F02E5C648900DFCE16 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 304665EE2E5C648900DFCE16 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		305F94872E57282A00461071 /* PlayerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305F94862E57282200461071 /* PlayerProtocols.swift */; };
+		3075B9EB2E6928DB009DF0D1 /* PlayerConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075B9EA2E6928D7009DF0D1 /* PlayerConfigurator.swift */; };
+		3075BA0C2E696A19009DF0D1 /* PlayerWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3075BA0B2E696A19009DF0D1 /* PlayerWorker.framework */; };
+		3075BA0D2E696A19009DF0D1 /* PlayerWorker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3075BA0B2E696A19009DF0D1 /* PlayerWorker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3432B3C119286D60842F5421 /* Pods_Player.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1B8E626DB97F31D3E4FC353 /* Pods_Player.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +24,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				304665F02E5C648900DFCE16 /* Core.framework in Embed Frameworks */,
+				3075BA0D2E696A19009DF0D1 /* PlayerWorker.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -31,6 +35,8 @@
 		304665EE2E5C648900DFCE16 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		305F94422E57210700461071 /* Player.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Player.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		305F94862E57282200461071 /* PlayerProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerProtocols.swift; sourceTree = "<group>"; };
+		3075B9EA2E6928D7009DF0D1 /* PlayerConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerConfigurator.swift; sourceTree = "<group>"; };
+		3075BA0B2E696A19009DF0D1 /* PlayerWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PlayerWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5548CE76140584D5FAFAB473 /* Pods-Player.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Player.debug.xcconfig"; path = "Target Support Files/Pods-Player/Pods-Player.debug.xcconfig"; sourceTree = "<group>"; };
 		B6D0ECDA339032F2F3DD680B /* Pods-Player.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Player.release.xcconfig"; path = "Target Support Files/Pods-Player/Pods-Player.release.xcconfig"; sourceTree = "<group>"; };
 		D1B8E626DB97F31D3E4FC353 /* Pods_Player.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Player.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3075BA0C2E696A19009DF0D1 /* PlayerWorker.framework in Frameworks */,
 				3432B3C119286D60842F5421 /* Pods_Player.framework in Frameworks */,
 				304665EF2E5C648900DFCE16 /* Core.framework in Frameworks */,
 			);
@@ -103,6 +110,7 @@
 		305F94382E57210700461071 = {
 			isa = PBXGroup;
 			children = (
+				3075B9EA2E6928D7009DF0D1 /* PlayerConfigurator.swift */,
 				305F94862E57282200461071 /* PlayerProtocols.swift */,
 				305F94702E5722BC00461071 /* Router */,
 				305F946F2E5722AB00461071 /* Interactor */,
@@ -126,6 +134,7 @@
 		7B582936F742ECEC6586DB7C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3075BA0B2E696A19009DF0D1 /* PlayerWorker.framework */,
 				304665EE2E5C648900DFCE16 /* Core.framework */,
 				D1B8E626DB97F31D3E4FC353 /* Pods_Player.framework */,
 			);
@@ -246,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				305F94872E57282A00461071 /* PlayerProtocols.swift in Sources */,
+				3075B9EB2E6928DB009DF0D1 /* PlayerConfigurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

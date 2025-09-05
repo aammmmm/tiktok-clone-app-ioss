@@ -1,0 +1,6 @@
+framework module Pods_DataService {
+  umbrella header "Pods-DataService-umbrella.h"
+
+  export *
+  module * { export * }
+}

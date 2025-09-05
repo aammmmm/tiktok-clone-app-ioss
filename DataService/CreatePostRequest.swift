@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import Core
 
-public struct CreatePostRequest: Encodable {
+public struct CreatePostRequest: Codable {
     let id: String
     let title: String
     let thumbnailUrl: String

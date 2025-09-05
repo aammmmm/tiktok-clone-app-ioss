@@ -10,27 +10,11 @@ import Core
 import UIKit
 
 public final class PlayerRouter: PlayerPresenterToRouter {
+//    static func createModule(with video: Core.VideoEntity) -> PlayerViewController {
+//        
+//    }
     
-    public static func createModule(with video: VideoEntity) -> PlayerViewController {
-        let view = PlayerViewController(
-            nibName: "PlayerViewController",
-            bundle: Bundle(for: PlayerViewController.self)
-        )
-        
-        let presenter = PlayerPresenter()
-        let interactor = PlayerInteractor(video: video)
-        let router = PlayerRouter()
-        
-        view.presenter = presenter
-        
-        presenter.view = view
-        presenter.interactor = interactor
-        presenter.router = router
-        
-        interactor.presenter = presenter
-        
-        return view
-    }
+    
     
 //    func navigateToNextPage(from view: (any PlayerPresenterToView)?) {
 //        guard let sourceVC = view as? UIViewController else { return }

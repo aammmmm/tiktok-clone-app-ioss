@@ -10,6 +10,9 @@
 		305F94852E57281300461071 /* FeedProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305F94842E5727FA00461071 /* FeedProtocols.swift */; };
 		305F95AC2E5807B800461071 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305F95AB2E5807B800461071 /* Core.framework */; };
 		305F95AD2E5807B800461071 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 305F95AB2E5807B800461071 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3075B9E72E692659009DF0D1 /* FeedConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075B9E62E692654009DF0D1 /* FeedConfigurator.swift */; };
+		30C4AF512E68587000DFABEB /* FeedWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C4AF502E68587000DFABEB /* FeedWorker.framework */; };
+		30C4AF522E68587000DFABEB /* FeedWorker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 30C4AF502E68587000DFABEB /* FeedWorker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		60B4E3E07E8FC6EAFD1C0694 /* Pods_Feed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E26F62A1D4C6E89BC4D1A64 /* Pods_Feed.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,6 +23,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				30C4AF522E68587000DFABEB /* FeedWorker.framework in Embed Frameworks */,
 				305F95AD2E5807B800461071 /* Core.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -32,6 +36,11 @@
 		305F93DE2E571ADC00461071 /* Feed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		305F94842E5727FA00461071 /* FeedProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedProtocols.swift; sourceTree = "<group>"; };
 		305F95AB2E5807B800461071 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3075B9E62E692654009DF0D1 /* FeedConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedConfigurator.swift; sourceTree = "<group>"; };
+		30C4AD192E68339900DFABEB /* Worker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Worker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30C4AD552E68500B00DFABEB /* FeedWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FeedWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30C4AF4D2E68574A00DFABEB /* FeedWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FeedWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30C4AF502E68587000DFABEB /* FeedWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FeedWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E26F62A1D4C6E89BC4D1A64 /* Pods_Feed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Feed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE17C97ECCC79E653ABF9B49 /* Pods-Feed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feed.debug.xcconfig"; path = "Target Support Files/Pods-Feed/Pods-Feed.debug.xcconfig"; sourceTree = "<group>"; };
 		CDDC622588996E7A5C85022C /* Pods-Feed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feed.release.xcconfig"; path = "Target Support Files/Pods-Feed/Pods-Feed.release.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30C4AF512E68587000DFABEB /* FeedWorker.framework in Frameworks */,
 				60B4E3E07E8FC6EAFD1C0694 /* Pods_Feed.framework in Frameworks */,
 				305F95AC2E5807B800461071 /* Core.framework in Frameworks */,
 			);
@@ -99,6 +109,7 @@
 		305F93D42E571ADC00461071 = {
 			isa = PBXGroup;
 			children = (
+				3075B9E62E692654009DF0D1 /* FeedConfigurator.swift */,
 				305F94842E5727FA00461071 /* FeedProtocols.swift */,
 				305F941C2E571FD200461071 /* View */,
 				305F941B2E571F8300461071 /* Router */,
@@ -133,6 +144,10 @@
 		D72C85A71C7063C2D29C2867 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				30C4AF502E68587000DFABEB /* FeedWorker.framework */,
+				30C4AF4D2E68574A00DFABEB /* FeedWorker.framework */,
+				30C4AD552E68500B00DFABEB /* FeedWorker.framework */,
+				30C4AD192E68339900DFABEB /* Worker.framework */,
 				304665E12E5C4FC100DFCE16 /* Player.framework */,
 				305F95AB2E5807B800461071 /* Core.framework */,
 				6E26F62A1D4C6E89BC4D1A64 /* Pods_Feed.framework */,
@@ -255,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				305F94852E57281300461071 /* FeedProtocols.swift in Sources */,
+				3075B9E72E692659009DF0D1 /* FeedConfigurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
