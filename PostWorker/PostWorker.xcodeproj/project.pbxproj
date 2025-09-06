@@ -7,22 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3075BA282E696DF3009DF0D1 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3075BA262E696DF3009DF0D1 /* Core.framework */; };
-		3075BA292E696DF3009DF0D1 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3075BA262E696DF3009DF0D1 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3075BA2A2E696DF3009DF0D1 /* DataService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3075BA272E696DF3009DF0D1 /* DataService.framework */; };
-		3075BA2B2E696DF3009DF0D1 /* DataService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3075BA272E696DF3009DF0D1 /* DataService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3075BA2E2E696E00009DF0D1 /* PostWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075BA2D2E696DFC009DF0D1 /* PostWorker.swift */; };
+		05008042B92C9F34AE38D773 /* Pods_PostWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92FFC917C493A5CE0FD21849 /* Pods_PostWorker.framework */; };
+		0CFB1B33EA920612D584F8FD /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F1B5367B167322C6BC4E820A /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		55031030FD634B9D24A75548 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1B5367B167322C6BC4E820A /* Core.framework */; };
+		607187754AAE3A167D589B46 /* PostWorker.h in Headers */ = {isa = PBXBuildFile; fileRef = 56366E26A91202850DE9AF01 /* PostWorker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8EA854F3B710FBECC135BD3 /* PostWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF20D727C55D7934F9491F13 /* PostWorker.swift */; };
+		B284A10904BF6BA54D38FDAF /* Pods_PostWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB19DC97D688313F422F6593 /* Pods_PostWorker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		3075BA2C2E696DF3009DF0D1 /* Embed Frameworks */ = {
+		9A50849DD54E34F98BA34136 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3075BA2B2E696DF3009DF0D1 /* DataService.framework in Embed Frameworks */,
-				3075BA292E696DF3009DF0D1 /* Core.framework in Embed Frameworks */,
+				0CFB1B33EA920612D584F8FD /* Core.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -30,69 +30,73 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3075BA1A2E696DE8009DF0D1 /* PostWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PostWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3075BA262E696DF3009DF0D1 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3075BA272E696DF3009DF0D1 /* DataService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3075BA2D2E696DFC009DF0D1 /* PostWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostWorker.swift; sourceTree = "<group>"; };
+		56366E26A91202850DE9AF01 /* PostWorker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostWorker.h; sourceTree = "<group>"; };
+		6099F0D66B6E64CA4A92FEA2 /* PostWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PostWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92FFC917C493A5CE0FD21849 /* Pods_PostWorker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_PostWorker.framework; path = "${BUILT_PRODUCTS_DIR}/Pods_PostWorker.framework"; sourceTree = "<group>"; };
+		B8E6EB6BEA33582BE05272E0 /* Pods-PostWorker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostWorker.release.xcconfig"; path = "Target Support Files/Pods-PostWorker/Pods-PostWorker.release.xcconfig"; sourceTree = "<group>"; };
+		BFC7F7604D2A6228BE1974E0 /* Pods-PostWorker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostWorker.debug.xcconfig"; path = "Target Support Files/Pods-PostWorker/Pods-PostWorker.debug.xcconfig"; sourceTree = "<group>"; };
+		EF20D727C55D7934F9491F13 /* PostWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostWorker.swift; sourceTree = "<group>"; };
+		F1B5367B167322C6BC4E820A /* Core.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Core.framework; path = "${BUILT_PRODUCTS_DIR}/Core.framework"; sourceTree = "<group>"; };
+		FB19DC97D688313F422F6593 /* Pods_PostWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		3075BA1F2E696DE8009DF0D1 /* Exceptions for "PostWorker" folder in "PostWorker" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			publicHeaders = (
-				PostWorker.h,
-			);
-			target = 3075BA192E696DE8009DF0D1 /* PostWorker */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		3075BA1C2E696DE8009DF0D1 /* PostWorker */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				3075BA1F2E696DE8009DF0D1 /* Exceptions for "PostWorker" folder in "PostWorker" target */,
-			);
-			path = PostWorker;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
-
 /* Begin PBXFrameworksBuildPhase section */
-		3075BA172E696DE8009DF0D1 /* Frameworks */ = {
+		2019A05FDCB2AACA1AE991FF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3075BA2A2E696DF3009DF0D1 /* DataService.framework in Frameworks */,
-				3075BA282E696DF3009DF0D1 /* Core.framework in Frameworks */,
+				55031030FD634B9D24A75548 /* Core.framework in Frameworks */,
+				05008042B92C9F34AE38D773 /* Pods_PostWorker.framework in Frameworks */,
+				B284A10904BF6BA54D38FDAF /* Pods_PostWorker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3075BA102E696DE8009DF0D1 = {
+		29218854DA5B05D77666F123 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3075BA2D2E696DFC009DF0D1 /* PostWorker.swift */,
-				3075BA1C2E696DE8009DF0D1 /* PostWorker */,
-				3075BA252E696DF3009DF0D1 /* Frameworks */,
-				3075BA1B2E696DE8009DF0D1 /* Products */,
+				BFC7F7604D2A6228BE1974E0 /* Pods-PostWorker.debug.xcconfig */,
+				B8E6EB6BEA33582BE05272E0 /* Pods-PostWorker.release.xcconfig */,
 			);
+			name = Pods;
+			path = ../Pods;
 			sourceTree = "<group>";
 		};
-		3075BA1B2E696DE8009DF0D1 /* Products */ = {
+		4B3727BE8AB1C513B1A82599 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3075BA1A2E696DE8009DF0D1 /* PostWorker.framework */,
+				6099F0D66B6E64CA4A92FEA2 /* PostWorker.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3075BA252E696DF3009DF0D1 /* Frameworks */ = {
+		74926C5281A097C6FBBDFE12 /* PostWorker */ = {
 			isa = PBXGroup;
 			children = (
-				3075BA262E696DF3009DF0D1 /* Core.framework */,
-				3075BA272E696DF3009DF0D1 /* DataService.framework */,
+				56366E26A91202850DE9AF01 /* PostWorker.h */,
+				EF20D727C55D7934F9491F13 /* PostWorker.swift */,
+			);
+			path = PostWorker;
+			sourceTree = "<group>";
+		};
+		9E349D32006DBEB78DB76E35 = {
+			isa = PBXGroup;
+			children = (
+				74926C5281A097C6FBBDFE12 /* PostWorker */,
+				F8F2C796A3B00CE21583A701 /* Frameworks */,
+				4B3727BE8AB1C513B1A82599 /* Products */,
+				29218854DA5B05D77666F123 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		F8F2C796A3B00CE21583A701 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1B5367B167322C6BC4E820A /* Core.framework */,
+				92FFC917C493A5CE0FD21849 /* Pods_PostWorker.framework */,
+				FB19DC97D688313F422F6593 /* Pods_PostWorker.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -100,173 +104,138 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3075BA152E696DE8009DF0D1 /* Headers */ = {
+		BE836AC240D5684F2EBEED29 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				607187754AAE3A167D589B46 /* PostWorker.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3075BA192E696DE8009DF0D1 /* PostWorker */ = {
+		7D80800C51A57D8956C3D6D3 /* PostWorker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3075BA202E696DE8009DF0D1 /* Build configuration list for PBXNativeTarget "PostWorker" */;
+			buildConfigurationList = 9F191A07698240D002AD6FD0 /* Build configuration list for PBXNativeTarget "PostWorker" */;
 			buildPhases = (
-				3075BA152E696DE8009DF0D1 /* Headers */,
-				3075BA162E696DE8009DF0D1 /* Sources */,
-				3075BA172E696DE8009DF0D1 /* Frameworks */,
-				3075BA182E696DE8009DF0D1 /* Resources */,
-				3075BA2C2E696DF3009DF0D1 /* Embed Frameworks */,
+				32DF88AB5B27F4CED7CBA419 /* [CP] Check Pods Manifest.lock */,
+				BE836AC240D5684F2EBEED29 /* Headers */,
+				BE053B0AB50A505ADED293D6 /* Sources */,
+				2019A05FDCB2AACA1AE991FF /* Frameworks */,
+				9A50849DD54E34F98BA34136 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				3075BA1C2E696DE8009DF0D1 /* PostWorker */,
-			);
 			name = PostWorker;
-			packageProductDependencies = (
-			);
 			productName = PostWorker;
-			productReference = 3075BA1A2E696DE8009DF0D1 /* PostWorker.framework */;
+			productReference = 6099F0D66B6E64CA4A92FEA2 /* PostWorker.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3075BA112E696DE8009DF0D1 /* Project object */ = {
+		5A91A86A757F46D12BE33D36 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1600;
-				TargetAttributes = {
-					3075BA192E696DE8009DF0D1 = {
-						CreatedOnToolsVersion = 16.0;
-						LastSwiftMigration = 1600;
-					};
-				};
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
 			};
-			buildConfigurationList = 3075BA142E696DE8009DF0D1 /* Build configuration list for PBXProject "PostWorker" */;
+			buildConfigurationList = 7C5E99C566F74EF75EE67429 /* Build configuration list for PBXProject "PostWorker" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
-			mainGroup = 3075BA102E696DE8009DF0D1;
+			mainGroup = 9E349D32006DBEB78DB76E35;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 3075BA1B2E696DE8009DF0D1 /* Products */;
+			productRefGroup = 4B3727BE8AB1C513B1A82599 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3075BA192E696DE8009DF0D1 /* PostWorker */,
+				7D80800C51A57D8956C3D6D3 /* PostWorker */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		3075BA182E696DE8009DF0D1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* Begin PBXShellScriptBuildPhase section */
+		32DF88AB5B27F4CED7CBA419 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PostWorker-checkManifestLockResult.txt",
+			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
-/* End PBXResourcesBuildPhase section */
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3075BA162E696DE8009DF0D1 /* Sources */ = {
+		BE053B0AB50A505ADED293D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3075BA2E2E696E00009DF0D1 /* PostWorker.swift in Sources */,
+				A8EA854F3B710FBECC135BD3 /* PostWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		3075BA212E696DE8009DF0D1 /* Debug */ = {
+		04416FBF791C05666CBC66B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFC7F7604D2A6228BE1974E0 /* Pods-PostWorker.debug.xcconfig */;
 			buildSettings = {
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = JZUG2CRW5M;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${BUILT_PRODUCTS_DIR}\"",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = Aam.PostWorker;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PostWorker.PostWorker;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
-		3075BA222E696DE8009DF0D1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = JZUG2CRW5M;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = Aam.PostWorker;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		3075BA232E696DE8009DF0D1 /* Debug */ = {
+		06A8F979244E5DBA856FBD89 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -293,18 +262,16 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
 					"$(inherited)",
+					"DEBUG=1",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -312,27 +279,26 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		3075BA242E696DE8009DF0D1 /* Release */ = {
+		34C97744FC37A6A09D27F159 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -359,12 +325,10 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -372,40 +336,67 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				VALIDATE_PRODUCT = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		90351055557F2E216F332B27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8E6EB6BEA33582BE05272E0 /* Pods-PostWorker.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${BUILT_PRODUCTS_DIR}\"",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.PostWorker.PostWorker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3075BA142E696DE8009DF0D1 /* Build configuration list for PBXProject "PostWorker" */ = {
+		7C5E99C566F74EF75EE67429 /* Build configuration list for PBXProject "PostWorker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3075BA232E696DE8009DF0D1 /* Debug */,
-				3075BA242E696DE8009DF0D1 /* Release */,
+				06A8F979244E5DBA856FBD89 /* Debug */,
+				34C97744FC37A6A09D27F159 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		3075BA202E696DE8009DF0D1 /* Build configuration list for PBXNativeTarget "PostWorker" */ = {
+		9F191A07698240D002AD6FD0 /* Build configuration list for PBXNativeTarget "PostWorker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3075BA212E696DE8009DF0D1 /* Debug */,
-				3075BA222E696DE8009DF0D1 /* Release */,
+				04416FBF791C05666CBC66B0 /* Debug */,
+				90351055557F2E216F332B27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3075BA112E696DE8009DF0D1 /* Project object */;
+	rootObject = 5A91A86A757F46D12BE33D36 /* Project object */;
 }

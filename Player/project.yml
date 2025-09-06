@@ -1,9 +1,24 @@
+name: Player
+options:
+  bundleIdPrefix: com.Player
+  deploymentTarget:
+    iOS: "16.0"
+
 targets:
   Player:
     type: framework
     platform: iOS
     sources:
-      - path: Sources/
+      - Player
     dependencies:
-      - target: Core
-      - target: PlayerWorker
+      - framework: '${BUILT_PRODUCTS_DIR}/Core.framework'
+        embed: true
+        codeSign: true
+      - framework: '${BUILT_PRODUCTS_DIR}/PlayerWorker.framework'
+        embed: true
+        codeSign: true
+      - framework: '${BUILT_PRODUCTS_DIR}/Pods_Player.framework'
+        embed: false
+        codeSign: false
+    settings:
+      GENERATE_INFOPLIST_FILE: YES

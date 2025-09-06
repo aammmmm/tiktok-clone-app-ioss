@@ -1,9 +1,24 @@
+name: PlayerWorker
+options:
+  bundleIdPrefix: com.PlayerWorker
+  deploymentTarget:
+    iOS: "16.0"
+
 targets:
   PlayerWorker:
     type: framework
     platform: iOS
     sources:
-      - path: Sources/
+      - PlayerWorker
     dependencies:
-      - target: Core
-      - target: DataService
+      - framework: '${BUILT_PRODUCTS_DIR}/Core.framework'
+        embed: true
+        codeSign: true
+      - framework: '${BUILT_PRODUCTS_DIR}/DataService.framework'
+        embed: true
+        codeSign: true
+      - framework: '${BUILT_PRODUCTS_DIR}/Pods_PlayerWorker.framework'
+        embed: false
+        codeSign: false
+    settings:
+      GENERATE_INFOPLIST_FILE: YES

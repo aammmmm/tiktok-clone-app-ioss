@@ -1,9 +1,22 @@
+name: PostWorker
+options:
+  bundleIdPrefix: com.PostWorker
+  deploymentTarget:
+    iOS: "16.0"
+
 targets:
   PostWorker:
     type: framework
     platform: iOS
     sources:
-      - path: Sources/
+      - PostWorker
     dependencies:
-      - target: Core
-      - target: DataService
+      - framework: '${BUILT_PRODUCTS_DIR}/Core.framework'
+        embed: true
+        codeSign: true
+        codeSign: true
+      - framework: '${BUILT_PRODUCTS_DIR}/Pods_PostWorker.framework'
+        embed: false
+        codeSign: false
+    settings:
+      GENERATE_INFOPLIST_FILE: YES

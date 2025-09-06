@@ -1,9 +1,24 @@
+name: Post
+options:
+  bundleIdPrefix: com.Post
+  deploymentTarget:
+    iOS: "16.0"
+
 targets:
   Post:
     type: framework
     platform: iOS
     sources:
-      - path: Sources/
+      - Post
     dependencies:
-      - target: Core
-      - target: PostWorker
+      - framework: '${BUILT_PRODUCTS_DIR}/Core.framework'
+        embed: true
+        codeSign: true
+      - framework: '${BUILT_PRODUCTS_DIR}/PostWorker.framework'
+        embed: true
+        codeSign: true
+      - framework: '${BUILT_PRODUCTS_DIR}/Pods_Post.framework'
+        embed: false
+        codeSign: false
+    settings:
+      GENERATE_INFOPLIST_FILE: YES

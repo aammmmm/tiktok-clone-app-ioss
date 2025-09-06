@@ -1,9 +1,23 @@
+name: Feed
+options:
+  bundleIdPrefix: com.Feed
+  deploymentTarget:
+    iOS: "16.0"
 targets:
   Feed:
     type: framework
     platform: iOS
     sources:
-      - path: Sources/
+      - Feed
     dependencies:
-      - target: Core
-      - target: FeedWorker
+      - framework: '${BUILT_PRODUCTS_DIR}/Core.framework'
+        embed: true
+        codeSign: true
+      - framework: '${BUILT_PRODUCTS_DIR}/FeedWorker.framework'
+        embed: true
+        codeSign: true
+      - framework: '${BUILT_PRODUCTS_DIR}/Pods_Feed.framework'
+        embed: false
+        codeSign: false
+    settings:
+      GENERATE_INFOPLIST_FILE: YES

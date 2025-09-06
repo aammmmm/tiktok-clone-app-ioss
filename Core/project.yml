@@ -1,6 +1,17 @@
+name: Core
+options:
+  bundleIdPrefix: com.Core
+  deploymentTarget:
+    iOS: "16.0"
 targets:
   Core:
     type: framework
     platform: iOS
     sources:
-      - path: Sources/
+      - path: Core/
+    dependencies:
+      - framework: '${BUILT_PRODUCTS_DIR}/Pods_Core.framework'
+        embed: false
+        codeSign: false
+    settings:
+      GENERATE_INFOPLIST_FILE: YES

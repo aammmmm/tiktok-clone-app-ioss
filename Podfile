@@ -1,6 +1,5 @@
 platform :ios, '16.0'
 use_frameworks!
-
 workspace 'TikTokCloneiOSs.xcworkspace'
 
 def common_pods
@@ -11,6 +10,31 @@ end
 target 'TikTokCloneApp' do
   project 'TikTokCloneApp/TikTokCloneApp.xcodeproj'
   pod 'netfox'
+  common_pods
+end
+
+target 'Core' do
+  project 'Core/Core.xcodeproj'
+  common_pods
+end
+
+target 'DataService' do
+  project 'DataService/DataService.xcodeproj'
+  common_pods
+end
+
+target 'FeedWorker' do
+  project 'FeedWorker/FeedWorker.xcodeproj'
+  common_pods
+end
+
+target 'PlayerWorker' do
+  project 'PlayerWorker/PlayerWorker.xcodeproj'
+  common_pods
+end
+
+target 'PostWorker' do
+  project 'PostWorker/PostWorker.xcodeproj'
   common_pods
 end
 
@@ -29,19 +53,12 @@ target 'Post' do
   common_pods
 end
 
-target 'Core' do
-  project 'Core/Core.xcodeproj'
+target 'AppNavigations' do
+  project 'AppNavigations/AppNavigations.xcodeproj'
   common_pods
 end
 
-target 'DataService' do
-  project 'DataService/DataService.xcodeproj'
+target 'WebViewDetail' do
+  project 'WebViewDetail/WebViewDetail.xcodeproj'
   common_pods
-end
-
-target 'FeedWorker' do
-  project 'FeedWorker/FeedWorker.xcodeproj'
-  common_pods
-
-target
 end

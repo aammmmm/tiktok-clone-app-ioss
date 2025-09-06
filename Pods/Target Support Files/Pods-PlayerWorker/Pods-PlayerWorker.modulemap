@@ -1,0 +1,6 @@
+framework module Pods_PlayerWorker {
+  umbrella header "Pods-PlayerWorker-umbrella.h"
+
+  export *
+  module * { export * }
+}

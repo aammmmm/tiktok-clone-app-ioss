@@ -1,0 +1,39 @@
+name: TikTokCloneApp
+options:
+  bundleIdPrefix: com.TikTokCloneApp
+  deploymentTarget:
+    iOS: "16.0"
+
+targets:
+  TikTokCloneApp:
+    type: application
+    platform: iOS
+    sources:
+      - TikTokCloneApp
+    dependencies:
+      - framework: '${BUILT_PRODUCTS_DIR}/AppNavigations.framework'
+        embed: true
+        codeSign: true
+      - framework: '${BUILT_PRODUCTS_DIR}/Core.framework'
+        embed: true
+        codeSign: true
+      - framework: '${BUILT_PRODUCTS_DIR}/DataService.framework'
+        embed: true
+        codeSign: true
+      - framework: '${BUILT_PRODUCTS_DIR}/Feed.framework'
+        embed: true
+        codeSign: true
+      - framework: '${BUILT_PRODUCTS_DIR}/Player.framework'
+        embed: true
+        codeSign: true
+      - framework: '${BUILT_PRODUCTS_DIR}/Post.framework'
+        embed: true
+        codeSign: true
+      - framework: '${BUILT_PRODUCTS_DIR}/WebViewDetail.framework'
+        embed: true
+        codeSign: true
+      - framework: '${BUILT_PRODUCTS_DIR}/Pods_TikTokCloneApp.framework'
+        embed: false
+        codeSign: false
+    settings:
+      GENERATE_INFOPLIST_FILE: YES

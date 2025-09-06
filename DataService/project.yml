@@ -1,8 +1,20 @@
+name: DataService
+options:
+  bundleIdPrefix: Aam.TikTokCloneApp
+  deploymentTarget:
+    iOS: "16.0"
 targets:
   DataService:
     type: framework
     platform: iOS
     sources:
-      - path: Sources/
+      - path: DataService
     dependencies:
-      - target: Core
+      - framework: '${BUILT_PRODUCTS_DIR}/Core.framework'
+        embed: true
+        codeSign: true
+      - framework: '${BUILT_PRODUCTS_DIR}/Pods_DataService.framework'
+        embed: false
+        codeSign: false
+    settings:
+      GENERATE_INFOPLIST_FILE: YES

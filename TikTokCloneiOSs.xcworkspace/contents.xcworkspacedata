@@ -2,25 +2,13 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:TikTokCloneApp/TikTokCloneApp.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:AppNavigations/AppNavigations.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:WebViewDetail/WebViewDetail.xcodeproj">
+      location = "group:Core/Core.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:PostWorker/PostWorker.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:PlayerWorker/PlayerWorker.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Post/Post.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Player/Player.xcodeproj">
+      location = "group:DataService/DataService.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Feed/Feed.xcodeproj">
@@ -29,12 +17,24 @@
       location = "group:FeedWorker/FeedWorker.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:DataService/DataService.xcodeproj">
+      location = "group:Player/Player.xcodeproj">
    </FileRef>
    <FileRef
-      location = "container:Core/Core.xcodeproj">
+      location = "group:PlayerWorker/PlayerWorker.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Post/Post.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:PostWorker/PostWorker.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:TikTokCloneApp/TikTokCloneApp.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:WebViewDetail/WebViewDetail.xcodeproj">
    </FileRef>
 </Workspace>

@@ -1,9 +1,24 @@
+name: FeedWorker
+options:
+  bundleIdPrefix: com.FeedWorker
+  deploymentTarget:
+    iOS: "16.0"
+
 targets:
   FeedWorker:
     type: framework
     platform: iOS
     sources:
-      - path: Sources/
+      - FeedWorker
     dependencies:
-      - target: Core
-      - target: DataService
+      - framework: '${BUILT_PRODUCTS_DIR}/Core.framework'
+        embed: true
+        codeSign: true
+      - framework: '${BUILT_PRODUCTS_DIR}/DataService.framework'
+        embed: true
+        codeSign: true
+      - framework: '${BUILT_PRODUCTS_DIR}/Pods_FeedWorker.framework'
+        embed: false
+        codeSign: false
+    settings:
+      GENERATE_INFOPLIST_FILE: YES

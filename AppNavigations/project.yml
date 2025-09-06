@@ -1,11 +1,31 @@
+name: AppNavigations
+options:
+  bundleIdPrefix: com.AppNavigations
+  deploymentTarget:
+    iOS: "16.0"
 targets:
   AppNavigations:
     type: framework
     platform: iOS
+    deploymentTarget: "16.0"
+    generateInfoPlist: true
     sources:
-      - path: Sources/
+      - AppNavigations
     dependencies:
-      - target: Feed
-      - target: Player
-      - target: Post
-      - target: WebViewDetail
+      - framework: '${BUILT_PRODUCTS_DIR}/Feed.framework'
+        embed: true
+        codeSign: true
+      - framework: '${BUILT_PRODUCTS_DIR}/Player.framework'
+        embed: true
+        codeSign: true
+      - framework: '${BUILT_PRODUCTS_DIR}/Post.framework'
+        embed: true
+        codeSign: true
+      - framework: '${BUILT_PRODUCTS_DIR}/WebViewDetail.framework'
+        embed: true
+        codeSign: true
+      - framework: '${BUILT_PRODUCTS_DIR}/Pods_AppNavigations.framework'
+        embed: false
+        codeSign: false
+    settings:
+      GENERATE_INFOPLIST_FILE: YES

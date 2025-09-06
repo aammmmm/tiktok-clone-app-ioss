@@ -1,0 +1,6 @@
+framework module Pods_PostWorker {
+  umbrella header "Pods-PostWorker-umbrella.h"
+
+  export *
+  module * { export * }
+}

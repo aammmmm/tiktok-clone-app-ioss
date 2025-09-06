@@ -1,6 +1,17 @@
+name: WebViewDetail
+options:
+  bundleIdPrefix: com.WebViewDetail
+  deploymentTarget:
+    iOS: "16.0"
 targets:
   WebViewDetail:
     type: framework
     platform: iOS
     sources:
-      - path: Sources/
+      - path: .
+    dependencies:
+      - framework: '${BUILT_PRODUCTS_DIR}/Pods_WebViewDetail.framework'
+        embed: false
+        codeSign: false
+    settings:
+      GENERATE_INFOPLIST_FILE: YES
