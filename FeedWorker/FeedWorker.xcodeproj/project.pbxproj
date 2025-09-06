@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		302FC71C2E6BF510002B2A2D /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 302FC71B2E6BF510002B2A2D /* Core.framework */; };
+		302FC71D2E6BF510002B2A2D /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 302FC71B2E6BF510002B2A2D /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3075B9E02E689041009DF0D1 /* FeedWorkerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075B9DF2E68903C009DF0D1 /* FeedWorkerProtocol.swift */; };
 		30C4AF422E6856D400DFABEB /* DataService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C4AF412E6856D400DFABEB /* DataService.framework */; };
 		30C4AF432E6856D400DFABEB /* DataService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 30C4AF412E6856D400DFABEB /* DataService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -22,6 +24,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				30C4AF432E6856D400DFABEB /* DataService.framework in Embed Frameworks */,
+				302FC71D2E6BF510002B2A2D /* Core.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -29,6 +32,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		302FC71B2E6BF510002B2A2D /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3075B9DF2E68903C009DF0D1 /* FeedWorkerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedWorkerProtocol.swift; sourceTree = "<group>"; };
 		30C4AEE22E6856BA00DFABEB /* FeedWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FeedWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C4AF412E6856D400DFABEB /* DataService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +70,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30C4AF422E6856D400DFABEB /* DataService.framework in Frameworks */,
+				302FC71C2E6BF510002B2A2D /* Core.framework in Frameworks */,
 				9CC7A2C5294274A1D5D0FB6C /* Pods_FeedWorker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,6 +81,7 @@
 		05305093D15E6E34FE6D7C7C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				302FC71B2E6BF510002B2A2D /* Core.framework */,
 				30C4AF472E6856EC00DFABEB /* Core.framework */,
 				30C4AF412E6856D400DFABEB /* DataService.framework */,
 				532F5CDD0E24A8B78B2AA11A /* Pods_FeedWorker.framework */,

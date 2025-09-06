@@ -20,7 +20,6 @@ protocol FeedPresenterToView: AnyObject {
     func appendVideos(_ videos: [FeedEntity])
     func showLoading(_ isLoading: Bool)
     func showError(_ message: String)
-//    func showOriginalVideos()
     func clearVideos()
 }
 
@@ -32,11 +31,8 @@ protocol FeedInteractorToPresenter: AnyObject {
     func didStartFetchingVideos()
     func didFetchVideos(_ videos: [VideoEntity], page: Int)
     func didFailToFetchVideos(_ error: Error)
-//    func didSearchVideos(_ videos: [VideoEntity])
 }
 
 protocol FeedPresenterToRouter: AnyObject {
     func navigateToPlayer(from view: FeedPresenterToView, with video: String)
 }
-
-// ViewToPresenter -> PresenterToInteractor -> InteractorToPresenter -> PresenterToView -> PresenterToRouter

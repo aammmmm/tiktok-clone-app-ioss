@@ -14,6 +14,8 @@
 		302FC6FD2E6AA99C002B2A2D /* Player.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 302FC6FB2E6AA99C002B2A2D /* Player.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		302FC7092E6ABF67002B2A2D /* WebViewDetail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 302FC7082E6ABF67002B2A2D /* WebViewDetail.framework */; };
 		302FC70A2E6ABF67002B2A2D /* WebViewDetail.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 302FC7082E6ABF67002B2A2D /* WebViewDetail.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		302FC7192E6BED63002B2A2D /* Post.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 302FC7182E6BED63002B2A2D /* Post.framework */; };
+		302FC71A2E6BED63002B2A2D /* Post.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 302FC7182E6BED63002B2A2D /* Post.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,6 +25,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				302FC71A2E6BED63002B2A2D /* Post.framework in Embed Frameworks */,
 				302FC6F92E6AA983002B2A2D /* Feed.framework in Embed Frameworks */,
 				302FC6FD2E6AA99C002B2A2D /* Player.framework in Embed Frameworks */,
 				302FC70A2E6ABF67002B2A2D /* WebViewDetail.framework in Embed Frameworks */,
@@ -38,6 +41,7 @@
 		302FC6F72E6AA983002B2A2D /* Feed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Feed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		302FC6FB2E6AA99C002B2A2D /* Player.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Player.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		302FC7082E6ABF67002B2A2D /* WebViewDetail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = WebViewDetail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		302FC7182E6BED63002B2A2D /* Post.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Post.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -66,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				302FC7192E6BED63002B2A2D /* Post.framework in Frameworks */,
 				302FC6F82E6AA983002B2A2D /* Feed.framework in Frameworks */,
 				302FC6FC2E6AA99C002B2A2D /* Player.framework in Frameworks */,
 				302FC7092E6ABF67002B2A2D /* WebViewDetail.framework in Frameworks */,
@@ -96,6 +101,7 @@
 		302FC6F62E6AA983002B2A2D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				302FC7182E6BED63002B2A2D /* Post.framework */,
 				302FC7082E6ABF67002B2A2D /* WebViewDetail.framework */,
 				302FC6FB2E6AA99C002B2A2D /* Player.framework */,
 				302FC6F72E6AA983002B2A2D /* Feed.framework */,

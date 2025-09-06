@@ -37,7 +37,9 @@ extension PlayerPresenter: PlayerInteractorToPresenter {
         view?.showVideoDetails(video)
     }
     
-    func didFailToFetchVideoDetails(_ error: Error) {
-        view?.showError(error.localizedDescription)
+    func didFailToFetchVideoDetails(_ error: APIErrorResponse) {
+        let appError = AppError(apiError: error)
+        view?.showError(appError)
     }
+
 }

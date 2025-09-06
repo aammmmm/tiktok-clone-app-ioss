@@ -1,0 +1,9 @@
+targets:
+  PostWorker:
+    type: framework
+    platform: iOS
+    sources:
+      - path: Sources/
+    dependencies:
+      - target: Core
+      - target: DataService

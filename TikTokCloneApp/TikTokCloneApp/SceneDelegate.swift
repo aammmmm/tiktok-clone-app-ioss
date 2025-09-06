@@ -6,9 +6,6 @@
 //
 
 import UIKit
-import Core
-import Feed
-import Player
 import Post
 import AppNavigations
 

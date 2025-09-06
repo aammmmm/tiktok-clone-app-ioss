@@ -1,0 +1,6 @@
+targets:
+  Core:
+    type: framework
+    platform: iOS
+    sources:
+      - path: Sources/

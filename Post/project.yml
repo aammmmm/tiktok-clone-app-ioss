@@ -1,0 +1,9 @@
+targets:
+  Post:
+    type: framework
+    platform: iOS
+    sources:
+      - path: Sources/
+    dependencies:
+      - target: Core
+      - target: PostWorker

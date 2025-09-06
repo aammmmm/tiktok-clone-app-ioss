@@ -1,77 +1,36 @@
-name: TikTokCloneiOS
+name: TikTokCloneiOSs
+
 options:
-  bundleIdPrefix: com.yourcompany
+  bundleIdPrefix: com.yourcompany.TikTokCloneiOS
   deploymentTarget:
-    iOS: '16.0'
-  organizationName: YourCompany
-  developmentLanguage: Swift
-configurations:
-  Debug: debug
-  Release: release
-settings:
-  base:
-    IPHONEOS_DEPLOYMENT_TARGET: '16.0'
-    ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: YES
-    SWIFT_VERSION: 5.0
+    iOS: 16.0
+
+# Main App
 targets:
   TikTokCloneApp:
     type: application
     platform: iOS
-    sources: [TikTokCloneApp/Sources]
-    resources: [TikTokCloneApp/Resources]
+    sources:
+      - path: TikTokCloneApp/Sources/ # Direktori kode sumber aplikasi
     dependencies:
+      - target: AppNavigations
       - target: Core
+      - target: DataService
       - target: Feed
       - target: Player
       - target: Post
-    settings:
-      base:
-        OTHER_LDFLAGS: "$(inherited) -ObjC"
-  Feed:
-    type: framework
-    platform: iOS
-    sources: [Feed/Sources]
-    resources: [Feed/Resources]
-    dependencies:
-      - target: Core
-    settings:
-      base:
-        OTHER_LDFLAGS: "$(inherited) -ObjC"
-  Player:
-    type: framework
-    platform: iOS
-    sources: [Player/Sources]
-    resources: [Player/Resources]
-    dependencies:
-      - target: Core
-    settings:
-      base:
-        OTHER_LDFLAGS: "$(inherited) -ObjC"
-  Post:
-    type: framework
-    platform: iOS
-    sources: [Post/Sources]
-    resources: [Post/Resources]
-    dependencies:
-      - target: Core
-    settings:
-      base:
-        OTHER_LDFLAGS: "$(inherited) -ObjC"
-  Core:
-    type: framework
-    platform: iOS
-    sources: [Core/Sources]
-    resources: [Core/Resources]
-    settings:
-      base:
-        OTHER_LDFLAGS: "$(inherited) -ObjC"
+      - target: Pods
+      - target: WebViewDetail
 
-workspaces:
-  TikTokCloneiOSs:
-    projects:
-      - TikTokCloneApp
-      - Feed
-      - Player
-      - Core
-      - Post
-
+include:
+  - path: AppNavigations/project.yml
+  - path: WebViewDetail/project.yml
+  - path: PostWorker/project.yml
+  - path: PlayerWorker/project.yml
+  - path: Post/project.yml
+  - path: Player/project.yml
+  - path: Feed/project.yml
+  - path: FeedWorker/project.yml
+  - path: DataService/project.yml
+  - path: Core/project.yml
+  - path: Pods/Pods.xcodeproj/project.yml

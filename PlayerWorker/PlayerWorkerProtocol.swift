@@ -14,5 +14,5 @@ public protocol PlayerWorkerProtocol {
 
 public protocol PlayerWorkerResponseDelegate: AnyObject {
     func didSuccessFetchVideoDetail(_ video: VideoEntity)
-    func didFailFetchVideoDetail(error: String)
+    func didFailFetchVideoDetail(error: APIErrorResponse)
 }

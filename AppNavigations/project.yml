@@ -1,0 +1,11 @@
+targets:
+  AppNavigations:
+    type: framework
+    platform: iOS
+    sources:
+      - path: Sources/
+    dependencies:
+      - target: Feed
+      - target: Player
+      - target: Post
+      - target: WebViewDetail
