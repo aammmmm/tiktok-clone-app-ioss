@@ -5,7 +5,7 @@
 //  Created by Abraham Putra Lukas on 21/08/25.
 //
 
-import Core
+import Domain
 
 final class FeedPresenter {
     weak var view: FeedPresenterToView?
@@ -22,12 +22,14 @@ final class FeedPresenter {
 extension FeedPresenter: FeedViewToPresenter {
     func viewDidLoad() {
         page = 1
+        view?.showLoading(true)
         interactor?.fetchVideos(page: page)
     }
 
     func loadMoreVideos() {
         guard !isLoading, !isSearching else { return }
         isLoading = true
+        view?.showLoading(true)
         page += 1
         print("DEBUG: loadMoreVideos called, page=\(page)")
         interactor?.fetchVideos(page: page)
@@ -60,10 +62,6 @@ extension FeedPresenter: FeedViewToPresenter {
 }
 
 extension FeedPresenter: FeedInteractorToPresenter {
-    func didStartFetchingVideos() {
-        view?.showLoading(true)
-    }
-    
     func didFetchVideos(_ videos: [VideoEntity], page: Int) {
         print("DEBUG: didFetchVideos called, page=\(page), count=\(videos.count)")
         isLoading = false

@@ -6,37 +6,39 @@
 //
 
 import UIKit
-import Core
+import Domain
 
-protocol PostViewToPresenter {
+protocol PostViewToPresenter: AnyObject {
     func viewDidLoad()
     func loadMorePosts()
     func didSelectItem(at index: Int)
-    func didTapCreate(video: VideoEntity)
+    func didTapCreate(request: CreatePostRequest)
+    func didPullToRefresh()
 }
 
+// MARK: PostPresenterToView
 protocol PostPresenterToView: AnyObject {
+    func showLoading(_ show: Bool)
     func showPosts(_ posts: [VideoEntity])
     func appendPosts(_ posts: [VideoEntity])
-    func showLoading(_ isLoading: Bool)
     func showError(_ message: String)
 }
 
-protocol PostPresenterToInteractor {
+// MARK: PostPresenterToInteractor
+protocol PostPresenterToInteractor: AnyObject {
     func fetchPosts(page: Int)
-    func postEntity(at index: Int) -> VideoEntity?
-    func createPost(video: VideoEntity)
+    func createPost(request: CreatePostRequest)
 }
 
+// MARK: PostInteractorToPresenter
 protocol PostInteractorToPresenter: AnyObject {
-    func didStartFetchingPosts()
     func didFetchPosts(_ posts: [VideoEntity], page: Int)
     func didFailToFetchPosts(_ error: Error)
     func didCreatePost(_ video: VideoEntity)
     func didFailToCreatePost(_ error: Error)
 }
 
+// MARK: PostPresenterToRouter
 protocol PostPresenterToRouter: AnyObject {
-    func navigateToPlayer(from view: PostPresenterToView, with video: VideoEntity)
-    func navigateToCreateForm(from view: PostPresenterToView?)
+    func navigateToPlayer(from view: PostPresenterToView, with videoId: String)
 }

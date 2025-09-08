@@ -5,7 +5,7 @@
 //  Created by Abraham Putra Lukas on 04/09/25.
 //
 
-import Core
+import Domain
 
 public protocol PlayerWorkerProtocol {
     var responseDelegate: PlayerWorkerResponseDelegate? { get set }

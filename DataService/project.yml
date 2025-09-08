@@ -10,7 +10,7 @@ targets:
     sources:
       - path: DataService
     dependencies:
-      - framework: '${BUILT_PRODUCTS_DIR}/Core.framework'
+      - framework: '${BUILT_PRODUCTS_DIR}/Domain.framework'
         embed: true
         codeSign: true
       - framework: '${BUILT_PRODUCTS_DIR}/Pods_DataService.framework'

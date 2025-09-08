@@ -1,0 +1,17 @@
+name: Domain
+options:
+  bundleIdPrefix: com.Domain
+  deploymentTarget:
+    iOS: "16.0"
+targets:
+  Domain:
+    type: framework
+    platform: iOS
+    sources:
+        - Domain
+    dependencies:
+      - framework: '${BUILT_PRODUCTS_DIR}/Pods_Domain.framework'
+        embed: false
+        codeSign: false
+    settings:
+      GENERATE_INFOPLIST_FILE: YES

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Core
+import Domain
 
 protocol PlayerViewToPresenter: AnyObject {
     func viewDidLoad()

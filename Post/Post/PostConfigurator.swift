@@ -8,8 +8,11 @@
 import UIKit
 
 public final class PostConfigurator {
-    public static func createModule() -> UIViewController {
-        let view = PostViewController()
+    public static let shared = PostConfigurator()
+    public var delegate: PostWireframe?
+    
+    public static func createPostModule() -> UIViewController {
+        let view = PostViewController(nibName: "PostViewController", bundle: Bundle(for: PostViewController.self))
         let presenter = PostPresenter()
         let interactor = PostInteractor()
         let router = PostRouter()

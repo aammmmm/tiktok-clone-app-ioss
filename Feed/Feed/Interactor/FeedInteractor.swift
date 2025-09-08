@@ -6,9 +6,8 @@
 //
 
 import Foundation
-import Core
+import Domain
 import FeedWorker
-
 
 final class FeedInteractor: FeedPresenterToInteractor {
     weak var output: FeedInteractorToPresenter?
@@ -20,7 +19,6 @@ final class FeedInteractor: FeedPresenterToInteractor {
     }
 
     func fetchVideos(page: Int) {
-        output?.didStartFetchingVideos()
         worker.fetchVideos(page: page)
     }
 }

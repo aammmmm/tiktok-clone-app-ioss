@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Core
+import Domain
 import PlayerWorker
 
 final class PlayerInteractor: PlayerPresenterToInteractor {

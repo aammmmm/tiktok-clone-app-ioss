@@ -4,8 +4,8 @@
 //
 //  Created by Abraham Putra Lukas on 22/08/25.
 //
-// FeedEntityMapper.swift
-import Core
+
+import Domain
 
 enum FeedEntityMapper {
     static func map(_ v: VideoEntity) -> FeedEntity {

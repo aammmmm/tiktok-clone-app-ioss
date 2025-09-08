@@ -8,6 +8,7 @@
 import UIKit
 import Kingfisher
 import Core
+import Domain
 
 final class PostViewController: UIViewController, PostPresenterToView {
     var presenter: PostViewToPresenter?
@@ -65,16 +66,18 @@ final class PostViewController: UIViewController, PostPresenterToView {
         )
     }
     
-//    declare nav modal sheet
     @objc private func didTapAdd() {
         let formVC = PostFormViewController()
-        formVC.onSubmit = { [weak self] video in
-            self?.presenter?.didTapCreate(video: video)
+        formVC.onSubmit = { [weak self] request in
+            self?.presenter?.didTapCreate(request: request)
         }
         let nav = UINavigationController(rootViewController: formVC)
         nav.modalPresentationStyle = .pageSheet
         present(nav, animated: true)
     }
+
+    
+    // MARK: - PostPresenterToView Implementation
     
     func showPosts(_ posts: [VideoEntity]) {
         self.posts = posts
@@ -92,9 +95,10 @@ final class PostViewController: UIViewController, PostPresenterToView {
         }
     }
     
-    func showLoading(_ isLoading: Bool) {
-        isLoadingMore = isLoading
-        collectionView.reloadSections(IndexSet(integer: 0))
+    func showLoading(_ show: Bool) {
+        isLoadingMore = show
+        // Optional: Add loading indicator di UI jika diperlukan
+        // Untuk sekarang, cukup update state saja
     }
     
     func showError(_ message: String) {
@@ -103,7 +107,6 @@ final class PostViewController: UIViewController, PostPresenterToView {
         present(alert, animated: true)
     }
 }
-
 
 extension PostViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

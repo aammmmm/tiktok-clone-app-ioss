@@ -14,6 +14,9 @@ targets:
       - framework: '${BUILT_PRODUCTS_DIR}/Core.framework'
         embed: true
         codeSign: true
+      - framework: '${BUILT_PRODUCTS_DIR}/Domain.framework'
+        embed: true
+        codeSign: true
       - framework: '${BUILT_PRODUCTS_DIR}/PostWorker.framework'
         embed: true
         codeSign: true

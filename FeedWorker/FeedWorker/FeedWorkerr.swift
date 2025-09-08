@@ -7,7 +7,7 @@
 
 import DataService
 import Moya
-import Core
+import Domain
 
 
 public class FeedWorkerr: FeedWorkerProtocol {

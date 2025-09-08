@@ -11,7 +11,7 @@ targets:
     sources:
       - PlayerWorker
     dependencies:
-      - framework: '${BUILT_PRODUCTS_DIR}/Core.framework'
+      - framework: '${BUILT_PRODUCTS_DIR}/Domain.framework'
         embed: true
         codeSign: true
       - framework: '${BUILT_PRODUCTS_DIR}/DataService.framework'

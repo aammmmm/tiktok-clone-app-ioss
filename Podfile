@@ -23,6 +23,11 @@ target 'DataService' do
   common_pods
 end
 
+target 'Domain' do
+  project 'Domain/Domain.xcodeproj'
+  common_pods
+end
+
 target 'FeedWorker' do
   project 'FeedWorker/FeedWorker.xcodeproj'
   common_pods

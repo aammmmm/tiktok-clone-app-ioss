@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Core
+import Domain
 
 final class PostFormViewController: UIViewController {
     
@@ -25,8 +25,7 @@ final class PostFormViewController: UIViewController {
     private let isLiveSwitch = UISwitch()
     private let submitButton = UIButton(type: .system)
     
-//    Callback ke parent
-    var onSubmit: ((VideoEntity) -> Void)?
+    var onSubmit: ((CreatePostRequest) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -99,8 +98,7 @@ final class PostFormViewController: UIViewController {
     }
     
     @objc private func handleSubmit() {
-        let video = VideoEntity(
-            id: UUID().uuidString,
+        let request = CreatePostRequest(
             title: titleField.text ?? "",
             thumbnailUrl: thumbnailField.text ?? "",
             duration: durationField.text ?? "",
@@ -113,7 +111,7 @@ final class PostFormViewController: UIViewController {
             isLive: isLiveSwitch.isOn
         )
         
-        onSubmit?(video)
+        onSubmit?(request)
         dismiss(animated: true, completion: nil)
     }
 }

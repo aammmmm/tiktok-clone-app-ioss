@@ -7,7 +7,6 @@
 
 import UIKit
 
-// abstraksi berupa protocol
 public protocol FeedWireframe: AnyObject {
     func fromFeedToPlayer(view: UIViewController, videoId: String)
 }

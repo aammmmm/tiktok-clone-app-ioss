@@ -5,8 +5,8 @@
 //  Created by Abraham Putra Lukas on 04/09/25.
 //
 
-import Core
 import Moya
+import Domain
 import DataService
 
 public class PlayerWorkerr: PlayerWorkerProtocol {

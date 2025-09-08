@@ -4,7 +4,7 @@
 //
 //  Created by Abraham Putra Lukas on 04/09/25.
 //
-import Core
+
 import UIKit
 
 public final class PlayerConfigurator {

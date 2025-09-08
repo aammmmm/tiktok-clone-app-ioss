@@ -6,19 +6,20 @@
 //
 
 import UIKit
-import Core
 
 public final class PostRouter: PostPresenterToRouter {
-    func navigateToPlayer(from view: PostPresenterToView, with video: VideoEntity) {
-        AppRouter.route?(.player(video.id))
+    func navigateToPlayer(from view: PostPresenterToView, with videoId: String) {
+        guard let vc = view as? UIViewController else { return }
+        PostConfigurator.shared.delegate?.fromPostToPlayer(view: vc, videoId: videoId)
     }
-
+        
     func navigateToCreateForm(from view: PostPresenterToView?) {
-        let formVC = PostFormViewController() // form untuk create
+        let formVC = PostFormViewController()
         if let vc = view as? UIViewController {
             vc.navigationController?.pushViewController(formVC, animated: true)
         }
     }
 }
+
 
 

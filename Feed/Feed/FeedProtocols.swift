@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Core
+import Domain
 
 protocol FeedViewToPresenter: AnyObject {
     func viewDidLoad()
@@ -28,7 +28,6 @@ protocol FeedPresenterToInteractor: AnyObject {
 }
 
 protocol FeedInteractorToPresenter: AnyObject {
-    func didStartFetchingVideos()
     func didFetchVideos(_ videos: [VideoEntity], page: Int)
     func didFailToFetchVideos(_ error: Error)
 }

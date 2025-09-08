@@ -8,6 +8,7 @@
 import UIKit
 import Kingfisher
 import Core
+import Domain
 
 public final class PostCollectionViewCell: UICollectionViewCell {
     static let reuseIdentifier = "PostCollectionViewCell"

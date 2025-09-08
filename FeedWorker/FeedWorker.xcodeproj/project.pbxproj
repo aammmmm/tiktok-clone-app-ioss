@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		0D1F735F38C8B73FE8448049 /* FeedWorkerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE7758FE54C0ACF904428 /* FeedWorkerProtocol.swift */; };
 		2205BEF96CE418766DBE7E9B /* FeedWorkerr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823DA54B5BC42A636F57FEA0 /* FeedWorkerr.swift */; };
-		2A4A4B5444507A58ED0C2407 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAFB6EF3B6FE1106CF39C4DC /* Core.framework */; };
+		33E76DF21E0F4AFFFE4C8B4D /* Pods_FeedWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D9A75F840D80AE429BE0F64 /* Pods_FeedWorker.framework */; };
+		65AE4969A757E2E3D7370DAD /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A0DFEDB1128E680AA2E5A15 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		73D06B93AC525496B6B00AF1 /* DataService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006117C9D1EEAF404C1A974A /* DataService.framework */; };
 		88945375BF83F2044B8753C1 /* Pods_FeedWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5F68CF3DC252E4A12B762C /* Pods_FeedWorker.framework */; };
 		C3FE2AB5A5C5D992793717A4 /* DataService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 006117C9D1EEAF404C1A974A /* DataService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C56CF5EC1AC8560E37DED022 /* FeedWorker.h in Headers */ = {isa = PBXBuildFile; fileRef = 139DD112FE03E9C8CC2D576C /* FeedWorker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CAA507CAA5539FC5FC33D2FE /* Pods_FeedWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CC8123842DD3DCC4F93B7E5 /* Pods_FeedWorker.framework */; };
-		F2DFE669833863A9D771C340 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAFB6EF3B6FE1106CF39C4DC /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FBCE54E5939D9305968C3467 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A0DFEDB1128E680AA2E5A15 /* Domain.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,7 +25,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F2DFE669833863A9D771C340 /* Core.framework in Embed Frameworks */,
+				65AE4969A757E2E3D7370DAD /* Domain.framework in Embed Frameworks */,
 				C3FE2AB5A5C5D992793717A4 /* DataService.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -36,14 +36,14 @@
 /* Begin PBXFileReference section */
 		006117C9D1EEAF404C1A974A /* DataService.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DataService.framework; path = "${BUILT_PRODUCTS_DIR}/DataService.framework"; sourceTree = "<group>"; };
 		139DD112FE03E9C8CC2D576C /* FeedWorker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedWorker.h; sourceTree = "<group>"; };
+		2A0DFEDB1128E680AA2E5A15 /* Domain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Domain.framework; path = "${BUILT_PRODUCTS_DIR}/Domain.framework"; sourceTree = "<group>"; };
 		54096FF82981EF6E0DA8CC0C /* FeedWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FeedWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D9A75F840D80AE429BE0F64 /* Pods_FeedWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeedWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		823DA54B5BC42A636F57FEA0 /* FeedWorkerr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedWorkerr.swift; sourceTree = "<group>"; };
-		9CC8123842DD3DCC4F93B7E5 /* Pods_FeedWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeedWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AAFB6EF3B6FE1106CF39C4DC /* Core.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Core.framework; path = "${BUILT_PRODUCTS_DIR}/Core.framework"; sourceTree = "<group>"; };
+		97E5EA8FE62FDB482677C45F /* Pods-FeedWorker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedWorker.release.xcconfig"; path = "Target Support Files/Pods-FeedWorker/Pods-FeedWorker.release.xcconfig"; sourceTree = "<group>"; };
+		A21FE169C7C3F1B6378EA44F /* Pods-FeedWorker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedWorker.debug.xcconfig"; path = "Target Support Files/Pods-FeedWorker/Pods-FeedWorker.debug.xcconfig"; sourceTree = "<group>"; };
 		AE5F68CF3DC252E4A12B762C /* Pods_FeedWorker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_FeedWorker.framework; path = "${BUILT_PRODUCTS_DIR}/Pods_FeedWorker.framework"; sourceTree = "<group>"; };
 		BAEBE7758FE54C0ACF904428 /* FeedWorkerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedWorkerProtocol.swift; sourceTree = "<group>"; };
-		C8B0F267FE2D45FB14A2DA40 /* Pods-FeedWorker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedWorker.debug.xcconfig"; path = "Target Support Files/Pods-FeedWorker/Pods-FeedWorker.debug.xcconfig"; sourceTree = "<group>"; };
-		C919CDA60F5F910933D91062 /* Pods-FeedWorker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedWorker.release.xcconfig"; path = "Target Support Files/Pods-FeedWorker/Pods-FeedWorker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +51,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A4A4B5444507A58ED0C2407 /* Core.framework in Frameworks */,
+				FBCE54E5939D9305968C3467 /* Domain.framework in Frameworks */,
 				73D06B93AC525496B6B00AF1 /* DataService.framework in Frameworks */,
 				88945375BF83F2044B8753C1 /* Pods_FeedWorker.framework in Frameworks */,
-				CAA507CAA5539FC5FC33D2FE /* Pods_FeedWorker.framework in Frameworks */,
+				33E76DF21E0F4AFFFE4C8B4D /* Pods_FeedWorker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,13 +71,23 @@
 			path = FeedWorker;
 			sourceTree = "<group>";
 		};
+		8738A3C03F6F88618595148A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A21FE169C7C3F1B6378EA44F /* Pods-FeedWorker.debug.xcconfig */,
+				97E5EA8FE62FDB482677C45F /* Pods-FeedWorker.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
 		96C6EA9BD755B920F0E023C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AAFB6EF3B6FE1106CF39C4DC /* Core.framework */,
 				006117C9D1EEAF404C1A974A /* DataService.framework */,
+				2A0DFEDB1128E680AA2E5A15 /* Domain.framework */,
 				AE5F68CF3DC252E4A12B762C /* Pods_FeedWorker.framework */,
-				9CC8123842DD3DCC4F93B7E5 /* Pods_FeedWorker.framework */,
+				6D9A75F840D80AE429BE0F64 /* Pods_FeedWorker.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -88,18 +98,8 @@
 				8259D0F38D7A39D60E90C21F /* FeedWorker */,
 				96C6EA9BD755B920F0E023C2 /* Frameworks */,
 				BA3446D000D5093AE533175A /* Products */,
-				B7692A7A40D222AFC4ECA795 /* Pods */,
+				8738A3C03F6F88618595148A /* Pods */,
 			);
-			sourceTree = "<group>";
-		};
-		B7692A7A40D222AFC4ECA795 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C8B0F267FE2D45FB14A2DA40 /* Pods-FeedWorker.debug.xcconfig */,
-				C919CDA60F5F910933D91062 /* Pods-FeedWorker.release.xcconfig */,
-			);
-			name = Pods;
-			path = ../Pods;
 			sourceTree = "<group>";
 		};
 		BA3446D000D5093AE533175A /* Products */ = {
@@ -128,7 +128,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45153FBE937E3E6A9B79CF6F /* Build configuration list for PBXNativeTarget "FeedWorker" */;
 			buildPhases = (
-				78510028EA8EA2751156BD9D /* [CP] Check Pods Manifest.lock */,
+				23B5F2663C498F7E3ED86245 /* [CP] Check Pods Manifest.lock */,
 				54BA258A18BC6AF851A392F6 /* Headers */,
 				19C021012E51BFCD2EB47E5F /* Sources */,
 				C4A95B2D460FE1E2E51E376B /* Frameworks */,
@@ -173,7 +173,7 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		78510028EA8EA2751156BD9D /* [CP] Check Pods Manifest.lock */ = {
+		23B5F2663C498F7E3ED86245 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -212,7 +212,7 @@
 /* Begin XCBuildConfiguration section */
 		166AC2F60D7B7095449DC51D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8B0F267FE2D45FB14A2DA40 /* Pods-FeedWorker.debug.xcconfig */;
+			baseConfigurationReference = A21FE169C7C3F1B6378EA44F /* Pods-FeedWorker.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
@@ -240,7 +240,7 @@
 		};
 		695B1C2E9251BAFB379DBF5F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C919CDA60F5F910933D91062 /* Pods-FeedWorker.release.xcconfig */;
+			baseConfigurationReference = 97E5EA8FE62FDB482677C45F /* Pods-FeedWorker.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;

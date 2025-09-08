@@ -11,6 +11,9 @@
       location = "group:DataService/DataService.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Domain/Domain.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Feed/Feed.xcodeproj">
    </FileRef>
    <FileRef
@@ -32,9 +35,9 @@
       location = "group:TikTokCloneApp/TikTokCloneApp.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Pods/Pods.xcodeproj">
+      location = "group:WebViewDetail/WebViewDetail.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:WebViewDetail/WebViewDetail.xcodeproj">
+      location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

@@ -6,6 +6,7 @@
 //
 
 import Core
+import Domain
 
 public protocol FeedWorkerProtocol: AnyObject {
     var responseDelegate: FeedWorkerResponseProtocol? { get set }

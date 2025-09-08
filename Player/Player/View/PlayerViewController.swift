@@ -7,7 +7,7 @@
 
 import UIKit
 import WebKit
-import Core
+import Domain
 
 public class PlayerViewController: UIViewController {
     var presenter: PlayerViewToPresenter?

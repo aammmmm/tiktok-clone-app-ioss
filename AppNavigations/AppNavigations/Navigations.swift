@@ -9,6 +9,7 @@ import UIKit
 import Feed
 import Player
 import WebViewDetail
+import Post
 
 // atur navigasi secara global dengan menyambungkan configurator, dan navigate
 // Navigations jadi delegate dari semua config, yaitu terima semua navigation request
@@ -22,6 +23,8 @@ public class Navigations {
         FeedConfigurator.shared.delegate = self
         PlayerConfigurator.shared.delegate = self
         WebViewDetailConfigurator.shared.delegate = self
+        PostConfigurator.shared.delegate = self
+        
     }
 
     public func buildFeedModule() -> UIViewController {
@@ -51,5 +54,12 @@ extension Navigations: WebViewDetailWireframe {
     
     public func fromWebDetailPopToRoot(view: UIViewController) {
         view.navigationController?.popToRootViewController(animated: true)
+    }
+}
+
+extension Navigations: PostWireframe {
+    public func fromPostToPlayer(view: UIViewController, videoId: String) {
+        let playerVC = PlayerConfigurator.shared.createPlayerModule(with: videoId)
+        view.navigationController?.pushViewController(playerVC, animated: true)
     }
 }
