@@ -8,7 +8,7 @@
 import UIKit
 import Domain
 
-final class PostFormViewController: UIViewController {
+class PostFormViewController: UIViewController {
     
     private let scrollView = UIScrollView()
     private let contentView = UIStackView()

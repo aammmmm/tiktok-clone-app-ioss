@@ -7,7 +7,7 @@
 
 import UIKit
 
-public final class PlayerConfigurator {
+public class PlayerConfigurator {
     public static let shared = PlayerConfigurator()
     public var delegate: PlayerWireframe?
     

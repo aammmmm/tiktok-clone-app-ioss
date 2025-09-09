@@ -7,7 +7,7 @@
 
 import UIKit
 
-public final class FeedConfigurator {
+public class FeedConfigurator {
     public static let shared = FeedConfigurator()
     public var delegate: FeedWireframe?
 

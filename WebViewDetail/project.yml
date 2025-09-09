@@ -10,6 +10,12 @@ targets:
     sources:
       - path: .
     dependencies:
+      - framework: '${BUILT_PRODUCTS_DIR}/Domain.framework'
+        embed: false
+        codeSign: false
+      - framework: '${BUILT_PRODUCTS_DIR}/PlayerWorker.framework'
+        embed: false
+        codeSign: false
       - framework: '${BUILT_PRODUCTS_DIR}/Pods_WebViewDetail.framework'
         embed: false
         codeSign: false

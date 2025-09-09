@@ -11,7 +11,7 @@ protocol SearchHeaderViewDelegate: AnyObject {
     func didSubmitSearch(query: String)
 }
 
-final class SearchHeaderView: UICollectionReusableView {
+class SearchHeaderView: UICollectionReusableView {
     static let reuseIdentifier = "SearchHeaderView"
 
     weak var delegate: SearchHeaderViewDelegate?

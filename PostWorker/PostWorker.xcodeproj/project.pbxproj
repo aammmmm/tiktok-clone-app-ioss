@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		05008042B92C9F34AE38D773 /* Pods_PostWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92FFC917C493A5CE0FD21849 /* Pods_PostWorker.framework */; };
 		3BADB9C81E299C6E79934AFA /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 34D343516D502558378D6F5C /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5A34F9512BE29E640BFB9A36 /* Pods_PostWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D313BE08F039ACFCC694B706 /* Pods_PostWorker.framework */; };
 		607187754AAE3A167D589B46 /* PostWorker.h in Headers */ = {isa = PBXBuildFile; fileRef = 56366E26A91202850DE9AF01 /* PostWorker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		614AF504A18FBD139E59E4D8 /* Pods_PostWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42FDE703B7266DDD6B9C384 /* Pods_PostWorker.framework */; };
 		994F309CC8ED997234CDA9F7 /* DataService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB3A569D19002A5603F00883 /* DataService.framework */; };
 		A8EA854F3B710FBECC135BD3 /* PostWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF20D727C55D7934F9491F13 /* PostWorker.swift */; };
 		AB0F77F8F5A3927292A0536F /* DataService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FB3A569D19002A5603F00883 /* DataService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -37,10 +37,10 @@
 		34D343516D502558378D6F5C /* Domain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Domain.framework; path = "${BUILT_PRODUCTS_DIR}/Domain.framework"; sourceTree = "<group>"; };
 		56366E26A91202850DE9AF01 /* PostWorker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostWorker.h; sourceTree = "<group>"; };
 		6099F0D66B6E64CA4A92FEA2 /* PostWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PostWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C7A892D4DCD06FEE5DA8E5C /* Pods-PostWorker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostWorker.release.xcconfig"; path = "Target Support Files/Pods-PostWorker/Pods-PostWorker.release.xcconfig"; sourceTree = "<group>"; };
 		92FFC917C493A5CE0FD21849 /* Pods_PostWorker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_PostWorker.framework; path = "${BUILT_PRODUCTS_DIR}/Pods_PostWorker.framework"; sourceTree = "<group>"; };
-		98CC43A9B7675D37235D7944 /* Pods-PostWorker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostWorker.debug.xcconfig"; path = "Target Support Files/Pods-PostWorker/Pods-PostWorker.debug.xcconfig"; sourceTree = "<group>"; };
-		B42FDE703B7266DDD6B9C384 /* Pods_PostWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		98AFABE72CBD7EEEFA58D72B /* Pods-PostWorker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostWorker.debug.xcconfig"; path = "Target Support Files/Pods-PostWorker/Pods-PostWorker.debug.xcconfig"; sourceTree = "<group>"; };
+		D313BE08F039ACFCC694B706 /* Pods_PostWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E14109BDEE9ED6994B1774D8 /* Pods-PostWorker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostWorker.release.xcconfig"; path = "Target Support Files/Pods-PostWorker/Pods-PostWorker.release.xcconfig"; sourceTree = "<group>"; };
 		EF20D727C55D7934F9491F13 /* PostWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostWorker.swift; sourceTree = "<group>"; };
 		F91FCC0F345F1AEAC3BBD0CC /* PostWorkerProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostWorkerProtocols.swift; sourceTree = "<group>"; };
 		FB3A569D19002A5603F00883 /* DataService.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DataService.framework; path = "${BUILT_PRODUCTS_DIR}/DataService.framework"; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 				E58DC97FE5F71D4658FCA23F /* Domain.framework in Frameworks */,
 				994F309CC8ED997234CDA9F7 /* DataService.framework in Frameworks */,
 				05008042B92C9F34AE38D773 /* Pods_PostWorker.framework in Frameworks */,
-				614AF504A18FBD139E59E4D8 /* Pods_PostWorker.framework in Frameworks */,
+				5A34F9512BE29E640BFB9A36 /* Pods_PostWorker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,11 +69,11 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		500D4FF413F5F8FC9C1F2A4C /* Pods */ = {
+		5326A772AF6A9B4F7504F931 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				98CC43A9B7675D37235D7944 /* Pods-PostWorker.debug.xcconfig */,
-				8C7A892D4DCD06FEE5DA8E5C /* Pods-PostWorker.release.xcconfig */,
+				98AFABE72CBD7EEEFA58D72B /* Pods-PostWorker.debug.xcconfig */,
+				E14109BDEE9ED6994B1774D8 /* Pods-PostWorker.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../Pods;
@@ -95,7 +95,7 @@
 				74926C5281A097C6FBBDFE12 /* PostWorker */,
 				F8F2C796A3B00CE21583A701 /* Frameworks */,
 				4B3727BE8AB1C513B1A82599 /* Products */,
-				500D4FF413F5F8FC9C1F2A4C /* Pods */,
+				5326A772AF6A9B4F7504F931 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,7 +105,7 @@
 				FB3A569D19002A5603F00883 /* DataService.framework */,
 				34D343516D502558378D6F5C /* Domain.framework */,
 				92FFC917C493A5CE0FD21849 /* Pods_PostWorker.framework */,
-				B42FDE703B7266DDD6B9C384 /* Pods_PostWorker.framework */,
+				D313BE08F039ACFCC694B706 /* Pods_PostWorker.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -128,7 +128,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F191A07698240D002AD6FD0 /* Build configuration list for PBXNativeTarget "PostWorker" */;
 			buildPhases = (
-				F71B2CE92063AC02761EE12F /* [CP] Check Pods Manifest.lock */,
+				F517470B64B56A2EC28E2080 /* [CP] Check Pods Manifest.lock */,
 				BE836AC240D5684F2EBEED29 /* Headers */,
 				BE053B0AB50A505ADED293D6 /* Sources */,
 				2019A05FDCB2AACA1AE991FF /* Frameworks */,
@@ -173,7 +173,7 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		F71B2CE92063AC02761EE12F /* [CP] Check Pods Manifest.lock */ = {
+		F517470B64B56A2EC28E2080 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -212,7 +212,7 @@
 /* Begin XCBuildConfiguration section */
 		04416FBF791C05666CBC66B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98CC43A9B7675D37235D7944 /* Pods-PostWorker.debug.xcconfig */;
+			baseConfigurationReference = 98AFABE72CBD7EEEFA58D72B /* Pods-PostWorker.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
@@ -359,7 +359,7 @@
 		};
 		90351055557F2E216F332B27 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C7A892D4DCD06FEE5DA8E5C /* Pods-PostWorker.release.xcconfig */;
+			baseConfigurationReference = E14109BDEE9ED6994B1774D8 /* Pods-PostWorker.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;

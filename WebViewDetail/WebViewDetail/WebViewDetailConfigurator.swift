@@ -7,7 +7,7 @@
 
 import UIKit
 
-public final class WebViewDetailConfigurator {
+public class WebViewDetailConfigurator {
     public static let shared = WebViewDetailConfigurator()
     public weak var delegate: WebViewDetailWireframe?
 

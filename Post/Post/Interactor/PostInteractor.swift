@@ -10,7 +10,7 @@ import Domain
 import DataService
 import PostWorker
 
-final class PostInteractor: PostPresenterToInteractor {
+class PostInteractor: PostPresenterToInteractor {
     weak var output: PostInteractorToPresenter?
     private let worker: PostWorkerr
 

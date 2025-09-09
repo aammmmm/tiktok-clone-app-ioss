@@ -9,8 +9,7 @@ import Foundation
 import Domain
 import UIKit
 
-final class PlayerPresenter: PlayerViewToPresenter {
-
+class PlayerPresenter: PlayerViewToPresenter {
     weak var view: PlayerPresenterToView?
     var interactor: PlayerPresenterToInteractor?
     var router: PlayerPresenterToRouter?
@@ -24,12 +23,6 @@ final class PlayerPresenter: PlayerViewToPresenter {
             router?.navigateToWebDetail(from: view, url: url, title: title)
         }
     }
-    
-    
-//    func didTapDummyButton() {
-//        router?.navigateToNextPage(from: view)
-//    }
-
 }
 
 extension PlayerPresenter: PlayerInteractorToPresenter {
@@ -39,7 +32,11 @@ extension PlayerPresenter: PlayerInteractorToPresenter {
     
     func didFailToFetchVideoDetails(_ error: APIErrorResponse) {
         let appError = AppError(apiError: error)
-        view?.showError(appError)
+        
+        if error.error.code == 4993 {
+            view?.showWebViewError(appError)
+        } else if error.error.code == 8000 {
+            view?.showError(appError)
+        }
     }
-
 }

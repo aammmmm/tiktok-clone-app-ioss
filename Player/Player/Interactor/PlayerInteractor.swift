@@ -9,7 +9,7 @@ import Foundation
 import Domain
 import PlayerWorker
 
-final class PlayerInteractor: PlayerPresenterToInteractor {
+class PlayerInteractor: PlayerPresenterToInteractor {
     weak var presenter: PlayerInteractorToPresenter?
     private let videoId: String
     private let worker: PlayerWorkerr

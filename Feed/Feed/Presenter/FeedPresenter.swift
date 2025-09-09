@@ -7,7 +7,7 @@
 
 import Domain
 
-final class FeedPresenter {
+class FeedPresenter {
     weak var view: FeedPresenterToView?
     var interactor: FeedPresenterToInteractor?
     var router: FeedPresenterToRouter?
@@ -46,11 +46,20 @@ extension FeedPresenter: FeedViewToPresenter {
     func didTapSearch(query: String) {
         if query.isEmpty {
             isSearching = false
-            view?.clearVideos()
-            page = 1
-            interactor?.fetchVideos(page: page)
+            
+            guard !videosCache.isEmpty else {
+                page = 1
+                interactor?.fetchVideos(page: page)
+                return
+            }
+            
+            let feedEntities = FeedEntityMapper.mapList(videosCache)
+            view?.showVideos(feedEntities)
         } else {
             isSearching = true
+
+            guard !videosCache.isEmpty else { return }
+            
             searchResults = videosCache.filter {
                 $0.title.lowercased().contains(query.lowercased()) ||
                 $0.author.lowercased().contains(query.lowercased())

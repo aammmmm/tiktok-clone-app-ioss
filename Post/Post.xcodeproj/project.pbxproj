@@ -14,8 +14,8 @@
 		687B75DF903872F10022698B /* PostWorker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6700875BA4AC337219836F30 /* PostWorker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		688BD02BE12BD622AE2A8D61 /* PostWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD0315E4FC51BBAB54A7AEA /* PostWireframe.swift */; };
 		6C038EEFAF5D35DED1C01EF0 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 32028104F9E9E266CAE0BEBA /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6CC2FC054C1C98A9892E824E /* Pods_Post.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0887F9CBB7A6E9098CC8C04B /* Pods_Post.framework */; };
 		6D2359C1D2DF471D2996A3A7 /* PostProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B34C2C7F65DF2E0AFBC53 /* PostProtocols.swift */; };
+		72AE35496188C452E6834725 /* Pods_Post.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19025092A83DBCBF832C58C /* Pods_Post.framework */; };
 		861D8DFCE01274C0A48E6F9D /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95E5DDF4431074F868ED1164 /* Core.framework */; };
 		87EBAC5080F1CDDA2CC00077 /* PostPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D40E535C8958231A0597DD7 /* PostPresenter.swift */; };
 		89F613306F3DF4395EB71779 /* Pods_Post.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD706AE931679C50D57829A /* Pods_Post.framework */; };
@@ -46,9 +46,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		00E2B370F8E3B8B8E14A0479 /* Pods-Post.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Post.release.xcconfig"; path = "Target Support Files/Pods-Post/Pods-Post.release.xcconfig"; sourceTree = "<group>"; };
 		0573646F9CD480C91FDC8580 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
-		0887F9CBB7A6E9098CC8C04B /* Pods_Post.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Post.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1156347BFBEA7636DE1BC18A /* PostRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRouter.swift; sourceTree = "<group>"; };
 		2D40E535C8958231A0597DD7 /* PostPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPresenter.swift; sourceTree = "<group>"; };
 		32028104F9E9E266CAE0BEBA /* Domain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Domain.framework; path = "${BUILT_PRODUCTS_DIR}/Domain.framework"; sourceTree = "<group>"; };
@@ -62,7 +60,9 @@
 		8577B3A418ADBFFA0300E277 /* Post.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Post.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95A627923222C409876147A6 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		95E5DDF4431074F868ED1164 /* Core.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Core.framework; path = "${BUILT_PRODUCTS_DIR}/Core.framework"; sourceTree = "<group>"; };
-		B723E85DF995FA8C37081499 /* Pods-Post.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Post.debug.xcconfig"; path = "Target Support Files/Pods-Post/Pods-Post.debug.xcconfig"; sourceTree = "<group>"; };
+		A0BB6752DDE33EE2CD2CAEA8 /* Pods-Post.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Post.release.xcconfig"; path = "Target Support Files/Pods-Post/Pods-Post.release.xcconfig"; sourceTree = "<group>"; };
+		B19025092A83DBCBF832C58C /* Pods_Post.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Post.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4779FDC1DFCA3A28029D145 /* Pods-Post.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Post.debug.xcconfig"; path = "Target Support Files/Pods-Post/Pods-Post.debug.xcconfig"; sourceTree = "<group>"; };
 		EDD706AE931679C50D57829A /* Pods_Post.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_Post.framework; path = "${BUILT_PRODUCTS_DIR}/Pods_Post.framework"; sourceTree = "<group>"; };
 		EE5BEED0D71F43A6C7681781 /* PostConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostConfigurator.swift; sourceTree = "<group>"; };
 		FB87C249A29C165BBDFF1090 /* PostInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostInteractor.swift; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 				5AEC57348082833798067885 /* Domain.framework in Frameworks */,
 				E212BA31E57E476932C3AA55 /* PostWorker.framework in Frameworks */,
 				89F613306F3DF4395EB71779 /* Pods_Post.framework in Frameworks */,
-				6CC2FC054C1C98A9892E824E /* Pods_Post.framework in Frameworks */,
+				72AE35496188C452E6834725 /* Pods_Post.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,7 +103,7 @@
 				32028104F9E9E266CAE0BEBA /* Domain.framework */,
 				EDD706AE931679C50D57829A /* Pods_Post.framework */,
 				6700875BA4AC337219836F30 /* PostWorker.framework */,
-				0887F9CBB7A6E9098CC8C04B /* Pods_Post.framework */,
+				B19025092A83DBCBF832C58C /* Pods_Post.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -130,7 +130,7 @@
 				B866E35D7B251D195FFE3C4C /* Post */,
 				4D897087E1D365E3A6C1A432 /* Frameworks */,
 				C6694BCD205DDCE5A825D500 /* Products */,
-				D26C3922A736FE4CA371087F /* Pods */,
+				FACA095851E44183F27CC3A9 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,22 +157,22 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D26C3922A736FE4CA371087F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B723E85DF995FA8C37081499 /* Pods-Post.debug.xcconfig */,
-				00E2B370F8E3B8B8E14A0479 /* Pods-Post.release.xcconfig */,
-			);
-			name = Pods;
-			path = ../Pods;
-			sourceTree = "<group>";
-		};
 		DF5C70D237B21A384F46B84D /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
 				FB87C249A29C165BBDFF1090 /* PostInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		FACA095851E44183F27CC3A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B4779FDC1DFCA3A28029D145 /* Pods-Post.debug.xcconfig */,
+				A0BB6752DDE33EE2CD2CAEA8 /* Pods-Post.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +193,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6DEB0B1F7383D539B71E12D1 /* Build configuration list for PBXNativeTarget "Post" */;
 			buildPhases = (
-				2ADF6967C2BFBAB0A05D0519 /* [CP] Check Pods Manifest.lock */,
+				0A445ED1B099D3A056F7A3D8 /* [CP] Check Pods Manifest.lock */,
 				78DA098392426C815FA46656 /* Headers */,
 				50B5E63FF84F0BC16952ED84 /* Sources */,
 				98BB3FE819DAB3604DFD3AA2 /* Resources */,
@@ -251,7 +251,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2ADF6967C2BFBAB0A05D0519 /* [CP] Check Pods Manifest.lock */ = {
+		0A445ED1B099D3A056F7A3D8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -297,7 +297,7 @@
 /* Begin XCBuildConfiguration section */
 		5631F8B9B4B4082312F029F5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00E2B370F8E3B8B8E14A0479 /* Pods-Post.release.xcconfig */;
+			baseConfigurationReference = A0BB6752DDE33EE2CD2CAEA8 /* Pods-Post.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
@@ -325,7 +325,7 @@
 		};
 		ACB15B7EB44F9B49475DC0C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B723E85DF995FA8C37081499 /* Pods-Post.debug.xcconfig */;
+			baseConfigurationReference = B4779FDC1DFCA3A28029D145 /* Pods-Post.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;

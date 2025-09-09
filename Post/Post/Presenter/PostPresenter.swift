@@ -8,7 +8,7 @@
 import Foundation
 import Domain
 
-final class PostPresenter {
+class PostPresenter {
     weak var view: PostPresenterToView?
     var interactor: PostPresenterToInteractor?
     var router: PostPresenterToRouter?

@@ -13,6 +13,7 @@
 		349F82047270A74219BAA73E /* DataService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDF2D8CABB85F40FCC04704A /* DataService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		36C7A95465C870FEAACF37AC /* AppNavigations.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A51AE45FEDF05E90DF9E136 /* AppNavigations.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		42EB9B3201E73D4868553A4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FD47E5DB1CA61A080A1E1D /* AppDelegate.swift */; };
+		4EAEAA79877D0FA5380FC11B /* Pods_TikTokCloneApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E55D1DEE60C8FD5735B1469 /* Pods_TikTokCloneApp.framework */; };
 		5CC7F0C040AC550432C3B60E /* Post.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C5E04B68256A92F31150A782 /* Post.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61EF4F2A9F45CCB88ADD2DC5 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD7984E7A848458D6649559 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6C8230CA000B7FBFB035B322 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD7984E7A848458D6649559 /* Domain.framework */; };
@@ -20,7 +21,6 @@
 		8516C587BAB89B9BDE90A5FA /* AppNavigations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A51AE45FEDF05E90DF9E136 /* AppNavigations.framework */; };
 		85F6638529DB390F8EE96061 /* Player.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F03E099DC4E5E874C7ABF1C9 /* Player.framework */; };
 		921ECD4D5D48A534F25DE6E3 /* DataService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF2D8CABB85F40FCC04704A /* DataService.framework */; };
-		B0EE7CF31AD2020BFB364CB2 /* Pods_TikTokCloneApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F9D6E51613572B4490E6B9 /* Pods_TikTokCloneApp.framework */; };
 		BACF5FFDF8B89872FC1DFCF6 /* WebViewDetail.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9362B02357FD39CE80D37D05 /* WebViewDetail.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C103213200FA3E3F41724442 /* Feed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31D58C5416141A481C8ED37B /* Feed.framework */; };
 		C48BC561D22E9C5D795EBC0C /* Feed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31D58C5416141A481C8ED37B /* Feed.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -54,16 +54,16 @@
 
 /* Begin PBXFileReference section */
 		02FD47E5DB1CA61A080A1E1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		18F9D6E51613572B4490E6B9 /* Pods_TikTokCloneApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikTokCloneApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		218B349077FFD6CB5D17E424 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31D58C5416141A481C8ED37B /* Feed.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Feed.framework; path = "${BUILT_PRODUCTS_DIR}/Feed.framework"; sourceTree = "<group>"; };
 		3A51AE45FEDF05E90DF9E136 /* AppNavigations.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppNavigations.framework; path = "${BUILT_PRODUCTS_DIR}/AppNavigations.framework"; sourceTree = "<group>"; };
 		3EB045AA554130D3FB745528 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		613AD50E926F1DB93DD75D0F /* Pods-TikTokCloneApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokCloneApp.debug.xcconfig"; path = "Target Support Files/Pods-TikTokCloneApp/Pods-TikTokCloneApp.debug.xcconfig"; sourceTree = "<group>"; };
+		4040BC55F20B46797760320A /* Pods-TikTokCloneApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokCloneApp.release.xcconfig"; path = "Target Support Files/Pods-TikTokCloneApp/Pods-TikTokCloneApp.release.xcconfig"; sourceTree = "<group>"; };
 		6BD7984E7A848458D6649559 /* Domain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Domain.framework; path = "${BUILT_PRODUCTS_DIR}/Domain.framework"; sourceTree = "<group>"; };
+		717FC9BF1C74E7A1A4887E54 /* Pods-TikTokCloneApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokCloneApp.debug.xcconfig"; path = "Target Support Files/Pods-TikTokCloneApp/Pods-TikTokCloneApp.debug.xcconfig"; sourceTree = "<group>"; };
+		7E55D1DEE60C8FD5735B1469 /* Pods_TikTokCloneApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikTokCloneApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88766BEBA7E7B6E8AD534662 /* Core.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Core.framework; path = "${BUILT_PRODUCTS_DIR}/Core.framework"; sourceTree = "<group>"; };
 		9362B02357FD39CE80D37D05 /* WebViewDetail.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebViewDetail.framework; path = "${BUILT_PRODUCTS_DIR}/WebViewDetail.framework"; sourceTree = "<group>"; };
-		B49462C53554BD0FB4D7476A /* Pods-TikTokCloneApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokCloneApp.release.xcconfig"; path = "Target Support Files/Pods-TikTokCloneApp/Pods-TikTokCloneApp.release.xcconfig"; sourceTree = "<group>"; };
 		C0DFD5DD34DBB6EFDC0E330B /* Pods_TikTokCloneApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_TikTokCloneApp.framework; path = "${BUILT_PRODUCTS_DIR}/Pods_TikTokCloneApp.framework"; sourceTree = "<group>"; };
 		C5E04B68256A92F31150A782 /* Post.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Post.framework; path = "${BUILT_PRODUCTS_DIR}/Post.framework"; sourceTree = "<group>"; };
 		D5C212EC9CF792C10CA2BB77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -87,23 +87,13 @@
 				1491955FEDD996F591AAA5DD /* Post.framework in Frameworks */,
 				D05BB366D8A891FC968E98C4 /* WebViewDetail.framework in Frameworks */,
 				313659920C97EC94BCE67B70 /* Pods_TikTokCloneApp.framework in Frameworks */,
-				B0EE7CF31AD2020BFB364CB2 /* Pods_TikTokCloneApp.framework in Frameworks */,
+				4EAEAA79877D0FA5380FC11B /* Pods_TikTokCloneApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2959EDEB6632717BDAF51623 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				613AD50E926F1DB93DD75D0F /* Pods-TikTokCloneApp.debug.xcconfig */,
-				B49462C53554BD0FB4D7476A /* Pods-TikTokCloneApp.release.xcconfig */,
-			);
-			name = Pods;
-			path = ../Pods;
-			sourceTree = "<group>";
-		};
 		3F9484DA8C245FC2D2A4BDEC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,7 +106,7 @@
 				C0DFD5DD34DBB6EFDC0E330B /* Pods_TikTokCloneApp.framework */,
 				C5E04B68256A92F31150A782 /* Post.framework */,
 				9362B02357FD39CE80D37D05 /* WebViewDetail.framework */,
-				18F9D6E51613572B4490E6B9 /* Pods_TikTokCloneApp.framework */,
+				7E55D1DEE60C8FD5735B1469 /* Pods_TikTokCloneApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -127,6 +117,16 @@
 				F7B0F5BC9014991A7557A369 /* TikTokCloneApp.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8D609405489E176D6BEC9D65 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				717FC9BF1C74E7A1A4887E54 /* Pods-TikTokCloneApp.debug.xcconfig */,
+				4040BC55F20B46797760320A /* Pods-TikTokCloneApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
 			sourceTree = "<group>";
 		};
 		BB4D632A27CCD7608D5A2D4F /* TikTokCloneApp */ = {
@@ -147,7 +147,7 @@
 				BB4D632A27CCD7608D5A2D4F /* TikTokCloneApp */,
 				3F9484DA8C245FC2D2A4BDEC /* Frameworks */,
 				6239C1686AA5417E7D1EC646 /* Products */,
-				2959EDEB6632717BDAF51623 /* Pods */,
+				8D609405489E176D6BEC9D65 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,12 +158,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 620316BCD47C4EBECC2D331A /* Build configuration list for PBXNativeTarget "TikTokCloneApp" */;
 			buildPhases = (
-				6DB77F4ED951E0C2E3D63F46 /* [CP] Check Pods Manifest.lock */,
+				C96C633BD91732F351E399A9 /* [CP] Check Pods Manifest.lock */,
 				B6485D87E788F7B04A934474 /* Sources */,
 				850EDD2EC0E4B0A76EEE1780 /* Resources */,
 				FFE1A717D4792EDB7E24E7C5 /* Frameworks */,
 				50217C1524C40AB4EA0BEA31 /* Embed Frameworks */,
-				F466666E92EF301208416660 /* [CP] Embed Pods Frameworks */,
+				EA983FDB6AEF56ED6F2D2271 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -214,7 +214,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6DB77F4ED951E0C2E3D63F46 /* [CP] Check Pods Manifest.lock */ = {
+		C96C633BD91732F351E399A9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -236,7 +236,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F466666E92EF301208416660 /* [CP] Embed Pods Frameworks */ = {
+		EA983FDB6AEF56ED6F2D2271 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -327,7 +327,7 @@
 		};
 		5A830A860381A2E4D190FAD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 613AD50E926F1DB93DD75D0F /* Pods-TikTokCloneApp.debug.xcconfig */;
+			baseConfigurationReference = 717FC9BF1C74E7A1A4887E54 /* Pods-TikTokCloneApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -338,8 +338,6 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TikTokCloneApp/Info.plist;
-				INFOPLIST_KEY_CFBundleShortVersionString = 1.0;
-				INFOPLIST_KEY_CFBundleVersion = 1;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -354,7 +352,7 @@
 		};
 		8B252788F62B5C10215976BD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B49462C53554BD0FB4D7476A /* Pods-TikTokCloneApp.release.xcconfig */;
+			baseConfigurationReference = 4040BC55F20B46797760320A /* Pods-TikTokCloneApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -365,8 +363,6 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TikTokCloneApp/Info.plist;
-				INFOPLIST_KEY_CFBundleShortVersionString = 1.0;
-				INFOPLIST_KEY_CFBundleVersion = 1;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

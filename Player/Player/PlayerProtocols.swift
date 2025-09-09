@@ -16,6 +16,7 @@ protocol PlayerViewToPresenter: AnyObject {
 protocol PlayerPresenterToView: AnyObject {
     func showVideoDetails(_ video: VideoEntity)
     func showError(_ error: AppError)
+    func showWebViewError(_ error: AppError)
 }
 
 protocol PlayerPresenterToInteractor: AnyObject {

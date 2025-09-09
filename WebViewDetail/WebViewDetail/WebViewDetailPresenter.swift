@@ -8,12 +8,11 @@
 import Foundation
 
 
-public final class WebViewDetailPresenter {
+public class WebViewDetailPresenter {
     public weak var view: WebViewDetailPresenterToView?
     public var router: WebViewDetailPresenterToRouter?
     public var interactor: WebViewDetailPresenterToInteractor?
 
-    // dependency yang akan diisi di configurator
     public var url: URL?
     public var pageTitle: String?
 }

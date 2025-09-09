@@ -8,7 +8,7 @@
 import Foundation
 import Moya
 
-public final class APIService {
+public class APIService {
     public static let shared = APIService()
     private let provider = MoyaProvider<APIProviders>()
 

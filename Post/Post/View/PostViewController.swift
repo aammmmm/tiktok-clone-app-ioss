@@ -10,7 +10,7 @@ import Kingfisher
 import Core
 import Domain
 
-final class PostViewController: UIViewController, PostPresenterToView {
+class PostViewController: UIViewController, PostPresenterToView {
     var presenter: PostViewToPresenter?
     
     static let nibName = "PostCollectionViewCell"

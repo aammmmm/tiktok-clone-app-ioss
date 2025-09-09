@@ -9,7 +9,7 @@ import Foundation
 import Core
 import UIKit
 
-public final class PlayerRouter: PlayerPresenterToRouter {
+public class PlayerRouter: PlayerPresenterToRouter {
     func navigateToWebDetail(from view: PlayerPresenterToView, url: URL, title: String) {
         guard let vc = view as? UIViewController else { return }
         PlayerConfigurator.shared.delegate?.fromPlayerToWebViewDetail(view: vc, url: url, title: title

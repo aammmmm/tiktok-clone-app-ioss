@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-final class LoadingFooterView: UICollectionReusableView {
+class LoadingFooterView: UICollectionReusableView {
     static let reuseIdentifier = "LoadingFooterView"
     
     private let spinner: UIActivityIndicatorView = {

@@ -19,7 +19,6 @@ public class Navigations {
     
 //    menghubungkan configurator dengan Navigations, init jadi delegate untuk semua config yg ada
     private init() {
-//        bilg ke config "object navigations adlh delegate mu, setiap kamu perlu navigate, berikan ke aku
         FeedConfigurator.shared.delegate = self
         PlayerConfigurator.shared.delegate = self
         WebViewDetailConfigurator.shared.delegate = self
@@ -29,6 +28,10 @@ public class Navigations {
 
     public func buildFeedModule() -> UIViewController {
         return FeedConfigurator.shared.createFeedModule()
+    }
+    
+    public func buildPostModule() -> UIViewController {
+        return PostConfigurator.shared.createPostModule()
     }
 }
 
@@ -48,8 +51,13 @@ extension Navigations: PlayerWireframe {
 
 extension Navigations: WebViewDetailWireframe {
     public func fromWebDetailToFeed(view: UIViewController) {
-        let feedVC = buildFeedModule()
-        view.navigationController?.pushViewController(feedVC, animated: true)
+        guard let navigationController = view.navigationController else { return }
+        
+        if let feedVC = navigationController.viewControllers.first(where: { vc in
+            return String(describing: type(of: vc)).contains("FeedViewController")
+        }) {
+            navigationController.popToViewController(feedVC, animated: true)
+        }
     }
     
     public func fromWebDetailPopToRoot(view: UIViewController) {

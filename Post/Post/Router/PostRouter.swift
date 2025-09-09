@@ -7,7 +7,7 @@
 
 import UIKit
 
-public final class PostRouter: PostPresenterToRouter {
+public class PostRouter: PostPresenterToRouter {
     func navigateToPlayer(from view: PostPresenterToView, with videoId: String) {
         guard let vc = view as? UIViewController else { return }
         PostConfigurator.shared.delegate?.fromPostToPlayer(view: vc, videoId: videoId)

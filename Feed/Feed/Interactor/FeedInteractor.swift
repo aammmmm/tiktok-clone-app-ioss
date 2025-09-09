@@ -9,7 +9,7 @@ import Foundation
 import Domain
 import FeedWorker
 
-final class FeedInteractor: FeedPresenterToInteractor {
+class FeedInteractor: FeedPresenterToInteractor {
     weak var output: FeedInteractorToPresenter?
     private let worker: FeedWorkerr
 

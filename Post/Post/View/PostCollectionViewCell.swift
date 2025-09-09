@@ -10,7 +10,7 @@ import Kingfisher
 import Core
 import Domain
 
-public final class PostCollectionViewCell: UICollectionViewCell {
+public class PostCollectionViewCell: UICollectionViewCell {
     static let reuseIdentifier = "PostCollectionViewCell"
     
     @IBOutlet weak var containerView: UIView!

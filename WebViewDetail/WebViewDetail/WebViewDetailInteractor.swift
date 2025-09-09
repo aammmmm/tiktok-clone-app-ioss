@@ -7,7 +7,7 @@
 
 import Foundation
 
-public final class WebViewDetailInteractor: WebViewDetailPresenterToInteractor {
+public class WebViewDetailInteractor: WebViewDetailPresenterToInteractor {
     
     public weak var presenter: WebViewDetailInteractorToPresenter?
     

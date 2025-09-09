@@ -15,12 +15,11 @@ public enum APIProviders {
     case createPost(CreatePostRequest)
 }
 
-//https://www.apirequest.in/video/api
 extension APIProviders: TargetType {
     public var baseURL: URL {
         switch self {
         case .getVideoById:
-            guard let url = URL(string: "https://www.apirequest.in/video/api/") else {
+            guard let url = URL(string: "http://localhost:3002") else {
                 fatalError("Invalid remote API URL")
             }
             return url
@@ -45,17 +44,13 @@ extension APIProviders: TargetType {
     
     public var method: Moya.Method {
         switch self {
-        case .getVideos, .getPosts:
+        case .getVideos, .getPosts, .getVideoById:
             return .get
         case .createPost:
             return .post
-        case .getVideoById(id: let id):
-            return .get
         }
     }
     
-//    specify request (body, param, objects)
-//    btter bikin jadi obj dulu
     public var task: Task {
         switch self {
         case .getVideos, .getPosts, .getVideoById:

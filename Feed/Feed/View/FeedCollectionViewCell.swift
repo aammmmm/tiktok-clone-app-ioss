@@ -9,7 +9,7 @@ import UIKit
 import Kingfisher
 import Core
 
-final class FeedCollectionViewCell: UICollectionViewCell {
+class FeedCollectionViewCell: UICollectionViewCell {
     static let nibName = "FeedCollectionViewCell"
     static let reuseIdentifier = "FeedCollectionViewCell"
     

@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                                           image: UIImage(systemName: "house"),
                                           tag: 0)
 
-        let postVC = PostConfigurator.createPostModule()
+        let postVC = Navigations.shared.buildPostModule()
         let postNav = UINavigationController(rootViewController: postVC)
         postNav.tabBarItem = UITabBarItem(title: "Post",
                                           image: UIImage(systemName: "plus.square"),
