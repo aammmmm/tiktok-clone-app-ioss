@@ -16,7 +16,6 @@ protocol PostViewToPresenter: AnyObject {
     func didPullToRefresh()
 }
 
-// MARK: PostPresenterToView
 protocol PostPresenterToView: AnyObject {
     func showLoading(_ show: Bool)
     func showPosts(_ posts: [VideoEntity])
@@ -24,21 +23,18 @@ protocol PostPresenterToView: AnyObject {
     func showError(_ message: String)
 }
 
-// MARK: PostPresenterToInteractor
 protocol PostPresenterToInteractor: AnyObject {
     func fetchPosts(page: Int)
     func createPost(request: CreatePostRequest)
 }
 
-// MARK: PostInteractorToPresenter
 protocol PostInteractorToPresenter: AnyObject {
     func didFetchPosts(_ posts: [VideoEntity], page: Int)
-    func didFailToFetchPosts(_ error: Error)
+    func didFailToFetchPosts(_ error: String)
     func didCreatePost(_ video: VideoEntity)
-    func didFailToCreatePost(_ error: Error)
+    func didFailToCreatePost(_ error: String)
 }
 
-// MARK: PostPresenterToRouter
 protocol PostPresenterToRouter: AnyObject {
     func navigateToPlayer(from view: PostPresenterToView, with videoId: String)
 }

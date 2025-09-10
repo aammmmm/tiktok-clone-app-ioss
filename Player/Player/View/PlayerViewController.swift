@@ -74,16 +74,6 @@ public class PlayerViewController: UIViewController {
             $0.firstAttribute == .height && $0.secondAttribute == .width }) {
             layout.isActive = false
         }
-        let aspectRatio = NSLayoutConstraint(
-            item: webView as Any,
-            attribute: .height,
-            relatedBy: .equal,
-            toItem: webView,
-            attribute: .width,
-            multiplier: 9.0/16.0,
-            constant: 0
-        )
-        aspectRatio.isActive = true
     }
     
     private func setupUI() {

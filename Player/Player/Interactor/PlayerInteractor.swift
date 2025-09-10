@@ -31,7 +31,6 @@ extension PlayerInteractor: PlayerWorkerResponseDelegate {
     }
     
     func didFailFetchVideoDetail(error: APIErrorResponse) {
-//        let err = NSError(domain: "FeedWorker", code: -1, userInfo: [NSLocalizedDescriptionKey: error])
         presenter?.didFailToFetchVideoDetails(error)
     }
 }

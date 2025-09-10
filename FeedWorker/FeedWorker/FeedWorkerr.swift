@@ -29,7 +29,7 @@ public class FeedWorkerr: FeedWorkerProtocol {
                     self.responseDelegate?.didSuccessFetchVideos(videos, page: page)
                 } catch {
                     print(error)
-                    self.responseDelegate?.didFailFetchVideos(error: "Failed to decode videos")
+                    self.responseDelegate?.didFailFetchVideos(error: error.localizedDescription)
                 }
             case .failure(let error):
                 self.responseDelegate?.didFailFetchVideos(error: error.localizedDescription)

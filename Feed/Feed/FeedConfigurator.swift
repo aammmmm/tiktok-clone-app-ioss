@@ -21,7 +21,7 @@ public class FeedConfigurator {
         presenter.view = view
         presenter.router = router
         presenter.interactor = interactor
-        interactor.output = presenter
+        interactor.presenter = presenter
 
         return view
     }

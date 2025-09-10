@@ -11,7 +11,7 @@ import DataService
 import PostWorker
 
 class PostInteractor: PostPresenterToInteractor {
-    weak var output: PostInteractorToPresenter?
+    weak var presenter: PostInteractorToPresenter?
     private let worker: PostWorkerr
 
     init(worker: PostWorkerr = PostWorkerr()) {
@@ -30,20 +30,18 @@ class PostInteractor: PostPresenterToInteractor {
 
 extension PostInteractor: PostWorkerResponseProtocol {
     func didSuccessFetchPosts(_ posts: [VideoEntity], page: Int) {
-        output?.didFetchPosts(posts, page: page)
+        presenter?.didFetchPosts(posts, page: page)
     }
 
     func didFailFetchPosts(error: String) {
-        let err = NSError(domain: "PostWorker", code: -1, userInfo: [NSLocalizedDescriptionKey: error])
-        output?.didFailToFetchPosts(err)
+        presenter?.didFailToFetchPosts(error)
     }
 
     func didSuccessCreatePost(_ video: VideoEntity) {
-        output?.didCreatePost(video)
+        presenter?.didCreatePost(video)
     }
 
     func didFailCreatePost(error: String) {
-        let err = NSError(domain: "PostWorker", code: -1, userInfo: [NSLocalizedDescriptionKey: error])
-        output?.didFailToCreatePost(err)
+        presenter?.didFailToCreatePost(error)
     }
 }

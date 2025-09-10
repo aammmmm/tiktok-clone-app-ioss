@@ -30,7 +30,14 @@ public class WebViewDetailViewController: UIViewController {
         setupWebView()
         setupButtons()
         presenter?.viewDidLoad()
+        if let nav = navigationController {
+            print("Navigation Stack:")
+            for (index, vc) in nav.viewControllers.enumerated() {
+                print("\(index): \(type(of: vc))")
+            }
+        }
     }
+    
 
     private func setupWebView() {
         view.backgroundColor = .systemBackground

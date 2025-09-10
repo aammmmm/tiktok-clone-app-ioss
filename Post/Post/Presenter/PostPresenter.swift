@@ -31,7 +31,6 @@ extension PostPresenter: PostViewToPresenter {
         isLoading = true
         view?.showLoading(true)
         page += 1
-        print("DEBUG: loadMorePosts called, page=\(page)")
         interactor?.fetchPosts(page: page)
     }
     
@@ -71,23 +70,23 @@ extension PostPresenter: PostInteractorToPresenter {
         }
     }
 
-    func didFailToFetchPosts(_ error: Error) {
+    func didFailToFetchPosts(_ error: String) {
         isLoading = false
         view?.showLoading(false)
-        view?.showError(error.localizedDescription)
+        view?.showError(error)
     }
 
     func didCreatePost(_ video: VideoEntity) {
-        isLoading = false  // Business logic
+        isLoading = false
         view?.showLoading(false)
         
         postsCache.insert(video, at: 0)
         view?.showPosts(postsCache)
     }
 
-    func didFailToCreatePost(_ error: Error) {
-        isLoading = false  // Business logic
+    func didFailToCreatePost(_ error: String) {
+        isLoading = false
         view?.showLoading(false)
-        view?.showError("Failed to create post: \(error.localizedDescription)")
+        view?.showError(error)
     }
 }

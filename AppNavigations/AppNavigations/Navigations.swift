@@ -50,6 +50,13 @@ extension Navigations: PlayerWireframe {
 }
 
 extension Navigations: WebViewDetailWireframe {
+    public func fromWebDetailToPost(view: UIViewController) {
+        guard let navigationController = view.navigationController else { return }
+        
+        let postVC = buildPostModule()
+        navigationController.pushViewController(postVC, animated: true)
+    }
+    
     public func fromWebDetailToFeed(view: UIViewController) {
         guard let navigationController = view.navigationController else { return }
         

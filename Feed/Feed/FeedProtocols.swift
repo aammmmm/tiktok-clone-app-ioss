@@ -29,7 +29,7 @@ protocol FeedPresenterToInteractor: AnyObject {
 
 protocol FeedInteractorToPresenter: AnyObject {
     func didFetchVideos(_ videos: [VideoEntity], page: Int)
-    func didFailToFetchVideos(_ error: Error)
+    func didFailToFetchVideos(_ error: String)
 }
 
 protocol FeedPresenterToRouter: AnyObject {

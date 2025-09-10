@@ -13,7 +13,6 @@ public protocol PostWorkerProtocol: AnyObject {
     func createPost(request: CreatePostRequest)
 }
 
-// MARK: PostWorkerResponseProtocol
 public protocol PostWorkerResponseProtocol: AnyObject {
     func didSuccessFetchPosts(_ posts: [VideoEntity], page: Int)
     func didFailFetchPosts(error: String)

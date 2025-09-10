@@ -38,19 +38,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.rootViewController = tabBarController
         window.makeKeyAndVisible()
 
-//        AppRouter.route = { destination in
-//            switch destination {
-//            case .feed:
-//                tabBarController.selectedIndex = 0
-//            case .post:
-//                tabBarController.selectedIndex = 1
-//            case .player(let videoId):
-//                let playerVC = PlayerConfigurator.createModule(with: videoId)
-//                UIApplication.topViewController()?.navigationController?.pushViewController(playerVC, animated: true)
-//            default:
-//                print("Route Not Found")
-//            }
-//        }
     }
 }
 

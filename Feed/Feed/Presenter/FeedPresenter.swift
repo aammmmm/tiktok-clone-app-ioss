@@ -87,9 +87,9 @@ extension FeedPresenter: FeedInteractorToPresenter {
         }
     }
 
-    func didFailToFetchVideos(_ error: Error) {
+    func didFailToFetchVideos(_ error: String) {
         isLoading = false
         view?.showLoading(false)
-        view?.showError(error.localizedDescription)
+        view?.showError(error)
     }
 }

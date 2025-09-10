@@ -10,9 +10,10 @@ import Domain
 import FeedWorker
 
 class FeedInteractor: FeedPresenterToInteractor {
-    weak var output: FeedInteractorToPresenter?
+    weak var presenter: FeedInteractorToPresenter?
     private let worker: FeedWorkerr
 
+//    interactor sebagai delegate dari worker, worker menggunakan interactor sebagai delegatenya
     init(worker: FeedWorkerr = FeedWorkerr()) {
         self.worker = worker
         self.worker.responseDelegate = self
@@ -25,11 +26,10 @@ class FeedInteractor: FeedPresenterToInteractor {
 
 extension FeedInteractor: FeedWorkerResponseProtocol {
     func didSuccessFetchVideos(_ videos: [VideoEntity], page: Int) {
-        output?.didFetchVideos(videos, page: page)
+        presenter?.didFetchVideos(videos, page: page)
     }
 
     func didFailFetchVideos(error: String) {
-        let err = NSError(domain: "FeedWorker", code: -1, userInfo: [NSLocalizedDescriptionKey: error])
-        output?.didFailToFetchVideos(err)
+        presenter?.didFailToFetchVideos(error)
     }
 }

@@ -21,7 +21,7 @@ public class PostConfigurator {
         presenter.view = view
         presenter.interactor = interactor
         presenter.router = router
-        interactor.output = presenter
+        interactor.presenter = presenter
 
         return view
     }

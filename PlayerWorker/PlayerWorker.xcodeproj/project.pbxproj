@@ -3,13 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3CEB777EB230ADDA84C2B3AD /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E9BBBBC6429F0D90D1CCBF97 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5F01B4E4C3FFFD9EC50C2C24 /* Pods_PlayerWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ADC918C66EB86F983C37D39 /* Pods_PlayerWorker.framework */; };
-		7D70F8E6B4629E10C5F0992F /* PlayerWorkerr.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2510B35AAD1D084E5E2436 /* PlayerWorkerr.swift */; };
+		7D70F8E6B4629E10C5F0992F /* PlayerWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2510B35AAD1D084E5E2436 /* PlayerWorker.swift */; };
 		90D1E9E9193C1C8DCC567140 /* Pods_PlayerWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE234D3722916C9A09A3F933 /* Pods_PlayerWorker.framework */; };
 		9489D1CFEF0DF42692BAF5A7 /* PlayerWorkerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4B0601EB97911EC2B16053 /* PlayerWorkerProtocol.swift */; };
 		A90A28DD93929B9D7ED14D30 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9BBBBC6429F0D90D1CCBF97 /* Domain.framework */; };
@@ -39,7 +39,7 @@
 		2D4B0601EB97911EC2B16053 /* PlayerWorkerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerWorkerProtocol.swift; sourceTree = "<group>"; };
 		429E6EF455F98378DAA7DFE8 /* DataService.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DataService.framework; path = "${BUILT_PRODUCTS_DIR}/DataService.framework"; sourceTree = "<group>"; };
 		77C3FF472D420037838368DE /* Pods-PlayerWorker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayerWorker.release.xcconfig"; path = "Target Support Files/Pods-PlayerWorker/Pods-PlayerWorker.release.xcconfig"; sourceTree = "<group>"; };
-		DC2510B35AAD1D084E5E2436 /* PlayerWorkerr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerWorkerr.swift; sourceTree = "<group>"; };
+		DC2510B35AAD1D084E5E2436 /* PlayerWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerWorker.swift; sourceTree = "<group>"; };
 		E9BBBBC6429F0D90D1CCBF97 /* Domain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Domain.framework; path = "${BUILT_PRODUCTS_DIR}/Domain.framework"; sourceTree = "<group>"; };
 		EE234D3722916C9A09A3F933 /* Pods_PlayerWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlayerWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEA466A45C0967DF88887448 /* Pods-PlayerWorker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayerWorker.debug.xcconfig"; path = "Target Support Files/Pods-PlayerWorker/Pods-PlayerWorker.debug.xcconfig"; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 			children = (
 				0B7E03C7E652581B3E71251E /* PlayerWorker.h */,
 				2D4B0601EB97911EC2B16053 /* PlayerWorkerProtocol.swift */,
-				DC2510B35AAD1D084E5E2436 /* PlayerWorkerr.swift */,
+				DC2510B35AAD1D084E5E2436 /* PlayerWorker.swift */,
 			);
 			path = PlayerWorker;
 			sourceTree = "<group>";
@@ -162,7 +162,6 @@
 			);
 			mainGroup = 8E55558523921EDEA9E7E38C;
 			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 78888049CCEF960E2256B224 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -203,7 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9489D1CFEF0DF42692BAF5A7 /* PlayerWorkerProtocol.swift in Sources */,
-				7D70F8E6B4629E10C5F0992F /* PlayerWorkerr.swift in Sources */,
+				7D70F8E6B4629E10C5F0992F /* PlayerWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

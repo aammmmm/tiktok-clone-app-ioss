@@ -72,12 +72,10 @@ class PostViewController: UIViewController, PostPresenterToView {
             self?.presenter?.didTapCreate(request: request)
         }
         let nav = UINavigationController(rootViewController: formVC)
-        nav.modalPresentationStyle = .pageSheet
+        nav.modalPresentationStyle = .formSheet
         present(nav, animated: true)
     }
 
-    
-    // MARK: - PostPresenterToView Implementation
     
     func showPosts(_ posts: [VideoEntity]) {
         self.posts = posts
@@ -97,8 +95,6 @@ class PostViewController: UIViewController, PostPresenterToView {
     
     func showLoading(_ show: Bool) {
         isLoadingMore = show
-        // Optional: Add loading indicator di UI jika diperlukan
-        // Untuk sekarang, cukup update state saja
     }
     
     func showError(_ message: String) {

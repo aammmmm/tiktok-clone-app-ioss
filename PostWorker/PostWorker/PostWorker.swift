@@ -47,7 +47,7 @@ public class PostWorkerr: PostWorkerProtocol {
                     let video = try decoder.decode(VideoEntity.self, from: result.data)
                     self.responseDelegate?.didSuccessCreatePost(video)
                 } catch {
-                    self.responseDelegate?.didFailCreatePost(error: "Failed to decode response")
+                    self.responseDelegate?.didFailCreatePost(error: error.localizedDescription)
                 }
             case .failure(let error):
                 self.responseDelegate?.didFailCreatePost(error: error.localizedDescription)

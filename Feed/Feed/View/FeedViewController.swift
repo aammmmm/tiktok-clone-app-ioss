@@ -94,12 +94,6 @@ class FeedViewController: UIViewController, FeedPresenterToView {
         collectionView.setContentOffset(.zero, animated: false)
     }
     
-//    func showOriginalVideos() {
-//        // Cukup panggil reloadData() tanpa memodifikasi self.videos
-//        // karena self.videos masih menyimpan data asli.
-//        collectionView.reloadData()
-//    }
-    
 }
 
 extension FeedViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, SearchHeaderViewDelegate {

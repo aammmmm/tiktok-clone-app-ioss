@@ -17,18 +17,20 @@ public enum APIProviders {
 
 extension APIProviders: TargetType {
     public var baseURL: URL {
-        switch self {
-        case .getVideoById:
-            guard let url = URL(string: "http://localhost:3002") else {
-                fatalError("Invalid remote API URL")
-            }
-            return url
-        default:
-            guard let url = URL(string: "http://localhost:3001") else {
-                fatalError("Invalid local API URL")
-            }
-            return url
-        }
+        guard let url = URL(string: "http://localhost:3001") else {fatalError()}
+//        switch self {
+//        case .getVideoById:
+//            guard let url = URL(string: "http://localhost:3002") else {
+//                fatalError("Invalid remote API URL")
+//            }
+//            return url
+//        default:
+//            guard let url = URL(string: "http://localhost:3001") else {
+//                fatalError("Invalid local API URL")
+//            }
+//            return url
+//        }
+        return url
     }
     
     public var path: String {
